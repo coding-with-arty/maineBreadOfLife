@@ -899,7 +899,7 @@ section,
 	height: 95%;
 	background: linear-gradient(to right, color-mix(in srgb, var(--background-color), transparent 90%), var(--background-color)), url("../img/sign.webp") center top no-repeat;
 	background-size: cover;
-	z-index: ;
+	z-index: 1;
 	border-radius: 0 0 50% 50%;
 	transform: translateX(-50%) rotate(0deg);
 }
@@ -1501,7 +1501,7 @@ section,
 .artshouse h3 {
 	margin-top: 2rem;
 	font-size: 2rem;
-	font-color: #fd7e14;
+	color: #fd7e14;
 }
 
 .sk h1,
@@ -2323,7 +2323,6 @@ input[type="file"] {
 .gallery .gallery-item img {
 	transition: 0.3s;
 	display: block;
-	vertical-align: middle;
 
 }
 
