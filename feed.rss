@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Maine Bread of Life - Augusta, Maine</title>
+		<link>https://mainebreadoflife.org/</link>
+		<description>For over 40 years Bread of Life has been the backbone of its community, helping those in need and guiding those that may find themselves lost. The soup kitchen started it all and now they have hundreds of units to house individuals and families throughout the Augusta, Maine area.</description>
+		<language>en</language>
+		<pubDate>Wed, 15 May 2025 17:58:56 -0400</pubDate>
+		<generator>Maine Bread of Life</generator>
+
+		<item>
+			<guid isPermaLink="false">1811225922</guid>
+			<title>Family, Veteran and Emergency Shelters</title>
+			<link>https://mainebreadoflife.org/shelters/</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Bread of Life offers a variety of shelter options including family shelters, veteran housing, and emergency accommodation. Our ESHAP program provides support for individuals and families experiencing homelessness. Contact us at 207-626-3434 to learn about intake procedures and available housing options.</description>
+			<pubDate>Wed, 15 May 2025 17:58:56 -0400</pubDate>
+			<enclosure url="https://mainebreadoflife.org/assets/img/sign.webp" type="image/webp" length="0" />
+		</item>
+		<item>
+			<guid isPermaLink="false">4174026351</guid>
+			<title>Bread Of Life has been the backbone of its community for decades, please reach out and volunteer today.</title>
+			<link>https://mainebreadoflife.org/volunteer/</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Volunteers are the heart of our ministry. Join us in making a difference by donating your time and skills. We have various volunteer opportunities available including working in our soup kitchen, helping with shelter operations, and supporting our veteran services. Volunteer applications are accepted year-round.</description>
+			<pubDate>Wed, 15 May 2025 17:58:56 -0400</pubDate>
+			<enclosure url="https://mainebreadoflife.org/assets/img/sign.webp" type="image/webp" length="0" />
+		</item>
+		<item>
+			<guid isPermaLink="false">1041647012</guid>
+			<title>ART's - Addiction Recovery Trauma - House</title>
+			<link>https://mainebreadoflife.org/arts-house/</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Our newly renovated ART's House (Addiction Recovery Trauma) is specifically designed to serve veterans returning from military service. This specialized facility helps veterans overcome trauma and addiction issues related to PTSD and other effects of war. We provide a supportive environment and comprehensive services to help veterans build a successful future.</description>
+			<pubDate>Wed, 15 May 2025 17:58:56 -0400</pubDate>
+			<enclosure url="https://mainebreadoflife.org/assets/img/sign.webp" type="image/webp" length="0" />
+		</item>
+		<item>
+			<guid isPermaLink="false">876366572</guid>
+			<title>We are here if you need any help, please reach out today!</title>
+			<link>https://mainebreadoflife.org/contact-us/</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Need assistance? Contact Bread of Life at 207-626-3434 or visit our office at 157 Water St, Augusta, ME 04330. Our dedicated staff is ready to help with emergency housing, food assistance, veteran services, and community support. We're available Monday through Friday from 8:00 AM to 4:30 PM.</description>
+			<pubDate>Wed, 15 May 2025 17:58:56 -0400</pubDate>
+			<enclosure url="https://mainebreadoflife.org/assets/img/sign.webp" type="image/webp" length="0" />
+		</item>
+		<item>
+			<guid isPermaLink="false">3858700369</guid>
+			<title>Feeding The Hungry And Nurturing Souls Since 1984</title>
+			<link>https://mainebreadoflife.org/soup-kitchen/</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Our soup kitchen has been serving the Augusta community since 1984, providing nutritious meals to those in need. We serve breakfast and lunch Monday through Friday, and weekend meals by special announcement. Everyone is welcome, regardless of circumstances. Come join our community table where we nourish both body and spirit.</description>
+			<pubDate>Wed, 15 May 2025 17:58:56 -0400</pubDate>
+			<enclosure url="https://mainebreadoflife.org/assets/img/sign.webp" type="image/webp" length="0" />
+		</item>
+	</channel>
+</rss>

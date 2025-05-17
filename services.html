@@ -56,6 +56,7 @@
 <link rel="canonical" href="https://mainebreadoflife.org/services.html">
 <link href="assets/img/favicon.webp" rel="icon" type="image/webp">
 <link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
+<link rel="alternate" type="application/rss+xml" title="Maine Bread of Life Updates" href="https://mainebreadoflife.org/feed.rss">
 
 <!-- Resource hints for faster loading -->
 <link rel="manifest" href="/manifest.json">
@@ -75,7 +76,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
 <!-- Preload CSS components -->
-<link href="assets/css/main.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/services-styles.css">
 
 <!-- CSS files with performance optimization -->
 <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -263,28 +265,85 @@
 							<h4>
 								Our Services
 							</h4>
-							<div class="services-list" role="navigation" aria-label="Service links">
-								<a href="arts-house.html" target="_blank"><i class="bi bi-stars" aria-hidden="true"></i><span>ART's House</span></a>
-								<a href="shelters.html" target="_blank"><i class="bi bi-house-door" aria-hidden="true"></i><span>Emergency Shelters</span></a>
-								<a href="soup-kitchen.html"><i class="bi bi-cup-hot-fill" aria-hidden="true"></i><span>Soup Kitchen</span></a>
-								<a href="assets/img/clients/vol_app.pdf" target="_blank"><i class="bi bi-file-pdf" aria-hidden="true"></i><span>Volunteer Application</span></a>
-								<a href="assets/img/clients/h_app.pdf" target="_blank"><i class="bi bi-file-pdf" aria-hidden="true"></i><span>Housing Application</span></a>
-							</div>
-						</div><!-- /Services -->
-						<div class="help-box d-flex flex-column justify-content-center align-items-center" role="region" aria-labelledby="help-heading">
-							<i class="bi bi-headset help-icon" aria-hidden="true"></i>
-							<h4 id="help-heading">
-									Need Help?
-								</h4>
-							<p class="d-flex align-items-center mt-2 mb-0">
-								<i class="bi bi-telephone me-2" aria-hidden="true"></i> <span>(207) 626-3434</span>
-							</p>
-							<p class="d-flex align-items-center mt-1 mb-0">
-								<i class="bi bi-envelope me-2" aria-hidden="true"></i> <a href="contact-us.html">
-									receptionist@mainebreadoflife.org
-								</a>
-							</p>
-						</div>
+							<div class="services-grid row g-4 mt-3">
+    <!-- ART's House -->
+    <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card h-100 p-3">
+            <div class="d-flex align-items-center">
+                <div class="service-icon bg-primary bg-gradient text-white rounded-3 p-2 me-3" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-stars" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">ART's House</h5>
+                    <p class="small text-muted mb-1">Supportive housing program for veterans in recovery</p>
+                </div>
+                <a href="arts-house.html" class="btn btn-sm btn-outline-primary ms-auto" aria-label="Learn more about ART's House program">
+                    Learn more <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Shelters -->
+    <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="150">
+        <div class="service-card h-100 p-3">
+            <div class="d-flex align-items-center">
+                <div class="service-icon bg-success bg-gradient text-white rounded-3 p-2 me-3" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-house-door" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">Emergency Shelters</h5>
+                    <p class="small text-muted mb-1">Safe, temporary housing for individuals and families</p>
+                </div>
+                <a href="shelters.html" class="btn btn-sm btn-outline-success ms-auto" aria-label="Learn more about Emergency Shelters">
+                    Learn more <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Soup Kitchen -->
+    <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card h-100 p-3">
+            <div class="d-flex align-items-center">
+                <div class="service-icon bg-warning bg-gradient text-white rounded-3 p-2 me-3" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-cup-hot-fill" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">Soup Kitchen</h5>
+                    <p class="small text-muted mb-1">Nutritious meals served in a welcoming environment</p>
+                </div>
+                <a href="soup-kitchen.html" class="btn btn-sm btn-outline-warning ms-auto" aria-label="Learn more about the Soup Kitchen">
+                    Learn more <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="250">
+        <div class="service-card h-100 p-3">
+            <div class="d-flex align-items-center">
+                <div class="service-icon bg-info bg-gradient text-white rounded-3 p-2 me-3" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-file-earmark-text" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">Applications</h5>
+                    <p class="small text-muted mb-1">Access our volunteer and housing applications</p>
+                </div>
+                <div class="d-flex gap-2 ms-auto">
+                    <a href="assets/img/clients/vol_app.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-info" aria-label="Download Volunteer Application">
+                        <i class="bi bi-download me-1"></i> Volunteer
+                    </a>
+                    <a href="assets/img/clients/h_app.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-info" aria-label="Download Housing Application">
+                        <i class="bi bi-download me-1"></i> Housing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+						</div><!-- /Services -->						
 					</div>
 					<div class="col-lg-7 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
 						<center>
@@ -320,7 +379,82 @@
 			</div>
 			<!-- /Services -->
 
-			<!-- Faq Section -->
+		</section><!-- /Services -->
+		<section id="service-details" class="service-details section">
+			<div class="container">
+				<div class="row gy-5">
+					<div data-aos="fade-up">
+						<center>
+							<h2>
+								<b>
+									<em>Community Partnerships and Donations</em>
+								</b>
+							</h2>
+						</center>
+						<div class="row gy-4 align-items-center features-item">
+							<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+								<img class="img-A" src="assets/img/gfcu.webp" alt="Family shelter" loading="lazy" title="Gardiner Federal Credit Union Donation">
+							</div>
+							<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+								<h4>
+									<em><a href="https://gardinerfcu.org/" rel="noopener noreferrer" target="_blank" title="Visit Gardiner Federal Credit Union Website">Gardiner Federal Credit Union</a> Donation (2025)</em>
+								</h4>
+								<p>
+									Gardiner Federal Credit Union has been a strong supporter of local communities, including The Bread of Life. Their donations have helped provide essential items to veterans and the homeless, ensuring these individuals receive much-needed support and care
+								</p>
+								<p>
+									Other organizations are encouraged to join Gardiner Federal Credit Union in supporting The Bread of Life and similar initiatives. By contributing donations and resources, you can make a significant impact on the lives of veterans and the homeless, fostering a stronger, more compassionate community. Together, we can ensure everyone has access to the essentials they need.
+								</p>
+							</div>
+						</div><!-- /Item -->
+						<hr />
+						<div class="row gy-4 align-items-center features-item">
+							<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+								<img class="img-A" src="assets/img/lcc.webp" alt="Le Club Calumet" loading="lazy" title="Le Club Calumet Donation">
+							</div>
+							<div class="col-md-7" data-aos="fade-up">
+								<h4>
+									<em><a href="https://www.calumetclub.com/about-us" rel="noopener noreferrer" target="_blank" title="Visit Le Club Calumet Website">Le Club Calumet</a> Donation (2025)</em>
+								</h4>
+								<p>
+									Le Club Calumet recently made a generous donation to The Bread of Life. This contribution, will help provide essential items to those in need, including veterans and the homeless
+								</p>
+								<p>
+									The Le Club Calumet is a French-American fraternal organization that was founded in 1919 in Augusta, Maine. The club's name, Calumet, is a French word that means "lead" or "copper," and it was chosen to represent the club's commitment to the French-American community.
+								</p>
+							</div>
+						</div><!-- /Item -->
+					</div>
+				</div>
+				<hr />
+				<div class="container">
+					<div class="row gy-5">
+						<div data-aos="fade-up">
+							<div class="row gy-4 align-items-center features-item">
+								<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+									<img class="img-A" src="assets/img/lb2.webp" alt="ART's House'" loading="lazy" title="Quote by Laura Briggs-Director of Operations">
+								</div>
+								<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+									<h3>
+										<center>FEED • SHELTER • EMPOWER</center>
+									</h3>
+
+									<p>
+										Bread of Life has been a presence in our community for over 40 years, it operates a 44 bed family homeless shelter and a 14 bed Veterans homeless ahelter on Hospital Street, a soup kitchen on Water Street that serves about 120 people a day, and more than 100 housing units throughout Augusta.
+									</p>
+									<p>
+										Other organizations are encouraged to join Gardiner Federal Credit Union in supporting The Bread of Life and similar initiatives. By contributing donations and resources, you can make a significant impact on the lives of veterans and the homeless, fostering a stronger, more compassionate community. Together, we can ensure everyone has access to the essentials they need.
+									</p>
+								</div>
+							</div><!-- /Item -->
+							<hr />
+						</div><!-- End Section Title -->
+						</div>
+					</div>
+				</div>
+			</section><!-- /Starter -->
+
+						<!-- Faq Section -->
   <section id="faq" class="faq section">
 
     <div class="container">
@@ -389,78 +523,32 @@
   </section><!-- /Faq Section -->
 
 
-		</section><!-- /Services -->
-		<section id="service-details" class="service-details section">
+
+		<!-- Impact Stats Section -->
+		<section class="py-5 bg-light stats-section">
 			<div class="container">
-				<div class="row gy-5">
-					<div data-aos="fade-up">
-						<center>
-							<h2>
-								<b>
-									<em>Community Partnerships and Donations</em>
-								</b>
-							</h2>
-						</center>
-						<div class="row gy-4 align-items-center features-item">
-							<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-								<img class="img-A" src="assets/img/gfcu.webp" alt="Family shelter" loading="lazy" title="Gardiner Federal Credit Union Donation">
-							</div>
-							<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-								<h4>
-									<em><a href="https://gardinerfcu.org/" rel="noopener noreferrer" target="_blank" title="Visit Gardiner Federal Credit Union Website">Gardiner Federal Credit Union</a> Donation (2025)</em>
-								</h4>
-								<p>
-									Gardiner Federal Credit Union has been a strong supporter of local communities, including The Bread of Life. Their donations have helped provide essential items to veterans and the homeless, ensuring these individuals receive much-needed support and care
-								</p>
-								<p>
-									Other organizations are encouraged to join Gardiner Federal Credit Union in supporting The Bread of Life and similar initiatives. By contributing donations and resources, you can make a significant impact on the lives of veterans and the homeless, fostering a stronger, more compassionate community. Together, we can ensure everyone has access to the essentials they need.
-								</p>
-							</div>
-						</div><!-- /Item -->
-						<hr />
-						<div class="row gy-4 align-items-center features-item">
-							<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-								<img class="img-A" src="assets/img/lcc.webp" alt="Le Club Calumet" loading="lazy" title="Le Club Calumet Donation">
-							</div>
-							<div class="col-md-7" data-aos="fade-up">
-								<h4>
-									<em><a href="https://www.calumetclub.com/about-us" rel="noopener noreferrer" target="_blank" title="Visit Le Club Calumet Website">Le Club Calumet</a> Donation (2025)</em>
-								</h4>
-								<p>
-									Le Club Calumet recently made a generous donation to The Bread of Life. This contribution, will help provide essential items to those in need, including veterans and the homeless
-								</p>
-								<p>
-									The Le Club Calumet is a French-American fraternal organization that was founded in 1919 in Augusta, Maine. The club's name, Calumet, is a French word that means "lead" or "copper," and it was chosen to represent the club's commitment to the French-American community.
-								</p>
-							</div>
-						</div><!-- /Item -->
+				<div class="row g-4 text-center">
+					<div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+						<div class="display-4 fw-bold text-primary stat-number">40</div>
+						<p class="text-muted mb-0">Years of Service</p>
+					</div>
+					<div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
+						<div class="display-4 fw-bold text-success stat-number">120</div>
+						<p class="text-muted mb-0">Meals Served Daily</p>
+					</div>
+					<div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+						<div class="display-4 fw-bold text-warning stat-number">58</div>
+						<p class="text-muted mb-0">Shelter Beds</p>
+					</div>
+					<div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="250">
+						<div class="display-4 fw-bold text-danger stat-number">100</div>
+						<p class="text-muted mb-0">Housing Units</p>
 					</div>
 				</div>
-				<hr />
-				<div class="container">
-					<div class="row gy-5">
-						<div data-aos="fade-up">
-							<div class="row gy-4 align-items-center features-item">
-								<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-									<img class="img-A" src="assets/img/lb2.webp" alt="ART's House'" loading="lazy" title="Quote by Laura Briggs-Director of Operations">
-								</div>
-								<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-									<h3>
-										<center>FEED • SHELTER • EMPOWER</center>
-									</h3>
+			</div>
+		</section>
 
-									<p>
-										Bread of Life has been a presence in our community for over 40 years, it operates a 44 bed family homeless shelter and a 14 bed Veterans homeless ahelter on Hospital Street, a soup kitchen on Water Street that serves about 120 people a day, and more than 100 housing units throughout Augusta.
-									</p>
 
-								</div>
-							</div><!-- /Item -->
-							<hr />
-						</div><!-- End Section Title -->
-					</div>
-				</div>
-			</section><!-- /Starter -->
-		</section><!-- /Starter -->
 		<!-- Featured Services Section -->
 		<section id="featured-services" class="featured-services section">
 			<div class="container">
@@ -535,7 +623,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- Clients Section -->
+
+	</main>
+	<!-- Clients Section -->
 		<section id="clients" class="clients section">
 
 			<div class="container">
@@ -757,6 +847,7 @@
 <script src="assets/js/image-loader.js" defer></script>
 <script src="assets/js/form-handler.js" defer></script>
 <script src="assets/js/custom-scripts.js" defer></script>
+<script src="assets/js/services.js" defer></script>
 
 </body>
 </html>

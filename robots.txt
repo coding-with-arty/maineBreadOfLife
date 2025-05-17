@@ -1,3 +1,48 @@
+# Maine Bread of Life Website Robots Configuration
+# Updated: May 15, 2025
+
+# Global rules for all bots
 User-agent: *
 Allow: /
+
+# Prevent crawling of non-content directories
+Disallow: /assets/vendor/
+Disallow: /forms/
+Disallow: /forms/uploads/
+Disallow: /assets/js/
+Disallow: /*.php$
+
+# Prevent indexing of administrative or duplicate content
+Disallow: /*?*
+
+# Allow critical CSS/JS
+Allow: /assets/css/main.css
+Allow: /assets/css/custom-styles.css
+Allow: /assets/css/all.min.css
+Allow: /assets/js/all.min.js
+
+# Social Media Bots Customization
+User-agent: Twitterbot
+Allow: /assets/img/
+
+User-agent: facebookexternalhit
+Allow: /assets/img/
+
+# Add your XML sitemap location
 Sitemap: https://mainebreadoflife.org/sitemap.xml
+Sitemap: https://mainebreadoflife.org/feed.rss
+
+
+<div>
+										<center>
+											<h3>
+												Board of Directors
+											</h3>
+											<p>
+												Our board of directors is a governing body of this 501c3 organization. If you have an interest in serving, please reach out to
+												<a href="contact-us.html" title="Go to contacts page" target="_blank">
+													directors@mainebreadoflife.org
+												</a><br />to learn more.
+											</p>
+										</center>
+									</div>

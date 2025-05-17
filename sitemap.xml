@@ -2,75 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mainebreadoflife.org/</loc>
-    <lastmod>2025-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <!-- Add entries for each page -->    
-  <url>
-    <loc>https://mainebreadoflife.org/arts-house.html</loc>
-    <lastmod>2025-05-04</lastmod>
+    <lastmod>2025-05-12T20:56:58+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mainebreadoflife.org/services.html</loc>
-    <lastmod>2025-05-04</lastmod>
+    <loc>https://mainebreadoflife.org/soup-kitchen/</loc>
+    <lastmod>2025-05-12T20:57:00+01:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mainebreadoflife.org/volunteer.html</loc>
-    <lastmod>2025-05-04</lastmod>
+    <loc>https://mainebreadoflife.org/arts-house/</loc>
+    <lastmod>2025-05-12T20:57:01+01:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mainebreadoflife.org/contact-us.html</loc>
-    <lastmod>2025-05-04</lastmod>
+    <loc>https://mainebreadoflife.org/shelters/</loc>
+    <lastmod>2025-05-12T20:57:01+01:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mainebreadoflife.org/shelters.html</loc>
-    <lastmod>2025-05-04</lastmod>
+    <loc>https://mainebreadoflife.org/services/</loc>
+    <lastmod>2025-05-12T20:57:01+01:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mainebreadoflife.org/soup-kitchen.html</loc>
-    <lastmod>2025-05-04</lastmod>
+    <loc>https://mainebreadoflife.org/contact-us/</loc>
+    <lastmod>2025-05-12T20:57:02+01:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mainehmis.org/docs/hmiswebsitelibraries/agency-forms/maine-hmis-privacy-notice---final-2-2-24.docx?sfvrsn=e9819f15_3</loc>
-    <lastmod>2025-05-04</lastmod>
+    <loc>https://mainebreadoflife.org/volunteer/</loc>
+    <lastmod>2025-05-12T20:57:04+01:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PGTFGX7RU4QHQ</loc>
-    <lastmod>2025-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.instagram.com/mainebreadoflife/</loc>
-    <lastmod>2025-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.facebook.com/MaineBreadofLife</loc>
-    <lastmod>2025-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.youtube.com/@HousingMattersPod</loc>
-    <lastmod>2025-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>

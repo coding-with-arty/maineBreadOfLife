@@ -57,6 +57,7 @@
 <link rel="canonical" href="https://mainebreadoflife.org/shelters.html">
 <link href="assets/img/favicon.webp" rel="icon" type="image/webp">
 <link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
+<link rel="alternate" type="application/rss+xml" title="Maine Bread of Life Updates" href="https://mainebreadoflife.org/feed.rss">
 
 
 <!-- Resource hints for faster loading -->
@@ -204,7 +205,7 @@
 	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">
 		<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 			<a href="https://mainebreadoflife.org" class="logo d-flex align-items-center" aria-label="Bread of Life Home">
-				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo in white" title="Back To Home Page">
+				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo in white" title="Back To Home Page" loading="eager">
 			</a>
 			<nav role="navigation" id="navmenu" class="navmenu" aria-label="Primary navigation">
 				<ul>
@@ -253,37 +254,94 @@
 			</div>
 		</div><!-- /Title -->
 
+		<!-- Services -->
 		<section id="service-details" class="service-details section">
 			<div class="container">
 				<div class="row gy-5">
 					<div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-
 						<div class="service-box" role="region" aria-labelledby="services-heading">
 							<h4>
 								Our Services
 							</h4>
-							<div class="services-list" role="navigation" aria-label="Service links">
-								<a href="arts-house.html" target="_blank"><i class="bi bi-stars" aria-hidden="true"></i><span>ART's House</span></a>
-								<a href="shelters.html" target="_blank"><i class="bi bi-house-door" aria-hidden="true"></i><span>Emergency Shelters</span></a>
-								<a href="soup-kitchen.html"><i class="bi bi-cup-hot-fill" aria-hidden="true"></i><span>Soup Kitchen</span></a>
-								<a href=".\assets\img\clients\vol_app.pdf" target="_blank"><i class="bi bi-file-pdf" aria-hidden="true"></i><span>Volunteer Application</span></a>
-								<a href=".\assets\img\clients\h_app.pdf" target="_blank"><i class="bi bi-file-pdf" aria-hidden="true"></i><span>Housing Application</span></a>
-							</div>
-						</div><!-- /Services -->
-						<div class="help-box d-flex flex-column justify-content-center align-items-center" role="region" aria-labelledby="help-heading">
-							<i class="bi bi-headset help-icon" aria-hidden="true"></i>
-							<h4 id="help-heading">
-									Need Help?
-								</h4>
-							<p class="d-flex align-items-center mt-2 mb-0">
-								<i class="bi bi-telephone me-2" aria-hidden="true"></i> <span>(207) 626-3434</span>
-							</p>
-							<p class="d-flex align-items-center mt-1 mb-0">
-								<i class="bi bi-envelope me-2" aria-hidden="true"></i> <a href="contact-us.html">
-									receptionist@mainebreadoflife.org
-								</a>
-							</p>
-						</div>
+							<div class="services-grid row g-4 mt-3">
+    <!-- ART's House -->
+    <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card h-100 p-3">
+            <div class="d-flex align-items-center">
+                <div class="service-icon bg-primary bg-gradient text-white rounded-3 p-2 me-3" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-stars" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">ART's House</h5>
+                    <p class="small text-muted mb-1">Supportive housing program for veterans in recovery</p>
+                </div>
+                <a href="arts-house.html" class="btn btn-sm btn-outline-primary ms-auto" aria-label="Learn more about ART's House program">
+                    Learn more <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Shelters -->
+    <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="150">
+        <div class="service-card h-100 p-3">
+            <div class="d-flex align-items-center">
+                <div class="service-icon bg-success bg-gradient text-white rounded-3 p-2 me-3" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-house-door" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">Emergency Shelters</h5>
+                    <p class="small text-muted mb-1">Safe, temporary housing for individuals and families</p>
+                </div>
+                <a href="shelters.html" class="btn btn-sm btn-outline-success ms-auto" aria-label="Learn more about Emergency Shelters">
+                    Learn more <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Soup Kitchen -->
+    <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card h-100 p-3">
+            <div class="d-flex align-items-center">
+                <div class="service-icon bg-warning bg-gradient text-white rounded-3 p-2 me-3" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-cup-hot-fill" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">Soup Kitchen</h5>
+                    <p class="small text-muted mb-1">Nutritious meals served in a welcoming environment</p>
+                </div>
+                <a href="soup-kitchen.html" class="btn btn-sm btn-outline-warning ms-auto" aria-label="Learn more about the Soup Kitchen">
+                    Learn more <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="250">
+        <div class="service-card h-100 p-3">
+            <div class="d-flex align-items-center">
+                <div class="service-icon bg-info bg-gradient text-white rounded-3 p-2 me-3" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-file-earmark-text" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">Applications</h5>
+                    <p class="small text-muted mb-1">Access our volunteer and housing applications</p>
+                </div>
+                <div class="d-flex gap-2 ms-auto">
+                    <a href="assets/img/clients/vol_app.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-info" aria-label="Download Volunteer Application">
+                        <i class="bi bi-download me-1"></i> Volunteer
+                    </a>
+                    <a href="assets/img/clients/h_app.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-info" aria-label="Download Housing Application">
+                        <i class="bi bi-download me-1"></i> Housing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+						</div><!-- /Services -->						
 					</div>
 					<div class="col-lg-7 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
 						<center>
@@ -323,7 +381,7 @@
 			<div class="container">
 				<div class="row gy-4 align-items-center features-item">
 					<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-						<img src="assets/img/bol5.webp" class="img-A" alt="Sleeping area'" loading="lazy" title="Common area and kitchen in shelter" >
+						<img src="assets/img/bol5.webp" class="img-A" alt="Sleeping area'" loading="lazy" title="Common area and kitchen in shelter" decoding="async" fetchpriority="low">
 					</div>
 					<div class="col-md-7" data-aos="fade-up">
 						<h3>
@@ -487,6 +545,32 @@
 	  <hr />
     </div>
   </section><!-- /Faq Section -->
+
+
+<!-- Impact Stats Section -->
+		<section class="py-5 bg-light stats-section">
+			<div class="container">
+				<div class="row g-4 text-center">
+					<div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+						<div class="display-4 fw-bold text-primary stat-number">40</div>
+						<p class="text-muted mb-0">Years of Service</p>
+					</div>
+					<div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
+						<div class="display-4 fw-bold text-success stat-number">120</div>
+						<p class="text-muted mb-0">Meals Served Daily</p>
+					</div>
+					<div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+						<div class="display-4 fw-bold text-warning stat-number">58</div>
+						<p class="text-muted mb-0">Shelter Beds</p>
+					</div>
+					<div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="250">
+						<div class="display-4 fw-bold text-danger stat-number">100</div>
+						<p class="text-muted mb-0">Housing Units</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
 
 
 			<!-- Featured Services Section -->
@@ -697,7 +781,7 @@
 							<hr />
 							<a href="contact-us.html" title="Visit Our Contact Page">
 								<div class="container" data-aos="fade-up">
-									<img src="assets/img/breadoflife-white.webp" height="33%" alt="" width="100%">
+									<img src="assets/img/breadoflife-white.webp" height="33%" alt="Bread of Life Logo" width="100%" loading="lazy">
 								</div>
 							</a>
 							<hr />
@@ -768,20 +852,20 @@
 
 
 	<!-- JS with performance optimization -->
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-	<script src="assets/vendor/php-email-form/validate.js" defer></script>
-	<script src="assets/vendor/aos/aos.js" defer></script>
-	<script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-	<script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-	<script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-	<script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
-	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	<script src="assets/js/main.js" defer></script>
-	<script src="assets/js/image-loader.js" defer></script>
-	<script src="assets/js/form-handler.js" defer></script>
-	<script src="assets/js/custom-scripts.js" defer></script>
+					<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript" defer></script>
+					<script src="assets/vendor/php-email-form/validate.js" type="text/javascript" defer></script>
+					<script src="assets/vendor/aos/aos.js" type="text/javascript" defer></script>
+					<script src="assets/vendor/glightbox/js/glightbox.min.js" type="text/javascript" defer></script>
+					<script src="assets/vendor/purecounter/purecounter_vanilla.js" type="text/javascript" defer></script>
+					<script src="assets/vendor/swiper/swiper-bundle.min.js" type="text/javascript" defer></script>
+					<script src="assets/vendor/waypoints/noframework.waypoints.js" type="text/javascript" defer></script>
+					<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" type="text/javascript" defer></script>
+					<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" type="text/javascript" defer></script>
+					<script src="https://www.google.com/recaptcha/api.js" type="text/javascript" async defer></script>
+					<script src="assets/js/main.js" type="text/javascript" defer></script>
+					<script src="assets/js/image-loader.js" type="text/javascript" defer></script>
+					<script src="assets/js/form-handler.js" type="text/javascript" defer></script>
+					<script src="assets/js/custom-scripts.js" type="text/javascript" defer></script>
 
 </body>
 </html>

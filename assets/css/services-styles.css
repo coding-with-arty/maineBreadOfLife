@@ -1,0 +1,128 @@
+/* Services Grid */
+.services-grid .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.services-grid .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+/* Icons */
+.icon-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+/* Stats Section */
+.stats-section .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+/* Help Section */
+.help-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.help-section .btn {
+    transition: all 0.3s ease;
+}
+
+.help-section .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+/* How It Works */
+.how-it-works .step {
+    position: relative;
+    padding: 2rem;
+    height: 100%;
+    background: #fff;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.how-it-works .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+}
+
+.how-it-works .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Ways to Help */
+.ways-to-help .card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.ways-to-help .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
+}
+
+.ways-to-help .card-body {
+    padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .stats-section .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .help-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .help-section .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Animation for stats counter */
+@keyframes countUp {
+    from { 
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.stat-number {
+    animation: countUp 0.6s ease-out forwards;
+}
