@@ -11,10 +11,12 @@
 
 	<!-- 2. SEO Basics -->
 	<meta name="description"
-		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs. Dedicated to helping those who served and those in need. Call 207-626-3434 for assistance.">
+		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
 	<meta name="keywords"
-		content="Veterans Support, Homeless Shelter, Soup Kitchen, Veterans Housing, Veterans Recovery, PTSD Support, Military Support, Addiction Recovery, Life Skills Training, Community Outreach, Augusta Maine, Kennebec County, Veterans Services, Emergency Shelter, Free Meals, Veteran Rehabilitation, Mental Health Support, Trauma Recovery, Veteran Community, Maine Veterans, VA Maine">
+		content="Veterans Support, Homeless Shelter, Soup Kitchen, Veterans Housing, Community Outreach, Veterans Services, Emergency Shelter, Free Meals, Veteran Community, Maine Veterans">
 	<meta name="author" content="Arthur Belanger | Bread of Life Web Development Team - Lead Developer">
+	
+	<!-- Use same robots meta tag for crawling and indexing of the page  -->
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="English">
 
@@ -22,7 +24,7 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Veterans Support & Community Services | Augusta, ME | Bread of Life">
 	<meta property="og:description"
-		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs. Dedicated to helping those who served and those in need. Call 207-626-3434 for assistance.">
+		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
 	<meta property="og:url" content="https://mainebreadoflife.org">
 	<meta property="og:site_name" content="Bread of Life">
 	<meta property="og:locale" content="en_US">
@@ -37,7 +39,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Veterans Support & Community Services | Augusta, ME">
 	<meta name="twitter:description"
-		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs. Dedicated to helping those who served and those in need. Call 207-626-3434 for assistance.">
+		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
 	<meta name="twitter:image" content="https://mainebreadoflife.org/assets/img/sign.webp">
 	<meta name="twitter:image:width" content="1685">
 	<meta name="twitter:image:height" content="1080">
@@ -56,16 +58,26 @@
 	<meta http-equiv="X-Content-Type-Options" content="nosniff">
 	<meta http-equiv="X-XSS-Protection" content="1; mode=block">
 	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-	<meta http-equiv="Content-Security-Policy"
-		content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-src https://www.google.com; object-src 'none';">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self';
+			script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
+			style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
+			img-src 'self' data: https:;
+			font-src 'self' https://fonts.gstatic.com;
+			connect-src 'self' https://www.google-analytics.com;
+			frame-src https://www.google.com https://www.youtube.com;
+			object-src 'none';
+			form-action 'self' https://www.google.com https://www.paypal.com;
+			frame-ancestors 'none';
+			report-uri /csp-report-endpoint/;">
+	<meta http-equiv="Permissions-Policy"
+		content="geolocation=(self), microphone=(self), camera=(self), interest-cohort=()">
 
-	<link rel="pingback" href="https://mainebreadoflife.org">
-	<link rel="canonical" href="https://mainebreadoflife.org/shelters.html">
+	<!-- Link and Favicons -->
+	<link rel="canonical" href="https://mainebreadoflife.org/index.html">
 	<link href="assets/img/favicon.webp" rel="icon" type="image/webp">
 	<link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
 	<link rel="alternate" type="application/rss+xml" title="Maine Bread of Life Updates"
 		href="https://mainebreadoflife.org/feed.rss">
-
 
 	<!-- Resource hints for faster loading -->
 	<link rel="manifest" href="/manifest.json">
@@ -77,9 +89,8 @@
 	<link href="https://www.google.com" rel="preconnect" crossorigin>
 
 	<!-- Preload critical assets -->
-	<link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-	<link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style">
-
+	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
+	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style">
 
 	<!-- Font loading with performance optimization -->
 	<link
@@ -87,76 +98,94 @@
 		rel="stylesheet" media="print" onload="this.media='all'">
 
 	<!-- Preload CSS components -->
-	<link href="assets/css/main.css" rel="stylesheet">
+	<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/custom-styles.css" rel="stylesheet" type="text/css">
 
 	<!-- CSS files with performance optimization -->
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" media="print"
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="print"
+		onload="this.media='all'" crossorigin="anonymous">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css" media="print"
+		onload="this.media='all'" crossorigin="anonymous">
+	<link href="/assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print"
 		onload="this.media='all'">
-	<link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="assets/css/custom-styles.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print"
+		onload="this.media='all'">
+	<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
 	<!-- Fallback for CSS loading when JavaScript is disabled -->
 	<noscript>
-		<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-		<link href="assets/vendor/aos/aos.css" rel="stylesheet">
-		<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-		<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+		<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+		<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+		<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 	</noscript>
 
 	<!-- Page-specific Schema (Add this) -->
 	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Organization",
-		"name": "Maine Bread of Life",
-		"url": "https://mainebreadoflife.org",
-		"logo": "https://mainebreadoflife.org/assets/img/logo.webp",
-		"sameAs": [
-			"https://www.facebook.com/MaineBreadofLife"
-		],
-		"contactPoint": {
-			"@type": "ContactPoint",
-			"telephone": "+1-207-626-3434",
-			"contactType": "Customer Service",
-			"areaServed": "US",
-			"availableLanguage": "English"
-		},
-		"founder": {
-			"@type": "Person",
-			"name": "Carolyn Neighoff"
-		},
-		"employee": [
 			{
-				"@type": "Person",
-				"name": "Victoria Abbott",
-				"jobTitle": "Executive Director"
-			},
-			{
-				"@type": "Person",
-				"name": "Laura Briggs",
-				"jobTitle": "Director of Operations"
-			},
-			{
-				"@type": "Person",
-				"name": "Arthur Daniel Belanger Jr.",
-				"jobTitle": "Web Development Team - Lead Developer"
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Maine Bread of Life",
+				"url": "https://mainebreadoflife.org",
+				"logo": "https://mainebreadoflife.org/assets/img/logo.webp",
+				"sameAs": [
+					"https://www.facebook.com/MaineBreadofLife"
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"telephone": "+1-207-626-3434",
+					"contactType": "Customer Service",
+					"areaServed": "US",
+					"availableLanguage": "English"
+				},
+				"founder": {
+					"@type": "Person",
+					"name": "Carolyn Neighoff"
+				},
+				"employee": [
+					{
+						"@type": "Person",
+						"name": "Victoria Abbott",
+						"jobTitle": "Executive Director"
+					},
+					{
+						"@type": "Person",
+						"name": "Laura Briggs",
+						"jobTitle": "Director of Operations"
+					},
+					{
+						"@type": "Person",
+						"name": "Arthur Daniel Belanger Jr.",
+						"jobTitle": "Lead Website Developer",
+						"worksFor": {
+						  "@type": "Organization",
+						  "name": "Maine Bread of Life",
+						  "url": "https://www.mainebreadoflife.org"
+						},
+						"address": {
+						  "@type": "PostalAddress",
+						  "streetAddress": "157 Water Street",
+						  "addressLocality": "Augusta",
+						  "addressRegion": "ME",
+						  "postalCode": "04330",
+						  "addressCountry": "US"
+						},
+						"url": "https://www.mainebreadoflife.org"
+				},
+				"creator": {
+	  				"@type": "Person",
+	  				"name": "Arthur Belanger",
+	  				"affiliation": {
+	    			"@type": "Organization",
+	    			"name": "Maine Bread of Life Web Development Team"
+	  			}
 			}
-		],
-		"address": {
-			"@type": "PostalAddress",
-			"streetAddress": "157 Water Street",
-			"addressLocality": "Augusta",
-			"addressRegion": "ME",
-			"postalCode": "04330",
-			"addressCountry": "US"
-		},
-		"description": "Bread of Life Ministries serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs. Over 40 years of compassionate outreach and support services."
-	}
-</script>
+				"description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
+			}
+		</script>
 
 	<!-- Page-specific Schema (Add this) -->
 	<script type="application/ld+json">
@@ -210,6 +239,16 @@
 	</script>
 
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM4L36RV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6HM4L36RV0');
+</script>
 
 <body class="service-details-page">
 	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">

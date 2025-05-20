@@ -11,10 +11,12 @@
 
 	<!-- 2. SEO Basics -->
 	<meta name="description"
-		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs. Dedicated to helping those who served and those in need. Call 207-626-3434 for assistance.">
+		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
 	<meta name="keywords"
-		content="Veterans Support, Homeless Shelter, Soup Kitchen, Veterans Housing, Veterans Recovery, PTSD Support, Military Support, Addiction Recovery, Life Skills Training, Community Outreach, Augusta Maine, Kennebec County, Veterans Services, Emergency Shelter, Free Meals, Veteran Rehabilitation, Mental Health Support, Trauma Recovery, Veteran Community, Maine Veterans, VA Maine">
+		content="Veterans Support, Homeless Shelter, Soup Kitchen, Veterans Housing, Community Outreach, Veterans Services, Emergency Shelter, Free Meals, Veteran Community, Maine Veterans">
 	<meta name="author" content="Arthur Belanger | Bread of Life Web Development Team - Lead Developer">
+	
+	<!-- Use same robots meta tag for crawling and indexing of the page  -->
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="English">
 
@@ -22,7 +24,7 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Veterans Support & Community Services | Augusta, ME | Bread of Life">
 	<meta property="og:description"
-		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs. Dedicated to helping those who served and those in need. Call 207-626-3434 for assistance.">
+		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
 	<meta property="og:url" content="https://mainebreadoflife.org">
 	<meta property="og:site_name" content="Bread of Life">
 	<meta property="og:locale" content="en_US">
@@ -37,7 +39,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Veterans Support & Community Services | Augusta, ME">
 	<meta name="twitter:description"
-		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs. Dedicated to helping those who served and those in need. Call 207-626-3434 for assistance.">
+		content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
 	<meta name="twitter:image" content="https://mainebreadoflife.org/assets/img/sign.webp">
 	<meta name="twitter:image:width" content="1685">
 	<meta name="twitter:image:height" content="1080">
@@ -71,7 +73,6 @@
 		content="geolocation=(self), microphone=(self), camera=(self), interest-cohort=()">
 
 	<!-- Link and Favicons -->
-	<link rel="pingback" href="https://mainebreadoflife.org">
 	<link rel="canonical" href="https://mainebreadoflife.org/index.html">
 	<link href="assets/img/favicon.webp" rel="icon" type="image/webp">
 	<link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
@@ -124,78 +125,95 @@
 
 	<!-- Page-specific Schema (Add this) -->
 	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "Organization",
-			"name": "Maine Bread of Life",
-			"url": "https://mainebreadoflife.org",
-			"logo": "https://mainebreadoflife.org/assets/img/logo.webp",
-			"sameAs": [
-				"https://www.facebook.com/MaineBreadofLife"
-			],
-			"contactPoint": {
-				"@type": "ContactPoint",
-				"telephone": "+1-207-626-3434",
-				"contactType": "Customer Service",
-				"areaServed": "US",
-				"availableLanguage": "English"
-			},
-			"founder": {
-				"@type": "Person",
-				"name": "Carolyn Neighoff"
-			},
-			"employee": [
-				{
-					"@type": "Person",
-					"name": "Victoria Abbott",
-					"jobTitle": "Executive Director"
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Maine Bread of Life",
+				"url": "https://mainebreadoflife.org",
+				"logo": "https://mainebreadoflife.org/assets/img/logo.webp",
+				"sameAs": [
+					"https://www.facebook.com/MaineBreadofLife"
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"telephone": "+1-207-626-3434",
+					"contactType": "Customer Service",
+					"areaServed": "US",
+					"availableLanguage": "English"
 				},
-				{
+				"founder": {
 					"@type": "Person",
-					"name": "Laura Briggs",
-					"jobTitle": "Director of Operations"
+					"name": "Carolyn Neighoff"
 				},
-				{
-					"@type": "Person",
-					"name": "Arthur Daniel Belanger Jr.",
-					"jobTitle": "Lead Website Developer",
-					"worksFor": {
-					  "@type": "Organization",
-					  "name": "Bread of Life Ministries",
-					  "url": "https://www.breadoflifeministry.org"
+				"employee": [
+					{
+						"@type": "Person",
+						"name": "Victoria Abbott",
+						"jobTitle": "Executive Director"
 					},
-					"address": {
-					  "@type": "PostalAddress",
-					  "streetAddress": "157 Water Street",
-					  "addressLocality": "Augusta",
-					  "addressRegion": "ME",
-					  "postalCode": "04330",
-					  "addressCountry": "US"
+					{
+						"@type": "Person",
+						"name": "Laura Briggs",
+						"jobTitle": "Director of Operations"
 					},
-					"url": "https://www.breadoflifeministry.org"
-			},
-			"description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs. Over 40 years of compassionate outreach and support services."
-		}
-	</script>
+					{
+						"@type": "Person",
+						"name": "Arthur Daniel Belanger Jr.",
+						"jobTitle": "Lead Website Developer",
+						"worksFor": {
+						  "@type": "Organization",
+						  "name": "Maine Bread of Life",
+						  "url": "https://www.mainebreadoflife.org"
+						},
+						"address": {
+						  "@type": "PostalAddress",
+						  "streetAddress": "157 Water Street",
+						  "addressLocality": "Augusta",
+						  "addressRegion": "ME",
+						  "postalCode": "04330",
+						  "addressCountry": "US"
+						},
+						"url": "https://www.mainebreadoflife.org"
+				},
+				"creator": {
+	  				"@type": "Person",
+	  				"name": "Arthur Belanger",
+	  				"affiliation": {
+	    			"@type": "Organization",
+	    			"name": "Maine Bread of Life Web Development Team"
+	  			}
+			}
+				"description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
+			}
+		</script>
 
 	<!-- Page-specific Schema (Add this) -->
 	<script type="application/ld+json">
-		{
-		  "@context": "https://schema.org",
-		  "@type": "WebSite",
-		  "url": "https://mainebreadoflife.org/",
-		  "name": "Bread of Life",
-		  "description": "Bread of Life: Serving veterans and the Augusta, ME community for over 40 years.",
-		  "potentialAction": {
-			"@type": "SearchAction",
-			"target": "https://mainebreadoflife.org/search?q={search_term_string}",
-			"query-input": "required name=search_term_string"
-		  }
-		}
-		</script>
+			{
+			  "@context": "https://schema.org",
+			  "@type": "WebSite",
+			  "url": "https://mainebreadoflife.org/",
+			  "name": "Maine Bread of Life",
+			  "description": "Maine Bread of Life: Serving veterans and the Augusta, ME community for over 40 years.",
+			  "potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://mainebreadoflife.org/search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			  }
+			}
+			</script>
 
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM4L36RV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6HM4L36RV0');
+</script>
 
 <body class="service-details-page">
 	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">
