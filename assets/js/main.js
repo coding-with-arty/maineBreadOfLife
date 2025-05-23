@@ -204,4 +204,64 @@
 
     });
 
+    // Scroll Observer Utility
+    function createScrollObserver(callback, options = { threshold: 0.1 }) {
+        return new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) callback(entry.target);
+            });
+        }, options);
+    }
+
+    // Image Loading Enhancement
+    const MAX_RETRIES = 3;
+    const RETRY_DELAY = 1000;
+
+    function handleImageLoaded(img) {
+        if (imageStatus.has(img)) {
+            imageStatus.delete(img);
+        }
+    }
+
+    function handleImageError(img) {
+        if (!imageStatus.has(img)) return;
+        const status = imageStatus.get(img);
+        
+        if (status.retries < MAX_RETRIES) {
+            status.retries++;
+            status.loading = false;
+            setTimeout(() => {
+                if (imageStatus.has(img)) {
+                    const cacheBuster = `?retry=${Date.now()}`;
+                    const originalSrc = status.src.split('?')[0];
+                    img.src = originalSrc + cacheBuster;
+                    status.loading = true;
+                }
+            }, RETRY_DELAY * status.retries);
+        } else {
+            console.warn(`Failed to load image after ${MAX_RETRIES} retries: ${img.src}`);
+        }
+    }
+
+    // Initialize image tracking
+    document.addEventListener('DOMContentLoaded', function() {
+        const allImages = document.querySelectorAll('img');
+        const imageStatus = new Map();
+        
+        allImages.forEach(img => {
+            if (img.complete && img.naturalHeight !== 0) return;
+            imageStatus.set(img, {
+                src: img.src,
+                retries: 0,
+                loading: false
+            });
+            
+            img.addEventListener('load', () => handleImageLoaded(img));
+            img.addEventListener('error', () => handleImageError(img));
+            
+            if (!img.hasAttribute('loading')) {
+                img.setAttribute('loading', 'lazy');
+            }
+        });
+    });
 })();

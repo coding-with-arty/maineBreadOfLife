@@ -11,6 +11,33 @@ document.addEventListener('DOMContentLoaded', function() {
   setupFormHandlers();
 });
 
+// Volunteer Form Handling
+document.addEventListener('DOMContentLoaded', function() {
+    const volunteerForm = document.getElementById('volunteerForm');
+    if (volunteerForm) {
+        volunteerForm.addEventListener('submit', function(e) {
+            if (!this.checkValidity()) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.add('was-validated');
+                return false;
+            }
+
+            const recaptchaResponse = grecaptcha && grecaptcha.getResponse();
+            if (!recaptchaResponse || recaptchaResponse.length === 0) {
+                alert('Please complete the reCAPTCHA verification.');
+                e.preventDefault();
+                return false;
+            }
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 
+                '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
+        });
+    }
+});
+
 /**
  * Load CSRF tokens for contact and newsletter forms
  */
@@ -135,6 +162,34 @@ function setupFormHandlers() {
       // We're not preventing default because we want the traditional form submission
       // This is more reliable on GoDaddy hosting than AJAX
     });
+  }
+  
+  // Volunteer Form Validation
+  function validateVolunteerForm() {
+    const form = document.getElementById('volunteerForm');
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+      form.classList.add('was-validated');
+      return false;
+    }
+
+    const recaptchaResponse = grecaptcha && grecaptcha.getResponse();
+    if (!recaptchaResponse || recaptchaResponse.length === 0) {
+      alert('Please complete the reCAPTCHA verification.');
+      return false;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
+    return true;
+  }
+  
+  const volunteerForm = document.getElementById('volunteerForm');
+  if (volunteerForm) {
+    volunteerForm.addEventListener('submit', validateVolunteerForm);
   }
   
   // Newsletter form handlers

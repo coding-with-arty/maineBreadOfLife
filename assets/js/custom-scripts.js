@@ -8,7 +8,67 @@ window.onload = function() {
     window.scrollTo(0, 0);
 };
 
+// Initialize core components
+function initCoreComponents() {
+    // AOS Animation
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+
+    // Bootstrap Tooltips
+    const tooltipList = initBootstrapComponents('[data-bs-toggle="tooltip"]', 'Tooltip');
+    
+    // Bootstrap Popovers
+    const popoverList = initBootstrapComponents('[data-bs-toggle="popover"]', 'Popover');
+
+    // Back to Top Button
+    initBackToTop();
+
+    // Swiper Sliders
+    initSwipers();
+}
+
+// Generic Bootstrap component initializer
+function initBootstrapComponents(selector, componentType) {
+    return [].slice.call(document.querySelectorAll(selector))
+        .map(el => new bootstrap[componentType](el));
+}
+
+// Back to Top functionality
+function initBackToTop() {
+    const backToTop = document.querySelector('.back-to-top');
+    if (!backToTop) return;
+
+    const toggleVisibility = () => {
+        backToTop.classList.toggle('active', window.scrollY > 100);
+    };
+
+    window.addEventListener('load', toggleVisibility);
+    document.addEventListener('scroll', toggleVisibility);
+    backToTop.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Initialize Swiper sliders
+function initSwipers() {
+    document.querySelectorAll('.init-swiper').forEach(swiperEl => {
+        try {
+            const config = JSON.parse(swiperEl.querySelector('.swiper-config').innerHTML);
+            new Swiper(swiperEl, config);
+        } catch (e) {
+            console.error('Swiper initialization error:', e);
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    initCoreComponents();
+
     // Force scroll to top again after DOM is loaded
     window.scrollTo(0, 0);
     // Swiper configuration handling
@@ -52,10 +112,67 @@ document.addEventListener('DOMContentLoaded', function() {
             // Form validation can be added here
         });
     }
+
+    // Service Page Statistics Animation
+    function animateStats() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.textContent);
+            let current = 0;
+            const increment = target / 50;
+
+            const updateCount = () => {
+                if (current < target) {
+                    current += increment;
+                    stat.textContent = current >= target ? target.toLocaleString() : Math.ceil(current).toLocaleString();
+                    requestAnimationFrame(updateCount);
+                }
+            };
+
+            const statsObserver = createScrollObserver(() => updateCount());
+            statsObserver.observe(stat);
+        });
+    }
+
+    // Initialize stats counter
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateStats();
+                observer.unobserve(statsSection);
+            }
+        }, { threshold: 0.1 });
+        observer.observe(statsSection);
+    }
+
+    // Handle URL parameter messages
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+    const message = urlParams.get('message');
+
+    if (status && message) {
+        const alertClass = status === 'success' ? 'alert-success' : 'alert-danger';
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert ${alertClass} alert-dismissible fade show`;
+        alertDiv.role = 'alert';
+        alertDiv.innerHTML = `
+            ${decodeURIComponent(message)}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        
+        const container = document.querySelector('main') || document.body;
+        container.insertAdjacentElement('afterbegin', alertDiv);
+    }
 });
 
 // Google Maps initialization (if needed)
 function initMap() {
     // This function can be used if custom map initialization is needed
     // Currently using iframe embed which doesn't require this
+}
+
+// Function to create a scroll observer
+function createScrollObserver(callback) {
+    return new IntersectionObserver(callback, { threshold: 0.1 });
 }
