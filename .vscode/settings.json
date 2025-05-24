@@ -45,15 +45,20 @@
         }
     },
     "[html]": {
-        "editor.defaultFormatter": "HookyQR.beautify",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
     "[css]": {
-        "editor.defaultFormatter": "HookyQR.beautify",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
     "[javascript]": {
-        "editor.defaultFormatter": "HookyQR.beautify",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on"
     }
 }

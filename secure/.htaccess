@@ -1,1 +1,14 @@
-Require all denied
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Allow legitimate form submissions
+    RewriteCond %{REQUEST_URI} ^/secure/[^/]+\.php$
+    RewriteCond %{REQUEST_METHOD} POST
+    RewriteCond %{HTTP_REFERER} ^https://mainebreadoflife.org/ [NC]
+    RewriteRule ^ - [L]
+
+    # Block all other access
+    RewriteRule ^.*$ - [F,L]
+</IfModule>
