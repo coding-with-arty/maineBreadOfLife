@@ -3,8 +3,9 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\js"
+    "\\assets\\js",
+    "\\forms"
   ],
-  "SelectedNode": "\\contact-us.html",
+  "SelectedNode": "\\.htaccess",
   "PreviewInSolutionExplorer": false
 }

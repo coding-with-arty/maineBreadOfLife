@@ -27,8 +27,9 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
         <item>
             <title><?= htmlspecialchars($item['title']) ?></title>
             <link><?= $base_url . $item['link'] ?></link>
-            <guid isPermaLink="false"><?= md5($item['link']) ?></guid>
+            <guid><?= $base_url . $item['link'] ?></guid>
             <pubDate><?= date(DATE_RSS, $item['pubDate']) ?></pubDate>
+            <dc:creator><![CDATA[Arthur Belanger]]></dc:creator>
             <description><![CDATA[<?= $item['description'] ?>]]></description>
         </item>
         <?php endforeach; ?>

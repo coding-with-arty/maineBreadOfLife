@@ -178,20 +178,20 @@ ErrorDocument 401 /error.html
 ErrorDocument 400 /error.html
 
 # Force HTTPS (uncomment when ready to enforce SSL)
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#   RewriteCond %{HTTPS} off
-#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# </IfModule>
-
-# Prevent image hotlinking
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteCond %{HTTP_REFERER} !^$
-  RewriteCond %{HTTP_REFERER} !^https://(www\.)?mainebreadoflife\.org/.*$ [NC]
-  RewriteCond %{HTTP_REFERER} !^https://www\.google\.com/.*$ [NC]
-  RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
+
+# Prevent image hotlinking/Comment this out for development/ Uncomment for deployment
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTP_REFERER} !^$
+#   RewriteCond %{HTTP_REFERER} !^https://(www\.)?mainebreadoflife\.org/.*$ [NC]
+#   RewriteCond %{HTTP_REFERER} !^https://www\.google\.com/.*$ [NC]
+#   RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
+# </IfModule>
 
 # Add caching headers for static assets
 <FilesMatch "\.(css|js|webp|woff2)$">

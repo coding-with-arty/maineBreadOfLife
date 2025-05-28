@@ -71,8 +71,7 @@
 	<link rel="canonical" href="https://mainebreadoflife.org/index.html">
 	<link href="assets/img/favicon.webp" rel="icon" type="image/webp">
 	<link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
-	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.rss" />
-	<link rel="alternate" type="application/rss+xml" title="Maine Bread of Life Updates" href="https://mainebreadoflife.org/feed.rss">
+	<link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg">
 
 	<!-- Resource hints for faster loading -->
 	<link rel="manifest" href="/manifest.json">
@@ -217,21 +216,19 @@
 			}]
 		}
 	</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM4L36RV0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-6HM4L36RV0');
+	</script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM4L36RV0"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
-
-	gtag('config', 'G-6HM4L36RV0');
-</script>
 
 <body class="service-details-page">
 	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">
@@ -406,7 +403,7 @@
 									<button type="submit" class="btn btn-primary">Send Message</button>
 								</div>
 								<!-- Display success/error messages -->
-								<div id="form-messages" class="mt-3"></div>
+								<div id="form-messages" class="mt-3" aria-live="polite"></div>
 							</form>
 						</section>
 					</div>
@@ -543,6 +540,15 @@
 						<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 							<div class="faq-container">
 
+								<div class="faq-item faq-active">
+									<h3><span class="num">4.</span> <span>How do I get a voucher?</span></h3>
+									<div class="faq-content">
+										<p><i class="bi bi-house"> </i><a href="https://www.mainehousing.org/" title="Visit Maine Housing" target="_blank" rel="nofollow noreferrer">Maine Housing Website</a></p>
+									</div>
+									<i class="faq-toggle bi bi-chevron-right"></i>
+								</div>
+								<!-- End Faq item-->
+
 								<div class="faq-item">
 									<h3><span class="num">2.</span> <span>Are you a church?</span></h3>
 									<div class="faq-content">
@@ -563,15 +569,6 @@
 												TODAY!
 											</a>
 										</p>
-									</div>
-									<i class="faq-toggle bi bi-chevron-right"></i>
-								</div>
-								<!-- End Faq item-->
-
-								<div class="faq-item">
-									<h3><span class="num">4.</span> <span>How do I get a voucher?</span></h3>
-									<div class="faq-content">
-										<p>Maine Housing Link here</p>
 									</div>
 									<i class="faq-toggle bi bi-chevron-right"></i>
 								</div>
@@ -882,7 +879,7 @@
 								   title="Bread Of Life PayPal"></i>
 							</a>
 							<a href="https://www.youtube.com/@HousingMattersPod" target="_blank" rel="noopener noreferrer" title="Housing Matters Podcast"><i class="bi bi-youtube"></i></a>
-							<a href="/feed.rss" class="rss-link" title="Subscribe via RSS" aria-label="Subscribe via RSS feed">
+							<a href="/feed.php" class="rss-link" title="Subscribe via RSS" aria-label="Subscribe via RSS feed">
 								<i class="bi bi-rss"></i>
 							</a>
 						</center>
