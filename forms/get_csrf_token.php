@@ -1,6 +1,6 @@
 <?php
 // Load configuration first
-require_once __DIR__ . '/config.php';
+require_once(__DIR__ . '/../config.php');
 
 // CORS headers
 header('Access-Control-Allow-Origin: https://mainebreadoflife.org'); // Replace with your actual domain

@@ -28,7 +28,7 @@
 	<meta property="og:image:width" content="1685">
 	<meta property="og:image:height" content="1080">
 	<meta property="og:image:type" content="image/webp">
-	<meta property="og:updated_time" content="2025-06-06T16:20:00-04:00">
+	<meta property="og:updated_time" content="2025-04-02T19:58:41-04:00">
 	<meta property="article:publisher" content="https://www.facebook.com/MaineBreadofLife">
 
 	<!-- 4. Social Sharing - Twitter -->
@@ -54,7 +54,7 @@
 	<meta http-equiv="X-XSS-Protection" content="1; mode=block">
 	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self';
-			script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
+			script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
 			style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
 			img-src 'self' data: https:;
 			font-src 'self' https://fonts.gstatic.com;
@@ -82,33 +82,29 @@
 	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 	<link href="https://www.google.com" rel="preconnect" crossorigin>
 
-	<!-- Preload critical assets -->
-	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style">
-
 	<!-- Font loading with performance optimization -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-	<!-- Preload CSS components -->
-	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/custom-styles.css" rel="stylesheet" type="text/css">
+	<!-- Critical CSS (load immediately) -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/custom-styles.css">
 
-	<!-- CSS files with performance optimization -->
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous">
-	<link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="assets/dist/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<!-- Performance-optimized CSS loading -->
+	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-	<!-- Fallback for CSS loading when JavaScript is disabled -->
+	<!-- Fallback for users with JavaScript disabled -->
 	<noscript>
-		<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-		<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-		<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-		<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+		<link rel="stylesheet" href="/assets/vendor/glightbox/css/glightbox.min.css">
+		<link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
 	</noscript>
+
 
 	<!-- Page-specific Schema (Add this) -->
 	<script type="application/ld+json">
@@ -454,7 +450,7 @@
 						<li><i class="bi bi-person-raised-hand"></i> <a href="volunteer.html"> Volunteer</a></li>
 						<li><i class="bi bi-info-circle"> </i> <a href="contact-us.html"> Resource Office</a></li>
 						<li>
-							<a href=".\assets\img\clients\h_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Housing Application Form">
+							<a href="./assets/img/clients/h_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Housing Application Form">
 								<i class="bi bi-file-pdf"></i><span>
 									Housing
 									Application
@@ -462,7 +458,7 @@
 							</a>
 						</li>
 						<li>
-							<a href=".\assets\img\clients\vol_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Volunteer Application Form">
+							<a href="./assets/img/clients/vol_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Volunteer Application Form">
 								<i class="bi bi-file-pdf"></i><span>
 									Volunteer
 									Application

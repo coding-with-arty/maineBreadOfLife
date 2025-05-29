@@ -25,7 +25,7 @@ session_start();
 define('BREAD_OF_LIFE_LOADED', true);
 
 // Include configuration
-require_once __DIR__ . '/config.php';
+require_once(__DIR__ . '/../config.php');
 
 // Generate CSRF token if it doesn't exist
 if (!isset($_SESSION['csrf_token'])) {
@@ -38,16 +38,16 @@ $receiving_email_address = 'receptionist@mainebreadoflife.org';
 // Function to log errors (useful for debugging on GoDaddy)
 function logError($message) {
   $logFile = __DIR__ . '/newsletter_errors.log';
-  
+
   // Create the log directory if it doesn't exist
   $logDir = dirname($logFile);
   if (!file_exists($logDir)) {
     mkdir($logDir, 0755, true);
   }
-  
+
   // Try to write to the log file
   error_log(date('[Y-m-d H:i:s] ') . $message . "\n", 3, $logFile);
-  
+
   // Store in session for user feedback
   $_SESSION['error'] = $message;
 }
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $recaptchaResponse = $_POST['g-recaptcha-response'];
     $secretKey = RECAPTCHA_SECRET_KEY;
     $verifyResponse = false;
-    
+
       // Try using cURL first (more reliable on GoDaddy)
     if (function_exists('curl_version')) {
       $ch = curl_init();
@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $verifyResponse = true;
       }
     }
-    
+
       // Verify Response
     if ($verifyResponse && intval($responseKeys["success"]) !== 1) {
       logError('reCAPTCHA verification failed. Please try again.');
@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: ' . $redirect_url);
     exit();
   }
-  
+
     // Check for duplicate submissions (optional)
   if (isset($_SESSION['last_email_submission']) && $_SESSION['last_email_submission'] === $email && time() - $_SESSION['last_submission_time'] < 3600) {
     $redirect_url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.html';
@@ -139,38 +139,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Prepare email content
   $to = $receiving_email_address;
   $subject = "New Newsletter Subscription";
-  
+
     // Headers optimized for GoDaddy
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "From: Bread of Life <no-reply@" . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'mainebreadoflife.org') . ">\r\n";
   $headers .= "Reply-To: $email\r\n";
   $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
   $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-  
+
     // Email body
   $message = "New newsletter subscription from: $email\r\n";
   $message .= "Submitted on: " . date('Y-m-d H:i:s') . "\r\n";
   $message .= "IP Address: " . $_SERVER['REMOTE_ADDR'] . "\r\n";
-  
+
     // Send email - GoDaddy optimized
     // Add a small delay before sending to prevent rate limiting
     usleep(100000); // 100ms delay
-    
+
     // Set additional parameters for GoDaddy mail servers
     $additional_params = null;
-    
+
     // On GoDaddy, sometimes you need to specify the sendmail path
     if (ini_get('sendmail_path')) {
       $additional_params = '-f' . 'no-reply@' . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'mainebreadoflife.org');
     }
-    
+
     // Send the email with proper parameters
     $mail_sent = mail($to, $subject, $message, $headers, $additional_params);
-    
+
     // Store submission info to prevent duplicates
     $_SESSION['last_email_submission'] = $email;
     $_SESSION['last_submission_time'] = time();
-    
+
     if ($mail_sent) {
       // Send confirmation to subscriber
       $subscriber_subject = "Thank you for subscribing to Bread of Life Newsletter";
@@ -181,10 +181,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $subscriber_message .= "Warm regards,\r\n";
       $subscriber_message .= "The Bread of Life Team\r\n";
       $subscriber_message .= "https://mainebreadoflife.org";
-      
+
       // Send confirmation email
       @mail($email, $subscriber_subject, $subscriber_message, $headers, $additional_params);
-      
+
       $status = 'success';
       $message = 'Thank you for subscribing! You will receive a confirmation email shortly.';
     } else {

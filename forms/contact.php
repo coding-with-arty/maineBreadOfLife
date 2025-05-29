@@ -20,7 +20,7 @@ session_start();
 define('BREAD_OF_LIFE_LOADED', true);
 
 // Include configuration
-require_once(__DIR__ . '/config.php');
+require_once(__DIR__ . '/../config.php');
 
 // Set error reporting for debugging (enabled for GoDaddy troubleshooting)
 error_reporting(E_ALL);
@@ -36,16 +36,16 @@ if (!isset($_SESSION['csrf_token'])) {
 // Function to log errors (useful for debugging on GoDaddy)
 function logError($message) {
     $logFile = __DIR__ . '/form_errors.log';
-    
+
     // Create the log directory if it doesn't exist
     $logDir = dirname($logFile);
     if (!file_exists($logDir)) {
         mkdir($logDir, 0755, true);
     }
-    
+
     // Try to write to the log file
     error_log(date('[Y-m-d H:i:s] ') . $message . "\n", 3, $logFile);
-    
+
     // Store in session for user feedback
     $_SESSION['error'] = $message;
 }
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // GoDaddy sometimes has issues with file_get_contents for external URLs
         // Try using cURL first, fallback to file_get_contents
         $verifyResponse = false;
-        
+
         if (function_exists('curl_version')) {
             // Use cURL if available (more reliable on GoDaddy)
             $ch = curl_init();
@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $verifyResponse = true;
             }
         }
-        
+
         if ($verifyResponse && intval($responseKeys["success"]) !== 1) {
             logError('reCAPTCHA verification failed. Please try again.');
             $redirect_url = '../contact-us.html';
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         // GoDaddy typically has a lower upload limit
         $maxFileSize = 8 * 1024 * 1024; // 8 MB is safer for GoDaddy
-        
+
         // Create upload directory if it doesn't exist (important for GoDaddy)
         $uploadDir = __DIR__ . '/uploads/';
         if (!file_exists($uploadDir)) {
@@ -204,11 +204,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Location: ' . $redirect_url);
                 exit();
             }
-            
+
             // Get file extension for extra security
             $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
             $allowedExts = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'gif', 'xls', 'xlsx'];
-            
+
             if (!in_array($fileExt, $allowedExts)) {
                 logError("File extension '.$fileExt' is not allowed for '$fileName'.");
                 $redirect_url = '../contact-us.html';
@@ -216,11 +216,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Location: ' . $redirect_url);
                 exit();
             }
-            
+
             // Create a unique filename to prevent overwriting
             $newFileName = time() . '_' . md5($fileName) . '.' . $fileExt;
             $destination = $uploadDir . $newFileName;
-            
+
             if (!move_uploaded_file($fileTmp, $destination)) {
                 logError("Failed to upload file '$fileName'. Please check folder permissions.");
                 $redirect_url = '../contact-us.html';
@@ -228,7 +228,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Location: ' . $redirect_url);
                 exit();
             }
-            
+
             // Store the file path for email attachment
             $uploadedFiles[] = [
                 'path' => $destination,
@@ -240,17 +240,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // If everything is valid, send email - GoDaddy optimized version
     $to = "receptionist@mainebreadoflife.org"; // Replace with your recipient email address
     $subject = "New Contact Form Submission: $topic";
-    
+
     // Create a boundary for the multipart message
     $boundary = md5(time());
-    
+
     // Headers optimized for GoDaddy
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "From: Bread of Life <no-reply@" . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'mainebreadoflife.org') . ">\r\n";
     $headers .= "Reply-To: $name <$email>\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
     $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
-    
+
     // Email body
     $message_body = "--$boundary\r\n";
     $message_body .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -260,7 +260,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message_body .= "Email: $email\r\n";
     $message_body .= "Topic: $topic\r\n";
     $message_body .= "Message:\r\n$message\r\n\r\n";
-    
+
     // Add attachments if any
     if (!empty($uploadedFiles)) {
         foreach ($uploadedFiles as $file) {
@@ -273,42 +273,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     }
-    
+
     // Close the message boundary
     $message_body .= "--$boundary--";
-    
+
     // Send the email - GoDaddy specific handling
     // Add a small delay before sending to prevent rate limiting
     usleep(100000); // 100ms delay
-    
+
     // Set additional parameters for GoDaddy mail servers
     $additional_params = null;
-    
+
     // On GoDaddy, sometimes you need to specify the sendmail path
     if (ini_get('sendmail_path')) {
         $additional_params = '-f' . 'no-reply@' . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'mainebreadoflife.org');
     }
-    
+
     // Send the email with proper parameters
     $mail_sent = mail($to, $subject, $message_body, $headers, $additional_params);
-    
+
     if ($mail_sent) {
         // Send auto-response to the person who submitted the form
         $auto_subject = "Thank you for contacting Bread of Life";
         $auto_headers = "MIME-Version: 1.0\r\n";
         $auto_headers .= "From: Bread of Life <no-reply@" . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'mainebreadoflife.org') . ">\r\n";
         $auto_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-        
+
         $auto_message = "Dear $name,\r\n\r\n";
         $auto_message .= "Thank you for contacting Bread of Life. We have received your message regarding '$topic'.\r\n\r\n";
         $auto_message .= "Our team will review your message and get back to you as soon as possible.\r\n\r\n";
         $auto_message .= "Feed - Shelter - Empower,\r\n";
         $auto_message .= "The Bread of Life Team\r\n";
         $auto_message .= "https://mainebreadoflife.org";
-        
+
         // Don't worry if auto-response fails
         @mail($email, $auto_subject, $auto_message, $auto_headers);
-        
+
         // Use URL parameters instead of session
         $redirect_url = '../contact-us.html';
         $redirect_url .= '?status=success&message=' . urlencode('Thank you for contacting us. Your message has been sent successfully.');

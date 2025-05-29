@@ -1,8 +1,10 @@
 <?php
-// Start output buffering to prevent header issues on GoDaddy
+// volunteer.php
+
+// Start output buffering
 ob_start();
 
-// Ensure session works on GoDaddy
+// Ensure session works on all hosts
 if (ini_get('session.save_path') == '') {
     $sessionPath = __DIR__ . '/sessions';
     if (!file_exists($sessionPath)) {
@@ -12,9 +14,9 @@ if (ini_get('session.save_path') == '') {
 }
 session_start();
 
-// Define security constant before including config
+// Load configuration
 define('BREAD_OF_LIFE_LOADED', true);
-require_once(__DIR__ . '/config.php');
+require_once(__DIR__ . '/../config.php');
 
 // Error reporting
 error_reporting(E_ALL);
@@ -62,13 +64,19 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // Handle file uploads
 $uploadedFiles = [];
 if (!empty($_FILES['attachment']['name'][0])) {
-    $allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/png'];
+    $allowedTypes = [
+        'application/pdf',
+        'application/msword',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        'image/jpeg',
+        'image/png'
+    ];
     $uploadDir = __DIR__ . '/uploads/';
     if (!file_exists($uploadDir)) mkdir($uploadDir, 0755, true);
 
     foreach ($_FILES['attachment']['name'] as $i => $name) {
         $tmp = $_FILES['attachment']['tmp_name'][$i];
-        $type = $_FILES['attachment']['type'][$i];
+        $type = mime_content_type($tmp);
         $size = $_FILES['attachment']['size'][$i];
 
         if ($size > 8 * 1024 * 1024) {
@@ -102,12 +110,12 @@ require '../vendor/autoload.php';
 $mail = new PHPMailer(true);
 try {
     $mail->isSMTP();
-    $mail->Host = 'smtp.example.com';
+    $mail->Host = SMTP_HOST;
     $mail->SMTPAuth = true;
-    $mail->Username = 'your@email.com';
-    $mail->Password = 'yourpassword';
+    $mail->Username = SMTP_USERNAME;
+    $mail->Password = SMTP_PASSWORD;
     $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
+    $mail->Port = SMTP_PORT;
 
     $mail->setFrom($email, "$firstName $lastName");
     $mail->addAddress('volunteer@mainebreadoflife.org', 'Volunteer Coordinator');

@@ -28,7 +28,7 @@
 	<meta property="og:image:width" content="1685">
 	<meta property="og:image:height" content="1080">
 	<meta property="og:image:type" content="image/webp">
-	<meta property="og:updated_time" content="2025-06-06T16:20:00-04:00">
+	<meta property="og:updated_time" content="2025-04-02T19:58:41-04:00">
 	<meta property="article:publisher" content="https://www.facebook.com/MaineBreadofLife">
 
 	<!-- 4. Social Sharing - Twitter -->
@@ -54,7 +54,7 @@
 	<meta http-equiv="X-XSS-Protection" content="1; mode=block">
 	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self';
-			script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
+			script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
 			style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
 			img-src 'self' data: https:;
 			font-src 'self' https://fonts.gstatic.com;
@@ -72,6 +72,7 @@
 	<link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
 	<link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg">
 
+
 	<!-- Resource hints for faster loading -->
 	<link rel="manifest" href="/manifest.json">
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -81,34 +82,29 @@
 	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 	<link href="https://www.google.com" rel="preconnect" crossorigin>
 
-	<!-- Preload critical assets -->
-	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style">
-
 	<!-- Font loading with performance optimization -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-	<!-- Preload CSS components -->
-	<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
-	<link href="/assets/css/custom-styles.css" rel="stylesheet" type="text/css">
+	<!-- Critical CSS (load immediately) -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/custom-styles.css">
 
-	<!-- CSS files with performance optimization -->
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous">
-	<link href="/assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<!-- Performance-optimized CSS loading -->
+	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-	<!-- Fallback for CSS loading when JavaScript is disabled -->
+	<!-- Fallback for users with JavaScript disabled -->
 	<noscript>
-		<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-		<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-		<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-		<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+		<link rel="stylesheet" href="/assets/vendor/glightbox/css/glightbox.min.css">
+		<link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
 	</noscript>
+
 
 	<!-- Page-specific Schema (Add this) -->
 	<script type="application/ld+json">
@@ -233,7 +229,7 @@
 	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">
 		<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 			<a href="https://mainebreadoflife.org" class="logo d-flex align-items-center" aria-label="Bread of Life Home">
-				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo in white" title="Back To Home Page" loading="eager">
+				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo" title="Back To Home Page" loading="eager">
 			</a>
 			<nav role="navigation" id="navmenu" class="navmenu" aria-label="Primary navigation">
 				<ul>
@@ -262,7 +258,7 @@
 				</h1>
 				<hr />
 				<h3>
-					Bread Of Life has been the backbone of it's community for decades,<br /> please reach out and
+					Bread Of Life has been the backbone of its community for decades,<br /> please reach out and
 					volunteer
 					today.
 				</h3>
@@ -514,33 +510,39 @@
 								<div class="card-body">
 									<form id="volunteerForm" class="needs-validation" novalidate action="forms/volunteer.php" method="POST" enctype="multipart/form-data" onsubmit="return validateVolunteerForm()">
 										<input type="hidden" name="csrf_token" value="<?php echo isset($_SESSION['csrf_token']) ? $_SESSION['csrf_token'] : ''; ?>">
+
 										<div class="row g-3">
+											<!-- First Name -->
 											<div class="col-md-6">
-												<label for="firstName" class="form-label">First Name *</label>
-												<input type="text" class="form-control" id="firstName" name="firstName" required>
+												<label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+												<input type="text" class="form-control" id="firstName" name="firstName" required aria-describedby="firstNameHelp">
 												<div class="invalid-feedback">Please enter your first name.</div>
 											</div>
+
+											<!-- Last Name -->
 											<div class="col-md-6">
-												<label for="lastName" class="form-label">Last Name *</label>
-												<input type="text" class="form-control" id="lastName" name="lastName" required>
+												<label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+												<input type="text" class="form-control" id="lastName" name="lastName" required aria-describedby="lastNameHelp">
 												<div class="invalid-feedback">Please enter your last name.</div>
 											</div>
+
+											<!-- Email -->
 											<div class="col-md-6">
-												<label for="email" class="form-label">Email *</label>
-												<input type="email" class="form-control" id="email" name="email" required>
+												<label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+												<input type="email" class="form-control" id="email" name="email" required aria-describedby="emailHelp">
 												<div class="invalid-feedback">Please enter a valid email address.</div>
 											</div>
+
+											<!-- Phone -->
 											<div class="col-md-6">
 												<label for="phone" class="form-label">Phone</label>
-												<input type="tel" class="form-control" id="phone" name="phone">
+												<input type="tel" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
 											</div>
+
+											<!-- Interest -->
 											<div class="col-12">
-												<label for="interest" class="form-label">
-													I'm interested in volunteering
-													for
-													*
-												</label>
-												<select class="form-select" id="interest" required>
+												<label for="interest" class="form-label">I'm interested in volunteering for <span class="text-danger">*</span></label>
+												<select class="form-select" id="interest" name="interest" required>
 													<option value="" selected disabled>Select an option</option>
 													<option value="soup-kitchen">Soup Kitchen</option>
 													<option value="special-projects">Special Projects</option>
@@ -549,42 +551,40 @@
 												</select>
 												<div class="invalid-feedback">Please select an option.</div>
 											</div>
+
+											<!-- Message -->
 											<div class="col-12">
-												<label for="message" class="form-label">
-													Tell us about yourself and why
-													you'd like to
-													volunteer *
-												</label>
+												<label for="message" class="form-label">Tell us about yourself and why you'd like to volunteer <span class="text-danger">*</span></label>
 												<textarea class="form-control" id="message" name="message" rows="4" required></textarea>
 												<div class="invalid-feedback">Please tell us about yourself.</div>
 											</div>
+
+											<!-- Terms Agreement -->
 											<div class="col-12">
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" id="terms" name="terms" required>
 													<label class="form-check-label" for="terms">
-														I agree to the <a href="hmis.html" target="_blank"
-																		  rel="noopener noreferrer">privacy policy</a> and <a href="security-policy.html"
-																						  target="_blank" rel="noopener noreferrer">terms of service</a> *
+														I agree to the <a href="hmis.html" target="_blank" rel="noopener noreferrer">privacy policy</a> and <a href="security-policy.html" target="_blank" rel="noopener noreferrer">terms of service</a> <span class="text-danger">*</span>
 													</label>
-													<div class="invalid-feedback">
-														You must agree before submitting.
-													</div>
+													<div class="invalid-feedback">You must agree before submitting.</div>
 												</div>
 											</div>
+
+											<!-- reCAPTCHA -->
 											<div class="col-12">
 												<div class="g-recaptcha mb-3" data-sitekey="6LcjtgUrAAAAAIOqKQc6Txmusc4zoxPqkBMt5vwS"></div>
 											</div>
+
+											<!-- Submit Button -->
 											<div class="col-12">
-												<button class="btn btn-primary" type="submit">
-													Submit
-													Application
-												</button>
+												<button class="btn btn-primary" type="submit">Submit Application</button>
 											</div>
 										</div>
 									</form>
 								</div>
 							</div>
 						</section>
+
 						<hr />
 						<div class="row gy-4 align-items-center features-item">
 							<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
@@ -616,7 +616,7 @@
 									Augusta Elks - Lodge 964
 								</h3>
 								<p>
-									The Augusta Maine Elks Lodge has consistently demonstrated an unwavering commitment to the Maine Bread of Life, serving as a pillar of support for their vital mission. Through dedicated fundraising initiatives, the Elks Lodge has provided essential financial resources, enabling the Bread of Life to continue offering sustenance and hope to those in need within the community. 
+									The Augusta Maine Elks Lodge has consistently demonstrated an unwavering commitment to the Maine Bread of Life, serving as a pillar of support for their vital mission. Through dedicated fundraising initiatives, the Elks Lodge has provided essential financial resources, enabling the Bread of Life to continue offering sustenance and hope to those in need within the community.
 								</p>
 								<p>
 									Beyond monetary contributions, members of the Augusta Elks Lodge regularly volunteer their time and effort, actively participating in the day-to-day operations and special events of the Maine Bread of Life. This continuous and multifaceted support exemplifies the Elks' enduring dedication to local charitable endeavors and their profound impact on the well-being of their fellow citizens.
@@ -854,7 +854,7 @@
 						<li><i class="bi bi-person-raised-hand"></i> <a href="volunteer.html"> Volunteer</a></li>
 						<li><i class="bi bi-info-circle"> </i> <a href="contact-us.html"> Resource Office</a></li>
 						<li>
-							<a href=".\assets\img\clients\h_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Housing Application Form">
+							<a href="./assets/img/clients/h_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Housing Application Form">
 								<i class="bi bi-file-pdf"></i><span>
 									Housing
 									Application
@@ -862,7 +862,7 @@
 							</a>
 						</li>
 						<li>
-							<a href=".\assets\img\clients\vol_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Volunteer Application Form">
+							<a href="./assets/img/clients/vol_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Volunteer Application Form">
 								<i class="bi bi-file-pdf"></i><span>
 									Volunteer
 									Application

@@ -6,11 +6,10 @@
 	<meta charset="utf-8">
 	<base href="/" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Soup Kitchen & Free Meals | Community Outreach Program | Augusta, ME | Bread of Life</title>
+	<title>Soup Kitchen & Free Meals | Bread of Life | Augusta, ME</title>
 
 	<!-- 2. SEO Basics -->
-	<meta name="description" content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
-	<meta name="keywords" content="Veterans Support, Homeless Shelter, Soup Kitchen, Veterans Housing, Community Outreach, Veterans Services, Emergency Shelter, Free Meals, Veteran Community, Maine Veterans">
+	<meta name="description" content="Bread of Life Soup Kitchen in Augusta, ME has been serving nutritious meals to the community since 1984. Open Monday through Friday for breakfast and lunch, we welcome all in need with compassion and dignity.">
 	<meta name="author" content="Arthur Belanger | Bread of Life Web Development Team - Lead Developer">
 
 	<!-- Use same robots meta tag for crawling and indexing of the page  -->
@@ -54,7 +53,7 @@
 	<meta http-equiv="X-XSS-Protection" content="1; mode=block">
 	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self';
-			script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
+			script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
 			style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
 			img-src 'self' data: https:;
 			font-src 'self' https://fonts.gstatic.com;
@@ -67,7 +66,7 @@
 	<meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(self), camera=(self), interest-cohort=()">
 
 	<!-- Link and Favicons -->
-	<link rel="canonical" href="https://mainebreadoflife.org/index.html">
+	<link rel="canonical" href="https://mainebreadoflife.org/soup-kitchen.html">
 	<link href="assets/img/favicon.webp" rel="icon" type="image/webp">
 	<link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
 	<link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg">
@@ -82,34 +81,29 @@
 	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 	<link href="https://www.google.com" rel="preconnect" crossorigin>
 
-	<!-- Preload critical assets -->
-	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style">
-
 	<!-- Font loading with performance optimization -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-	<!-- Preload CSS components -->
-	<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
-	<link href="/assets/css/custom-styles.css" rel="stylesheet" type="text/css">
+	<!-- Critical CSS (load immediately) -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/custom-styles.css">
 
-	<!-- CSS files with performance optimization -->
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous">
-	<link href="/assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<!-- Performance-optimized CSS loading -->
+	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-	<!-- Fallback for CSS loading when JavaScript is disabled -->
+	<!-- Fallback for users with JavaScript disabled -->
 	<noscript>
-		<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-		<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-		<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-		<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+		<link rel="stylesheet" href="/assets/vendor/glightbox/css/glightbox.min.css">
+		<link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
 	</noscript>
+
 
 	<!-- Page-specific Schema (Add this) -->
 	<script type="application/ld+json">
@@ -240,19 +234,19 @@
 	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">
 		<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 			<a href="https://mainebreadoflife.org" class="logo d-flex align-items-center" aria-label="Bread of Life Home">
-				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo in white" loading="eager" title="Back To Home Page">
+				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo" loading="eager" title="Back To Home Page">
 			</a>
 			<nav role="navigation" id="navmenu" class="navmenu" aria-label="Primary navigation">
 				<ul>
-					<li role="menuitem"><a href="https://mainebreadoflife.org" rel="preload">Home</a></li>
+					<li role="menuitem"><a href="https://mainebreadoflife.org">Home</a></li>
 					<li role="menuitem">
 						<a href="soup-kitchen.html" class="active" aria-current="page">Soup Kitchen</a>
 					</li>
-					<li role="menuitem"><a href="arts-house.html" rel="preload">ART's House</a></li>
-					<li role="menuitem"><a href="shelters.html" rel="preload">Shelters</a></li>
-					<li role="menuitem"><a href="services.html" rel="preload">Services</a></li>
-					<li role="menuitem"><a href="volunteer.html" rel="preload">Volunteer</a></li>
-					<li role="menuitem"><a href="contact-us.html" rel="preload">Contact Us</a></li>
+					<li role="menuitem"><a href="arts-house.html">ART's House</a></li>
+					<li role="menuitem"><a href="shelters.html">Shelters</a></li>
+					<li role="menuitem"><a href="services.html">Services</a></li>
+					<li role="menuitem"><a href="volunteer.html">Volunteer</a></li>
+					<li role="menuitem"><a href="contact-us.html">Contact Us</a></li>
 					<li role="menuitem"><a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PGTFGX7RU4QHQ"><i class="bi bi-paypal"></i></a></li>
 					<li role="menuitem"><a href="https://www.instagram.com/mainebreadoflife/" target="_blank" title=" Be a part of our Instagram family"><i class="bi bi-instagram"></i></a></li>
 					<li role="menuitem"><a href="https://www.facebook.com/MaineBreadofLife" target="_blank" title="Follow us on Facebook"><i class="bi bi-facebook"></i></a></li>
@@ -370,7 +364,7 @@
 								</p>
 								<p>
 									Bread of Life serves anywhere from 100 to 150 sit-down/take-home meals per day for breakfast and lunch, Monday through Friday. This ranges up to 26,000 to 39,000 meals per year.
-								<p />
+								</p>
 							</div>
 						</div>
 					</div>
@@ -535,7 +529,7 @@
 								<h3><span class="num">3.</span> <span>How can I help out or Volunteer?</span></h3>
 								<div class="faq-content">
 									<p>
-										Bread of Life relies on it's community for Volunteers and Donations to be able to help those in need, <a href="volunteer.html" rel="preload" target="_blank">
+										Bread of Life relies on it's community for Volunteers and Donations to be able to help those in need, <a href="volunteer.html" target="_blank">
 											VOLUNTEER
 											TODAY!
 										</a>
@@ -721,7 +715,7 @@
 					</span>
 					<div class="footer-contact pt-3">
 						<p>
-							159 Water Street
+							157 Water Street
 						</p>
 						<p>
 							Augusta, Maine 04330

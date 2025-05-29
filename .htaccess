@@ -24,6 +24,13 @@ Order Allow,Deny
 Deny from all
 </Files>
 
+# Protect .env file
+<Files .env>
+  Order allow,deny
+  Deny from all
+</Files>
+
+
 # Protect all PHP files in the forms directory
 <FilesMatch "^form_errors\.log$">
 Order Allow,Deny

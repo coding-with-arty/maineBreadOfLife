@@ -55,7 +55,7 @@
 	<meta http-equiv="X-XSS-Protection" content="1; mode=block">
 	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self';
-			script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
+			script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
 			style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
 			img-src 'self' data: https:;
 			font-src 'self' https://fonts.gstatic.com;
@@ -73,6 +73,7 @@
 	<link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
 	<link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg">
 
+
 	<!-- Resource hints for faster loading -->
 	<link rel="manifest" href="/manifest.json">
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -82,34 +83,29 @@
 	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 	<link href="https://www.google.com" rel="preconnect" crossorigin>
 
-	<!-- Preload critical assets -->
-	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style">
-
 	<!-- Font loading with performance optimization -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-	<!-- Preload CSS components -->
-	<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
-	<link href="/assets/css/custom-styles.css" rel="stylesheet" type="text/css">
+	<!-- Critical CSS (load immediately) -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/custom-styles.css">
 
-	<!-- CSS files with performance optimization -->
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous">
-	<link href="/assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-	<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<!-- Performance-optimized CSS loading -->
+	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-	<!-- Fallback for CSS loading when JavaScript is disabled -->
+	<!-- Fallback for users with JavaScript disabled -->
 	<noscript>
-		<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-		<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-		<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-		<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+		<link rel="stylesheet" href="/assets/vendor/glightbox/css/glightbox.min.css">
+		<link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
 	</noscript>
+
 
 	<!-- Page-specific Schema (Add this) -->
 	<script type="application/ld+json">
@@ -234,7 +230,7 @@
 	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">
 		<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 			<a href="https://mainebreadoflife.org" class="logo d-flex align-items-center" aria-label="Bread of Life Home">
-				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo in white" title="Back To Home Page">
+				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo" title="Back To Home Page">
 			</a>
 			<nav role="navigation" id="navmenu" class="navmenu" aria-label="Primary navigation">
 				<ul>
@@ -349,10 +345,10 @@
 						</div>
 					</div>
 					<!-- /Section -->
-
+					<!-- Contact Form -->
 					<div class="col-lg-6 mb-4 mb-lg-0">
 						<section id="contact-form" class="comment-form section">
-							<form action="https://mainebreadoflife.org/forms/contact.php" method="post" role="form" aria-labelledby="contact-heading" class="php-email-form d-flex flex-column" enctype="multipart/form-data">
+							<form action="forms/contact.php" method="POST" enctype="multipart/form-data" class="php-email-form d-flex flex-column" role="form" aria-labelledby="contact-heading" novalidate>
 								<h4 id="contact-heading"><u>Contact Us Today</u></h4>
 								<p>
 									<em>
@@ -361,6 +357,10 @@
 									</em><br />
 									<strong>All Fields Required</strong>
 								</p>
+
+								<!-- CSRF Token -->
+								<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'] ?? ''; ?>">
+
 								<div class="row">
 									<div class="col-md-6 form-group">
 										<input name="name" type="text" class="form-control contact-form" placeholder="Your Name" required aria-label="Your Name">
@@ -369,42 +369,43 @@
 										<input name="email" type="email" class="form-control contact-form" placeholder="Your Email" required aria-label="Your Email">
 									</div>
 								</div>
+
 								<div class="row">
 									<div class="col form-group">
 										<input name="topic" type="text" class="form-control contact-form" placeholder="Topic" required aria-label="Topic">
 									</div>
 								</div>
+
 								<div class="row flex-grow-1">
 									<div class="col form-group h-100">
 										<textarea name="message" class="form-control contact-form h-100" placeholder="Enter your message here..." required aria-label="Message"></textarea>
 									</div>
 								</div>
+
 								<div class="row">
 									<div class="text-center">
 										<label for="file-upload" class="btn btn-primary file-upload-btn">
 											Attach Files (e.g., applications, images, or documents)
 										</label>
-										<input id="file-upload" name="attachment[]" type="file" multiple aria-label="Attach files" aria-describedby="file-description">
+										<input id="file-upload" name="attachment[]" type="file" multiple aria-label="Attach files" aria-describedby="file-description" class="d-none">
 										<small id="file-description" class="d-block mt-2 text-muted">
-											Maximum file size:
-											8MB. Accepted formats: PDF, DOC, DOCX, JPG, JPEG, PNG, GIF, TXT, ZIP, XLS,
+											Maximum file size: 8MB. Accepted formats: PDF, DOC, DOCX, JPG, JPEG, PNG, GIF, TXT, ZIP, XLS
 										</small>
 									</div>
 								</div>
-								<div class="g-recaptcha" data-sitekey="6LcjtgUrAAAAAIOqKQc6Txmusc4zoxPqkBMt5vwS"></div>
-								<input type="hidden" name="csrf_token" id="csrf_token" value="">
-								<div id="csrf-loading" class="csrf-loading-style">
-									<div class="spinner-border spinner-border-sm text-primary" role="status">
-										<span class="visually-hidden">Loading security token...</span>
-									</div>
-									<small class="ms-1">Loading security...</small>
-								</div>
+
+								<!-- reCAPTCHA -->
+								<div class="g-recaptcha my-3" data-sitekey="6LcjtgUrAAAAAIOqKQc6Txmusc4zoxPqkBMt5vwS"></div>
+
+								<!-- Submit Button -->
 								<div class="text-center mt-3">
 									<button type="submit" class="btn btn-primary">Send Message</button>
 								</div>
-								<!-- Display success/error messages -->
+
+								<!-- Feedback Message -->
 								<div id="form-messages" class="mt-3" aria-live="polite"></div>
 							</form>
+
 						</section>
 					</div>
 					<hr />
@@ -842,7 +843,7 @@
 						<li><i class="bi bi-person-raised-hand"></i> <a href="volunteer.html"> Volunteer</a></li>
 						<li><i class="bi bi-info-circle"> </i> <a href="contact-us.html"> Resource Office</a></li>
 						<li>
-							<a href=".\assets\img\clients\h_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Housing Application Form">
+							<a href="./assets/img/clients/h_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Housing Application Form">
 								<i class="bi bi-file-pdf"></i><span>
 									Housing
 									Application
@@ -850,7 +851,7 @@
 							</a>
 						</li>
 						<li>
-							<a href=".\assets\img\clients\vol_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Volunteer Application Form">
+							<a href="./assets/img/clients/vol_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Volunteer Application Form">
 								<i class="bi bi-file-pdf"></i><span>
 									Volunteer
 									Application
@@ -929,6 +930,21 @@
 	<script src="assets/js/image-loader.js" type="text/javascript" defer></script>
 	<script src="assets/js/form-handler.js" type="text/javascript" defer></script>
 	<script src="assets/js/custom-scripts.js" type="text/javascript" defer></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const params = new URLSearchParams(window.location.search);
+		  const status = params.get("status");
+		  const message = params.get("message");
+
+		  if (status && message) {
+			const formMessages = document.getElementById("form-messages");
+			if (formMessages) {
+			  formMessages.classList.add("alert", status === "success" ? "alert-success" : "alert-danger");
+			  formMessages.textContent = decodeURIComponent(message.replace(/\+/g, ' '));
+			}
+		  }
+		});
+	</script>
 </body>
 
 </html>
