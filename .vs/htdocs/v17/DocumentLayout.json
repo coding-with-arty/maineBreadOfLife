@@ -3,6 +3,17 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthur.belanger\\Scripts\\git_backup.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\contact-us.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:contact-us.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\tests\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\assets\\css\\tests\\main-julius.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\tests\\main-julius.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -13,10 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\arts-house.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:arts-house.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\contact-us.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:contact-us.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\volunteer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -54,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "privacy-conduct.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\privacy-conduct.html",
               "RelativeDocumentMoniker": "privacy-conduct.html",
@@ -78,11 +85,12 @@
               "RelativeToolTip": "privacy-conduct.html",
               "ViewState": "AgIAAP8CAAAAAAAAAAAAAAkDAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:58.27Z"
+              "WhenOpened": "2025-05-28T23:13:58.27Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "shelters.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\shelters.html",
               "RelativeDocumentMoniker": "shelters.html",
@@ -90,11 +98,12 @@
               "RelativeToolTip": "shelters.html",
               "ViewState": "AgIAAFkDAAAAAAAAAAAAAGoDAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:36.949Z"
+              "WhenOpened": "2025-05-28T23:13:36.949Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "services.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\services.html",
               "RelativeDocumentMoniker": "services.html",
@@ -102,11 +111,12 @@
               "RelativeToolTip": "services.html",
               "ViewState": "AgIAAPUCAAAAAAAAAAAAAAQDAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:39.603Z"
+              "WhenOpened": "2025-05-28T23:13:39.603Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "index.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -114,11 +124,12 @@
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAACEDAAAAAAAAAAAAAC0DAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T22:21:06.909Z"
+              "WhenOpened": "2025-05-28T22:21:06.909Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "hmis.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\hmis.html",
               "RelativeDocumentMoniker": "hmis.html",
@@ -126,11 +137,12 @@
               "RelativeToolTip": "hmis.html",
               "ViewState": "AgIAAPsBAAAAAAAAAAAswPsBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:52.421Z"
+              "WhenOpened": "2025-05-28T23:13:52.421Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "soup-kitchen.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\soup-kitchen.html",
               "RelativeDocumentMoniker": "soup-kitchen.html",
@@ -138,11 +150,12 @@
               "RelativeToolTip": "soup-kitchen.html",
               "ViewState": "AgIAADoDAAAAAAAAAAAAAEcDAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:23.819Z"
+              "WhenOpened": "2025-05-28T23:13:23.819Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "volunteer.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\volunteer.html",
               "RelativeDocumentMoniker": "volunteer.html",
@@ -150,23 +163,25 @@
               "RelativeToolTip": "volunteer.html",
               "ViewState": "AgIAAH8DAAAAAAAAAAAqwI8DAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:44.023Z"
+              "WhenOpened": "2025-05-28T23:13:44.023Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "contact-us.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\contact-us.html",
               "RelativeDocumentMoniker": "contact-us.html",
               "ToolTip": "C:\\xampp\\htdocs\\contact-us.html",
               "RelativeToolTip": "contact-us.html",
-              "ViewState": "AgIAAIEDAAAAAAAAAAAAAJIDAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAJECAAAAAAAAAAAAAKQCAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:48.189Z"
+              "WhenOpened": "2025-05-28T23:13:48.189Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "arts-house.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\arts-house.html",
               "RelativeDocumentMoniker": "arts-house.html",
@@ -174,11 +189,12 @@
               "RelativeToolTip": "arts-house.html",
               "ViewState": "AgIAABEDAAAAAAAAAAAAACADAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:26.859Z"
+              "WhenOpened": "2025-05-28T23:13:26.859Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "error.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\error.html",
               "RelativeDocumentMoniker": "error.html",
@@ -191,15 +207,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "main-julius.css",
               "DocumentMoniker": "C:\\xampp\\htdocs\\assets\\css\\tests\\main-julius.css",
               "RelativeDocumentMoniker": "assets\\css\\tests\\main-julius.css",
               "ToolTip": "C:\\xampp\\htdocs\\assets\\css\\tests\\main-julius.css",
               "RelativeToolTip": "assets\\css\\tests\\main-julius.css",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAAAG0AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAAG0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-05-30T04:52:00.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\tests\\index.html",
+              "RelativeDocumentMoniker": "tests\\index.html",
+              "ToolTip": "C:\\xampp\\htdocs\\tests\\index.html",
+              "RelativeToolTip": "tests\\index.html",
+              "ViewState": "AgIAACMBAAAAAAAAAAAAAM4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-30T12:38:13.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "git_backup.ps1",
+              "DocumentMoniker": "C:\\Users\\arthur.belanger\\Scripts\\git_backup.ps1",
+              "RelativeDocumentMoniker": "..\\..\\Users\\arthur.belanger\\Scripts\\git_backup.ps1",
+              "ToolTip": "C:\\Users\\arthur.belanger\\Scripts\\git_backup.ps1",
+              "RelativeToolTip": "..\\..\\Users\\arthur.belanger\\Scripts\\git_backup.ps1",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-30T13:08:21.882Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- 1. Essential Setup -->
+	<meta charset="utf-8">
+	<base href="/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Volunteer | Community Outreach Program | Augusta, ME | Bread of Life</title>
+
+	<!-- 2. SEO Basics -->
+	<meta name="description" content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
+	<meta name="keywords" content="Veterans Support, Homeless Shelter, Soup Kitchen, Veterans Housing, Community Outreach, Veterans Services, Emergency Shelter, Free Meals, Veteran Community, Maine Veterans">
+	<meta name="author" content="Arthur Belanger | Bread of Life Web Development Team - Lead Developer">
+
+	<!-- Use same robots meta tag for crawling and indexing of the page  -->
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="English">
+
+	<!-- 3. Social Sharing - Open Graph (Facebook, LinkedIn) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Veterans Support & Community Services | Augusta, ME | Bread of Life">
+	<meta property="og:description" content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
+	<meta property="og:url" content="https://mainebreadoflife.org">
+	<meta property="og:site_name" content="Bread of Life">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:image" content="https://mainebreadoflife.org/assets/img/sign.webp">
+	<meta property="og:image:width" content="1685">
+	<meta property="og:image:height" content="1080">
+	<meta property="og:image:type" content="image/webp">
+	<meta property="og:updated_time" content="2025-04-02T19:58:41-04:00">
+	<meta property="article:publisher" content="https://www.facebook.com/MaineBreadofLife">
+
+	<!-- 4. Social Sharing - Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Veterans Support & Community Services | Augusta, ME">
+	<meta name="twitter:description" content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
+	<meta name="twitter:image" content="https://mainebreadoflife.org/assets/img/sign.webp">
+	<meta name="twitter:image:width" content="1685">
+	<meta name="twitter:image:height" content="1080">
+	<meta name="twitter:image:type" content="image/webp">
+	<meta name="twitter:site" content="@MaineBreadofLife">
+	<meta name="twitter:creator" content="@MaineBreadofLife">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- 5. Other Helpful Meta -->
+	<meta name="theme-color" content="#0d6efd">
+	<meta name="scroll-restoration" content="manual">
+	<meta http-equiv="Cache-Control" content="public, max-age=31536000">
+	<meta name="google-site-verification" content="gO5P_EY6XkK9EaqQJTYtkdUL9ZESyJYKQqc1_rC3JzQ">
+
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self';
+			script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com;
+			style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
+			img-src 'self' data: https:;
+			font-src 'self' https://fonts.gstatic.com;
+			connect-src 'self' https://www.google-analytics.com;
+			frame-src https://www.google.com https://www.youtube.com;
+			object-src 'none';
+			form-action 'self' https://www.google.com https://www.paypal.com;
+			frame-ancestors 'none';
+			report-uri /csp-report-endpoint/;">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(self), camera=(self), interest-cohort=()">
+
+	<!-- Link and Favicons -->
+	<link rel="canonical" href="https://mainebreadoflife.org/index.html">
+	<link href="assets/img/favicon.webp" rel="icon" type="image/webp">
+	<link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
+	<link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg">
+
+
+	<!-- Resource hints for faster loading -->
+	<link rel="manifest" href="/manifest.json">
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+	<link rel="dns-prefetch" href="https://www.google.com">
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+	<link href="https://www.google.com" rel="preconnect" crossorigin>
+
+	<!-- Font loading with performance optimization -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+	<!-- Critical CSS (load immediately) -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/custom-styles.css">
+
+	<!-- Performance-optimized CSS loading -->
+	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+	<link rel="preload" href="/assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+	<!-- Fallback for users with JavaScript disabled -->
+	<noscript>
+		<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+		<link rel="stylesheet" href="/assets/vendor/glightbox/css/glightbox.min.css">
+		<link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
+	</noscript>
+
+
+	<!-- Page-specific Schema (Add this) -->
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "Maine Bread of Life",
+		  "url": "https://mainebreadoflife.org",
+		  "logo": "https://mainebreadoflife.org/assets/img/logo.webp",
+		  "sameAs": [
+			"https://www.facebook.com/MaineBreadofLife"
+		  ],
+		  "contactPoint": {
+			"@type": "ContactPoint",
+			"telephone": "+1-207-626-3434",
+			"contactType": "Customer Service",
+			"areaServed": "US",
+			"availableLanguage": "English"
+		  },
+		  "founder": {
+			"@type": "Person",
+			"name": "Carolyn Neighoff"
+		  },
+		  "employee": [
+			{
+			  "@type": "Person",
+			  "name": "Victoria Abbott",
+			  "jobTitle": "Executive Director"
+			},
+			{
+			  "@type": "Person",
+			  "name": "Laura Briggs",
+			  "jobTitle": "Director of Operations"
+			},
+			{
+			  "@type": "Person",
+			  "name": "Arthur Daniel Belanger Jr.",
+			  "jobTitle": "Lead Website Developer",
+			  "worksFor": {
+				"@type": "Organization",
+				"name": "Maine Bread of Life",
+				"url": "https://www.mainebreadoflife.org"
+			  },
+			  "address": {
+				"@type": "PostalAddress",
+				"streetAddress": "157 Water Street",
+				"addressLocality": "Augusta",
+				"addressRegion": "ME",
+				"postalCode": "04330",
+				"addressCountry": "US"
+			  },
+			  "url": "https://www.mainebreadoflife.org"
+			}
+		  ],
+		  "description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
+		}
+	</script>
+
+	<!-- Page-specific Schema for Volunteer Page -->
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "HousingProject",
+		  "name": "Volunteer - Bread of Life Veterans Housing",
+		  "description": "Volunteer with the Bread of Life in Augusta, Maine.",
+		  "url": "https://mainebreadoflife.org/arts-house.html",
+		  "image": "https://mainebreadoflife.org/assets/img/arts-house.webp",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "157 Water Street",
+			"addressLocality": "Augusta",
+			"addressRegion": "ME",
+			"postalCode": "04330",
+			"addressCountry": "US"
+		  },
+		  "audience": {
+			"@type": "Audience",
+			"audienceType": "Community"
+		  },
+		  "telephone": "+1-207-626-3434",
+		  "provider": {
+			"@type": "Organization",
+			"name": "Maine Bread of Life",
+			"url": "https://mainebreadoflife.org"
+		  }
+		}
+	</script>
+
+	<!-- Breadcrumb Schema -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://mainebreadoflife.org/"
+			}, {
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Volunteer",
+				"item": "https://mainebreadoflife.org/volunteer.html"
+			}]
+		}
+	</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM4L36RV0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-6HM4L36RV0');
+	</script>
+</head>
+
+<body class="service-details-page">
+	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">
+		<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+			<a href="https://mainebreadoflife.org" class="logo d-flex align-items-center" aria-label="Bread of Life Home">
+				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo" title="Back To Home Page" loading="eager">
+			</a>
+			<nav role="navigation" id="navmenu" class="navmenu" aria-label="Primary navigation">
+				<ul>
+					<li role="menuitem"><a href="https://mainebreadoflife.org" rel="preload">Home</a></li>
+					<li role="menuitem"><a href="soup-kitchen.html" rel="preload">Soup Kitchen</a></li>
+					<li role="menuitem"><a href="arts-house.html" rel="preload">ART's House</a></li>
+					<li role="menuitem"><a href="shelters.html" rel="preload">Shelters</a></li>
+					<li role="menuitem"><a href="services.html" rel="preload">Services</a></li>
+					<li role="menuitem"><a href="volunteer.html" class="active" aria-current="page">Volunteer</a></li>
+					<li role="menuitem"><a href="contact-us.html" rel="preload">Contact Us</a></li>
+					<li role="menuitem"><a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PGTFGX7RU4QHQ"><i class="bi bi-paypal"></i></a></li>
+					<li role="menuitem"><a href="https://www.instagram.com/mainebreadoflife/" target="_blank" title=" Be a part of our Instagram family"><i class="bi bi-instagram"></i></a></li>
+					<li role="menuitem"><a href="https://www.facebook.com/MaineBreadofLife" target="_blank" title="Follow us on Facebook"><i class="bi bi-facebook"></i></a></li>
+				</ul>
+				<button class="mobile-nav-toggle d-xl-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navmenu"><i class="bi bi-list"></i></button>
+			</nav>
+		</div>
+	</header>
+
+
+	<main role="main" class="main" aria-label="Main content">
+		<div class="page-title dark-background">
+			<div class="container position-relative">
+				<h1>
+					Volunteer Today!
+				</h1>
+				<hr />
+				<h3>
+					Bread Of Life has been the backbone of its community for decades,<br /> please reach out and
+					volunteer
+					today.
+				</h3>
+				<nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+					<ol role="list">
+						<li>
+							FEED•SHELTER•EMPOWER
+						</li>
+						<li class="current">
+							Serving Augusta since September 10th, 1984.
+						</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<!-- /P-Title -->
+
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10" data-aos="fade-up" data-aos-delay="200">
+					<article class="article">
+						<div class="post-img">
+							<img class="img-A" src="assets/img/artwrk.webp" alt="ART's House Home Depot Day'" title="Bread of Life Volunteers" aria-describedby="volunteer-heading" loading="lazy">
+						</div>
+						<center>
+							<h3 id="volunteer-heading" class="title">
+								Our staff and volunteers during the ART's House Home Dept build day, without our
+								volunteers
+								theBread of Life would not be able to help those in need.
+							</h3>
+						</center>
+						<hr />
+
+						<!-- Volunteer Opportunities Section -->
+						<section class="mb-5">
+							<div class="card">
+								<div class="card-header bg-primary text-white">
+									<h3 class="mb-0">Volunteer Opportunities</h3>
+								</div>
+								<div class="card-body">
+									<div class="row g-4">
+										<!-- Soup Kitchen Card -->
+										<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+											<div class="service-card h-100 p-3">
+												<div class="d-flex align-items-center">
+													<div class="service-icon bg-primary bg-gradient text-white rounded-3 p-2 me-3 service-icon-inline">
+														<i class="bi bi-cup-hot-fill bi-icon-size"></i>
+													</div>
+													<div>
+														<h5 class="mb-1">Soup Kitchen</h5>
+														<p class="small text-muted mb-1">
+															Help serve meals to those in need
+														</p>
+													</div>
+												</div>
+												<div class="mt-3">
+													<p>Volunteers are needed to serve breakfast and lunch in our soup kitchen. No experience necessary!</p>
+													<div class="alert alert-info p-2 small">
+														<i class="bi bi-info-circle me-2"></i>
+														<strong>Shifts:</strong> 8-10 AM (breakfast) & 10 AM-1:30 PM (lunch)
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Special Projects Card -->
+										<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+											<div class="service-card h-100 p-3">
+												<div class="d-flex align-items-center">
+													<div class="service-icon bg-primary bg-gradient text-white rounded-3 p-2 me-3 service-icon-inline">
+														<i class="bi bi-tools" style="font-size: 1.5rem;"></i>
+													</div>
+													<div>
+														<h5 class="mb-1">Special Projects</h5>
+														<p class="small text-muted mb-1">
+															Group and individual opportunities
+														</p>
+													</div>
+												</div>
+												<div class="mt-3">
+													<p>Perfect for groups, teams, or companies looking to make a significant impact through hands-on projects.</p>
+													<ul class="list-unstyled small">
+														<li class="mb-1"><i class="bi bi-check-circle-fill text-primary me-2"></i> Landscaping & gardening</li>
+														<li class="mb-1"><i class="bi bi-check-circle-fill text-primary me-2"></i> Painting & maintenance</li>
+														<li class="mb-1"><i class="bi bi-check-circle-fill text-primary me-2"></i> Organizing donations</li>
+														<li class="mb-1">
+															<i class="bi bi-check-circle-fill text-primary me-2"></i> And more!
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr />
+						<!-- Inline Image with Spacing -->
+						<div class="row g-3 mb-4">
+							<div class="col-md-4" data-aos="fade-up">
+								<img src="assets/img/sisters.webp" alt="Community dining area" class="img-A">
+							</div>
+							<div class="col-md-4" data-aos="fade-up">
+								<img src="assets/img/mission.webp" alt="Volunteers serving meals" class="img-A">
+							</div>
+							<div class="col-md-4" data-aos="fade-up">
+								<img src="assets/img/cmp.webp" alt="Fresh food preparation" class="img-A">
+							</div>
+						</div>
+						<hr />
+						<!-- Call to Action -->
+						<div class="card bg-light border-0 mb-5">
+							<div class="card-body text-center p-4">
+								<div class="mb-3">
+									<i class="bi bi-people-fill display-4 text-primary"></i>
+								</div>
+								<h3 class="h4 mb-3">Join Our Volunteer Team</h3>
+								<p class="mb-4">Bread of Life relies on its community of volunteers to help those in need. Your time and talents can make a real difference in people's lives.</p>
+								<a href="#volunteer-form" class="btn btn-primary btn-lg px-4">Become a Volunteer</a>
+							</div>
+						</div>
+
+						<hr />
+						<div class="row gy-4 align-items-center features-item">
+							<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+								<img class="img-fluid img-A" src="assets/img/v2.webp" alt="Volunteer Today" loading="lazy" title="Volunteer Fair in Lithgow with Natalie">
+							</div>
+
+							<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+								<h3>
+									Come help today, it will make a difference.
+								</h3>
+								<p>
+									Did you miss Natalie at the volunteer fair in the <a href="https://www.lithgowlibrary.org/" target="_blank" rel="noopener noreferrer" title="Visit Lithgow Public Library">
+										<em>
+											Lithgow
+											Public
+											Library
+										</em>
+									</a>? Are you interested in volunteering? Call the <a href="contact-us.html" title="Contact Us Page">main office</a> 626-3434 to find your perfect volunteer spot at Bread of Life. We need Volunteers of all skill levels to help those
+									in need.
+								</p>
+								<p>
+									As a Bread of Life volunteer, you have the opportunity to meet wonderful people with amazing stories, bringing hope to the hopeless and joy to those who have none. Join our team of volunteers and become a part of positive change in our community, one
+									life at a time.
+								</p>
+							</div>
+						</div>
+						<!-- /Item -->
+						<hr />
+
+						<div class="row gy-4 align-items-center features-item">
+							<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+								<img src="assets/img/feed.webp" class="img-fluid img-A" alt="Reading nook in ART's House'" loading="lazy">
+							</div>
+							<div class="col-md-7" data-aos="fade-up">
+								<h3>
+									Our community helps those in need.
+								</h3>
+								<p>
+									We are thrilled to share some heartwarming news from our community! Thanks to the incredible efforts of Gardiner Federal Credit Union and Maine Bread of Life, a remarkable $24,000 has been raised and donated to Local Food Pantries.
+								</p>
+								<p>
+									This generous contribution will significantly bolster vital work in addressing hunger for individuals and families right here in Maine. This achievement is a testament to the power of collaboration and the profound impact that dedicated volunteers and
+									community partners can make.
+								</p>
+							</div>
+						</div>
+						<!-- /Item -->
+						<hr />
+
+
+						<!-- Volunteer Impact Section -->
+						<section class="mb-5">
+							<div class="card">
+								<div class="card-header bg-primary text-white">
+									<h3 class="mb-0">Volunteer Impact</h3>
+								</div>
+								<div class="card-body">
+									<div class="row g-4">
+										<div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+											<div class="display-4 text-primary fw-bold">600+</div>
+											<p class="text-muted mb-0">Meals Served Daily</p>
+											<p class="small text-muted">With the help of our volunteers</p>
+										</div>
+										<div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="150">
+											<div class="display-4 text-success fw-bold">120+</div>
+											<p class="text-muted mb-0">Shelter Beds</p>
+											<p class="small text-muted">Maintained by volunteer efforts</p>
+										</div>
+										<div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+											<div class="display-4 text-warning fw-bold">58</div>
+											<p class="text-muted mb-0">Housing Units</p>
+											<p class="small text-muted">Supported by volunteers</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<div class="row gy-4 align-items-center features-item">
+							<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+								<img src="assets/img/paint_800.webp" class="img-fluid img-A" alt="Carolyn Neighoff Painting a Brighter Future" loading="lazy" title="Carolyn Neighoff Painting a Brighter Future">
+							</div>
+
+							<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+								<h3>
+									Carolyn Neighoff, Painting a Brighter Future
+								</h3>
+								<p>
+									Forty years ago, a compassionate vision took root in a church soup kitchen, sparked by the unwavering dedication of Carolyn Neighoff. That vision has blossomed into the Bread of Life, a statewide organization that now extends a lifeline to hundreds through
+									daily meals, provides hundreds of stable housing units, and operates multiple shelters.
+								</p>
+								<p>
+									What began as a heartfelt response to immediate needs has become a powerful force for change across Maine, all thanks to Carolyn's enduring commitment. Even after four decades, Carolyn's hands are still at work, not just in guiding the organization, but
+									often found painting, adding beauty and warmth to the spaces that embody her life's work – a beautiful metaphor for her ongoing dedication to painting a brighter future for so many.
+								</p>
+							</div>
+						</div>
+						<!-- /Item -->
+						<hr />
+						<div class="row gy-4 align-items-center features-item">
+							<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+								<img src="assets/img/ben_600.webp" class="img-A" alt="Our volunteers speak'" loading="lazy">
+							</div>
+							<div class="col-md-7" data-aos="fade-up">
+								<h3>
+									Kindness and Love": Our Volunteers Speak
+								</h3>
+								<p>
+									At Bread of Life, our mission is driven by compassion, and we are so grateful for the dedication of our incredible volunteers. We often hear how special the atmosphere is, and we love hearing it directly from those who give their time.
+								</p>
+								<p>
+									As volunteer Ben beautifully put it, Bread of Life is "full of kindness and love." This sentiment truly encapsulates the heart of what we strive to create every day – a welcoming, supportive, and compassionate environment for everyone who walks through
+									our doors, both those we serve and those who serve alongside us.
+								</p>
+							</div>
+						</div>
+						<!-- /Item -->
+						<hr />
+
+						<!-- Volunteer Form Section -->
+						<section id="volunteer-form" class="mb-5">
+							<div class="card">
+								<div class="card-header bg-primary text-white">
+									<h3 class="mb-0">Get Started</h3>
+								</div>
+								<div class="card-body">
+									<form id="volunteerForm" class="needs-validation" novalidate action="forms/volunteer.php" method="POST" enctype="multipart/form-data" onsubmit="return validateVolunteerForm()">
+										<input type="hidden" name="csrf_token" value="<?php echo isset($_SESSION['csrf_token']) ? $_SESSION['csrf_token'] : ''; ?>">
+
+										<div class="row g-3">
+											<!-- First Name -->
+											<div class="col-md-6">
+												<label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+												<input type="text" class="form-control" id="firstName" name="firstName" required aria-describedby="firstNameHelp">
+												<div class="invalid-feedback">Please enter your first name.</div>
+											</div>
+
+											<!-- Last Name -->
+											<div class="col-md-6">
+												<label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+												<input type="text" class="form-control" id="lastName" name="lastName" required aria-describedby="lastNameHelp">
+												<div class="invalid-feedback">Please enter your last name.</div>
+											</div>
+
+											<!-- Email -->
+											<div class="col-md-6">
+												<label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+												<input type="email" class="form-control" id="email" name="email" required aria-describedby="emailHelp">
+												<div class="invalid-feedback">Please enter a valid email address.</div>
+											</div>
+
+											<!-- Phone -->
+											<div class="col-md-6">
+												<label for="phone" class="form-label">Phone</label>
+												<input type="tel" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
+											</div>
+
+											<!-- Interest -->
+											<div class="col-12">
+												<label for="interest" class="form-label">I'm interested in volunteering for <span class="text-danger">*</span></label>
+												<select class="form-select" id="interest" name="interest" required>
+													<option value="" selected disabled>Select an option</option>
+													<option value="soup-kitchen">Soup Kitchen</option>
+													<option value="special-projects">Special Projects</option>
+													<option value="both">Both</option>
+													<option value="other">Other (please specify)</option>
+												</select>
+												<div class="invalid-feedback">Please select an option.</div>
+											</div>
+
+											<!-- Message -->
+											<div class="col-12">
+												<label for="message" class="form-label">Tell us about yourself and why you'd like to volunteer <span class="text-danger">*</span></label>
+												<textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+												<div class="invalid-feedback">Please tell us about yourself.</div>
+											</div>
+
+											<!-- Terms Agreement -->
+											<div class="col-12">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+													<label class="form-check-label" for="terms">
+														I agree to the <a href="hmis.html" target="_blank" rel="noopener noreferrer">privacy policy</a> and <a href="privacy-conduct.html" target="_blank" rel="noopener noreferrer">terms of service</a> <span class="text-danger">*</span>
+													</label>
+													<div class="invalid-feedback">You must agree before submitting.</div>
+												</div>
+											</div>
+
+											<!-- reCAPTCHA -->
+											<div class="col-12">
+												<div class="g-recaptcha mb-3" data-sitekey="6LcjtgUrAAAAAIOqKQc6Txmusc4zoxPqkBMt5vwS"></div>
+											</div>
+
+											<!-- Submit Button -->
+											<div class="col-12">
+												<button class="btn btn-primary" type="submit">Submit Application</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+
+						<hr />
+						<div class="row gy-4 align-items-center features-item">
+							<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+								<img class="img-fluid img-A" src="assets/img/song_800.webp" alt="Volunteer Today" loading="lazy" title="Music fills the air with volunteers">
+							</div>
+
+							<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+								<h3>
+									Music Fills the Air at Our Volunteer Event
+								</h3>
+								<p>
+
+									We had such a wonderful time at our recent volunteer appreciation event! The atmosphere was made even more special with music playing throughout the evening. It was fantastic to see everyone enjoying themselves, connecting with one another, and celebrating
+									the incredible impact our volunteers make, all to the rhythm of some great tunes.
+								</p>
+								<p>
+									Thank you to everyone who joined us and helped make it such a memorable occasion!
+								</p>
+							</div>
+						</div>
+						<hr />
+
+						<div class="row gy-4 align-items-center features-item">
+							<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+								<img src="assets/img/elkBike.webp" class="img-A" alt="Our volunteers speak'" loading="lazy">
+							</div>
+							<div class="col-md-7" data-aos="fade-up">
+								<h3>
+									Augusta Elks - Lodge 964
+								</h3>
+								<p>
+									The Augusta Maine Elks Lodge has consistently demonstrated an unwavering commitment to the Maine Bread of Life, serving as a pillar of support for their vital mission. Through dedicated fundraising initiatives, the Elks Lodge has provided essential financial resources, enabling the Bread of Life to continue offering sustenance and hope to those in need within the community.
+								</p>
+								<p>
+									Beyond monetary contributions, members of the Augusta Elks Lodge regularly volunteer their time and effort, actively participating in the day-to-day operations and special events of the Maine Bread of Life. This continuous and multifaceted support exemplifies the Elks' enduring dedication to local charitable endeavors and their profound impact on the well-being of their fellow citizens.
+								</p>
+							</div>
+						</div>
+						<!-- /Item -->
+					</article>
+				</div>
+			</div>
+			<!-- /Item -->
+			<hr />
+
+			<!-- Featured Services Section -->
+			<section id="featured-services" class="featured-services section">
+				<div class="container">
+					<div class="row gy-4" data-aos="fade-up">
+						<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+							<div class="service-item item-cyan position-relative">
+								<div class="icon">
+									<i class="bi bi-facebook"></i>
+								</div>
+								<a href="https://www.facebook.com/MaineBreadofLife" class="stretched-link" target="_blank" rel="noopener noreferrer">
+									<h3>
+										Facebook
+									</h3>
+								</a>
+								<p>
+									Friend us and stay up to date with the Bread of Life.
+								</p>
+							</div>
+						</div>
+						<!-- End Service Item -->
+
+						<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+							<div class="service-item item-orange position-relative">
+								<div class="icon">
+									<i class="bi bi-youtube"></i>
+								</div>
+								<a href="https://www.youtube.com/watch?v=UurLrHsNFc4" class="stretched-link" target="_blank" rel="noopener noreferrer">
+									<h3>
+										Youtube
+									</h3>
+								</a>
+								<p>
+									Learn a little more about what we do.
+								</p>
+							</div>
+						</div>
+						<!-- End Service Item -->
+
+						<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+							<div class="service-item item-teal position-relative">
+								<div class="icon">
+									<i class="bi bi-instagram"></i>
+								</div>
+								<a href="https://www.instagram.com/mainebreadoflife/" class="stretched-link" target="_blank" rel="noopener noreferrer">
+									<h3>
+										Instagram
+									</h3>
+								</a>
+								<p>
+									Follow us to stay up to date with the Bread of Life.
+								</p>
+							</div>
+						</div>
+						<!-- End Service Item -->
+
+						<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+							<div class="service-item item-red position-relative">
+								<div class="icon">
+									<i class="bi bi-paypal"></i>
+								</div>
+								<a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PGTFGX7RU4QHQ" class="stretched-link" target="_blank" rel="noopener noreferrer">
+									<h3>
+										Donate or Volunteer
+									</h3>
+								</a>
+								<p>
+									Without your support none of this would be possible.
+								</p>
+							</div>
+						</div>
+						<!-- End Service Item -->
+					</div>
+				</div>
+			</section>
+
+			<!-- Clients Section -->
+			<section id="clients" class="clients section">
+				<div class="container">
+					<center>
+						<h2>
+							Our Partners
+						</h2>
+					</center>
+					<div class="swiper init-swiper">
+						<script type="application/json" class="swiper-config">
+							{
+								"loop": true,
+								"speed": 600,
+								"autoplay": {
+									"delay": 2500
+								},
+								"slidesPerView": "auto",
+								"pagination": {
+									"el": ".swiper-pagination",
+									"type": "bullets",
+									"clickable": true
+								},
+								"breakpoints": {
+									"320": {
+										"slidesPerView": 2,
+										"spaceBetween": 40
+									},
+									"480": {
+										"slidesPerView": 3,
+										"spaceBetween": 60
+									},
+									"640": {
+										"slidesPerView": 4,
+										"spaceBetween": 80
+									},
+									"992": {
+										"slidesPerView": 6,
+										"spaceBetween": 120
+									}
+								}
+							}
+						</script>
+						<div class="swiper-wrapper align-items-center">
+							<div class="swiper-slide">
+								<a href="https://www.augustamaine.com/" target="_blank" rel="noopener noreferrer"><img src="assets/img/clients/kvch.webp" id="partners" alt="Kennebec Valley Chamber of Commerce" loading="lazy" title="Kennebec Valley Chamber of Commerce"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://joingroups.com/" target="_blank" rel="noopener noreferrer"><img src="assets/img/clients/grp.webp" id="partners" alt="Groups Recover together" loading="lazy" title="Groups Recover together"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://uwkv.org/" target="_blank" rel="noopener noreferrer"><img src="assets/img/clients/uw.webp" id="partners" alt="United Way" loading="lazy" title="United Way"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://www.gsfb.org/" target="_blank" rel="noopener noreferrer"><img src="assets/img/clients/gs.webp" id="partners" alt="Good Shepherd Food Bank" loading="lazy" title="Good Shepherd Food Bank"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://augustaelks.org/" target="_blank" rel="noopener noreferrer"><img src="assets/img/clients/elk.webp" id="partners" alt="Augusta Elks Lodge" loading="lazy" title="Augusta Elks Lodge"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://portal.clubrunner.ca/522" target="_blank" rel="noopener noreferrer"><img src="assets/img/clients/rotary.webp" id="partners" alt="Rotary International" loading="lazy" title="Rotary International"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://www.core-mark.com/" target="_blank" rel="noopener noreferrer"><img src="assets/img/clients/cm.webp" id="partners" alt="Core-Mark" loading="lazy" title="Core-Mark"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://www.performancefoodservice.com/" target="_blank" rel="noopener noreferrer"><img src="assets/img/clients/pf.webp" id="partners" alt="Performance Food Service" loading="lazy" title="Performance Food Service"></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+		<!-- /Clients Section -->
+	</main>
+
+	<footer role="contentinfo" id="footer" class="footer dark-background">
+		<div class="container footer-top">
+			<div class="row gy-4">
+				<div class="col-lg-4 col-md-6 footer-about">
+					<span class="sitename">
+						<h4>
+							Bread Of Life
+						</h4>
+					</span>
+					<div class="footer-contact pt-3">
+						<p>
+							159 Water Street
+						</p>
+						<p>
+							Augusta, Maine 04330
+						</p>
+						<p class="mt-3">
+							<strong>Phone:</strong>
+							<span>(207) 626-3434</span>
+						</p>
+						<p>
+							<strong>Email:</strong>
+							<span>
+								receptionist@mainebreadoflife.org
+							</span>
+						</p>
+						<hr />
+						<span class="sitename">
+							<h4>
+								Board of Directors
+							</h4>
+						</span>
+						<p>
+							Our Our board of directors is a governing body of the 501(c)3 organization. If you have an interest in serving, please reach out to our directors.
+						</p>
+						<p>
+							<strong>
+								Email:
+							</strong>
+							<span>
+								directors@mainebreadoflife.org
+							</span>
+						</p>
+						<hr />
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3 footer-links">
+					<h4>
+						Our Partners
+					</h4>
+					<ul>
+						<li><i class="bi bi-people"></i> <a href="https://joingroups.com/" target="_blank" rel="noopener noreferrer" title="Visit Site">Groups Recover Together</a></li>
+						<li><i class="bi bi-people"></i> <a href="https://uwkv.org/" target="_blank" rel="noopener noreferrer" title="Visit Site">United Way Of Kennebec Valley</a></li>
+						<li><i class="bi bi-people"></i> <a href="https://www.gsfb.org/" target="_blank" rel="noopener noreferrer" title="Visit Site">Good Shepherd Food Bank</a></li>
+						<li><i class="bi bi-people"></i> <a href="https://augustaelks.org/" target="_blank" rel="noopener noreferrer" title="Visit Site">Augusta Elks Club</a></li>
+						<li><i class="bi bi-people"></i> <a href="https://portal.clubrunner.ca/522" target="_blank" rel="noopener noreferrer" title="Visit Site">Augusta Rotary</a></li>
+						<li><i class="bi bi-people"></i> <a href="https://www.core-mark.com/" target="_blank" rel="noopener noreferrer" title="Visit Site">Coremark</a></li>
+						<li>
+							<i class="bi bi-people"></i> <a href="https://www.performancefoodservice.com/" target="_blank" rel="noopener noreferrer" title="Visit Site">Performance Foodservice</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-3 footer-links">
+					<h4>
+						Our Services
+					</h4>
+					<ul>
+						<li><i class="bi bi-cup-hot-fill"></i> <a href="soup-kitchen.html"> Soup Kitchen</a></li>
+						<li><i class="bi bi-house-check"></i> <a href="arts-house.html"> ART's House</a></li>
+						<li><i class="bi bi-house-door"></i> <a href="shelters.html"> Shelter Services</a></li>
+						<li><i class="bi bi-person-raised-hand"></i> <a href="volunteer.html"> Volunteer</a></li>
+						<li><i class="bi bi-info-circle"> </i> <a href="contact-us.html"> Resource Office</a></li>
+						<li>
+							<a href="./assets/img/clients/h_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Housing Application Form">
+								<i class="bi bi-file-pdf"></i><span>
+									Housing
+									Application
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="./assets/img/clients/vol_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Volunteer Application Form">
+								<i class="bi bi-file-pdf"></i><span>
+									Volunteer
+									Application
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-md-12">
+					<p>
+						At Bread of Life, we rely on the strength of our community to make a lasting impact. Whether it’s through volunteering, donating, or simply spreading the word, your involvement helps us provide essential support to those in need!
+					</p>
+					<p>
+						We invite you to get involved and be part of the mission. Stay connected and informed by following us on our social media platforms—where we share stories of hope, upcoming events, and real-time updates on our programs.
+					</p>
+					<p>
+						Together, we can make a difference, one life at a time!
+					</p>
+					<hr />
+					<div class="social-links social-links-centered">
+						<center>
+							<a href="https://www.facebook.com/MaineBreadofLife" target="_blank" rel="noopener noreferrer" title="Bread Of Life Facebook Page"><i class="bi bi-facebook"></i></a>
+							<a href="https://www.instagram.com/mainebreadoflife/" target="_blank" rel="noopener noreferrer" title="Bread Of Life Instagram"><i class="bi bi-instagram"></i></a>
+							<a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PGTFGX7RU4QHQ">
+								<i class="bi bi-paypal" target="_blank" rel="noopener noreferrer"
+								   title="Bread Of Life PayPal"></i>
+							</a>
+							<a href="https://www.youtube.com/@HousingMattersPod" target="_blank" rel="noopener noreferrer" title="Housing Matters Podcast"><i class="bi bi-youtube"></i></a>
+							<a href="/feed.php" class="rss-link" title="Subscribe via RSS" aria-label="Subscribe via RSS feed">
+								<i class="bi bi-rss"></i>
+							</a>
+						</center>
+					</div>
+					<hr>
+
+				</div>
+			</div>
+		</div>
+		<div class="container copyright text-center mt-4">
+			<p> 2024 <strong class="px-1 sitename"><u>Bread of Life</u></strong> All Rights Reserved</p>
+			<div class="credits">
+				<b>Designed by Arthur(Bread of Life Volunteer)</b>
+				<br /> Made Possible With
+				<br />
+				<a href="https://bravebehindbars.org/" target="_blank" rel="noopener noreferrer" title="MIT's Brave Behind Bars Program"> MIT's Brave Behind Bars Program</a>
+				<br />
+				<a href="contact-us.html" class="btn-services scrollto">Contact Us</a>
+				|
+				<a href="privacy-conduct.html" target="_blank" rel="noopener noreferrer" title="Security Policy"> Privacy & Conduct Policies</a>
+			</div>
+		</div>
+	</footer>
+
+	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+		<i class="bi bi-arrow-up-short"></i>
+	</a>
+	<div id="preloader"></div>
+
+	<!-- JS with performance optimization -->
+	<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript" defer></script>
+	<script src="/assets/vendor/php-email-form/validate.js" type="text/javascript" defer></script>
+	<script src="/assets/vendor/aos/aos.js" type="text/javascript" defer></script>
+	<script src="/assets/vendor/glightbox/js/glightbox.min.js" type="text/javascript" defer></script>
+	<script src="/assets/vendor/purecounter/purecounter_vanilla.js" type="text/javascript" defer></script>
+	<script src="/assets/vendor/swiper/swiper-bundle.min.js" type="text/javascript" defer></script>
+	<script src="/assets/vendor/waypoints/noframework.waypoints.js" type="text/javascript" defer></script>
+	<script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" type="text/javascript" defer></script>
+	<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js" type="text/javascript" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" type="text/javascript" async defer></script>
+	<script src="/assets/js/main.js" type="text/javascript" defer></script>
+	<script src="/assets/js/image-loader.js" type="text/javascript" defer></script>
+	<script src="/assets/js/form-handler.js" type="text/javascript" defer></script>
+	<script src="assets/js/custom-scripts.js" defer></script>
+
+
+	</div>
+	</div>
+</body>
+
+</html>

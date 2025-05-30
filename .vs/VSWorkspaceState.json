@@ -5,8 +5,9 @@
     "\\assets\\css",
     "\\assets\\css\\tests",
     "\\assets\\js",
-    "\\forms"
+    "\\forms",
+    "\\tests"
   ],
-  "SelectedNode": "\\assets\\css\\tests\\main-julius.css",
+  "SelectedNode": "\\contact-us.html",
   "PreviewInSolutionExplorer": false
 }
