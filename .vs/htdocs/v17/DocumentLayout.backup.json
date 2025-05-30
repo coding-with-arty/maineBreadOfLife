@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\error.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:error.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\arts-house.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:arts-house.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\contact-us.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:contact-us.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,36 +19,28 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:volunteer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\services.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:services.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\security-policy.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:security-policy.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\soup-kitchen.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:soup-kitchen.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\hmis.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:hmis.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\error.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:error.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\services.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:services.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\shelters.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:shelters.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\arts-house.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:arts-house.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\soup-kitchen.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:soup-kitchen.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\privacy-conduct.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:privacy-conduct.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,133 +62,128 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "services.html",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\services.html",
-              "RelativeDocumentMoniker": "services.html",
-              "ToolTip": "C:\\xampp\\htdocs\\services.html",
-              "RelativeToolTip": "services.html",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "privacy-conduct.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\privacy-conduct.html",
+              "RelativeDocumentMoniker": "privacy-conduct.html",
+              "ToolTip": "C:\\xampp\\htdocs\\privacy-conduct.html",
+              "RelativeToolTip": "privacy-conduct.html",
+              "ViewState": "AgIAAP8CAAAAAAAAAAAAAAkDAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:39.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T23:13:58.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "volunteer.html",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\volunteer.html",
-              "RelativeDocumentMoniker": "volunteer.html",
-              "ToolTip": "C:\\xampp\\htdocs\\volunteer.html",
-              "RelativeToolTip": "volunteer.html",
-              "ViewState": "AgIAAPkBAAAAAAAAAAAqwEoCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:44.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "error.html",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\error.html",
-              "RelativeDocumentMoniker": "error.html",
-              "ToolTip": "C:\\xampp\\htdocs\\error.html",
-              "RelativeToolTip": "error.html",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAswGoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:50.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "hmis.html",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\hmis.html",
-              "RelativeDocumentMoniker": "hmis.html",
-              "ToolTip": "C:\\xampp\\htdocs\\hmis.html",
-              "RelativeToolTip": "hmis.html",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAswGoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:52.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "security-policy.html",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\security-policy.html",
-              "RelativeDocumentMoniker": "security-policy.html",
-              "ToolTip": "C:\\xampp\\htdocs\\security-policy.html",
-              "RelativeToolTip": "security-policy.html",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:58.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "contact-us.html",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\contact-us.html",
-              "RelativeDocumentMoniker": "contact-us.html",
-              "ToolTip": "C:\\xampp\\htdocs\\contact-us.html",
-              "RelativeToolTip": "contact-us.html",
-              "ViewState": "AgIAAGkBAAAAAAAAAAAqwG8BAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:48.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "shelters.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\shelters.html",
               "RelativeDocumentMoniker": "shelters.html",
               "ToolTip": "C:\\xampp\\htdocs\\shelters.html",
               "RelativeToolTip": "shelters.html",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFkDAAAAAAAAAAAAAGoDAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:36.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T23:13:36.949Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "arts-house.html",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\arts-house.html",
-              "RelativeDocumentMoniker": "arts-house.html",
-              "ToolTip": "C:\\xampp\\htdocs\\arts-house.html",
-              "RelativeToolTip": "arts-house.html",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
+              "Title": "services.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\services.html",
+              "RelativeDocumentMoniker": "services.html",
+              "ToolTip": "C:\\xampp\\htdocs\\services.html",
+              "RelativeToolTip": "services.html",
+              "ViewState": "AgIAAPUCAAAAAAAAAAAAAAQDAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:26.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T23:13:39.603Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "soup-kitchen.html",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\soup-kitchen.html",
-              "RelativeDocumentMoniker": "soup-kitchen.html",
-              "ToolTip": "C:\\xampp\\htdocs\\soup-kitchen.html",
-              "RelativeToolTip": "soup-kitchen.html",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T23:13:23.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "index.html",
               "DocumentMoniker": "C:\\xampp\\htdocs\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\xampp\\htdocs\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEDAAAAAAAAAAAAAC0DAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T22:21:06.909Z",
+              "WhenOpened": "2025-05-28T22:21:06.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "hmis.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\hmis.html",
+              "RelativeDocumentMoniker": "hmis.html",
+              "ToolTip": "C:\\xampp\\htdocs\\hmis.html",
+              "RelativeToolTip": "hmis.html",
+              "ViewState": "AgIAAPsBAAAAAAAAAAAswPsBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-28T23:13:52.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "soup-kitchen.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\soup-kitchen.html",
+              "RelativeDocumentMoniker": "soup-kitchen.html",
+              "ToolTip": "C:\\xampp\\htdocs\\soup-kitchen.html",
+              "RelativeToolTip": "soup-kitchen.html",
+              "ViewState": "AgIAADoDAAAAAAAAAAAAAEcDAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-28T23:13:23.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "volunteer.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\volunteer.html",
+              "RelativeDocumentMoniker": "volunteer.html",
+              "ToolTip": "C:\\xampp\\htdocs\\volunteer.html",
+              "RelativeToolTip": "volunteer.html",
+              "ViewState": "AgIAAH8DAAAAAAAAAAAqwI8DAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-28T23:13:44.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "contact-us.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\contact-us.html",
+              "RelativeDocumentMoniker": "contact-us.html",
+              "ToolTip": "C:\\xampp\\htdocs\\contact-us.html",
+              "RelativeToolTip": "contact-us.html",
+              "ViewState": "AgIAAIEDAAAAAAAAAAAAAJIDAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-28T23:13:48.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "arts-house.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\arts-house.html",
+              "RelativeDocumentMoniker": "arts-house.html",
+              "ToolTip": "C:\\xampp\\htdocs\\arts-house.html",
+              "RelativeToolTip": "arts-house.html",
+              "ViewState": "AgIAABEDAAAAAAAAAAAAACADAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-28T23:13:26.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "error.html",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\error.html",
+              "RelativeDocumentMoniker": "error.html",
+              "ToolTip": "C:\\xampp\\htdocs\\error.html",
+              "RelativeToolTip": "error.html",
+              "ViewState": "AgIAABkCAAAAAAAAAAAAACYCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-28T23:13:50.287Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }

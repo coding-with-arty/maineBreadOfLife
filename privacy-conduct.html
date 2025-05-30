@@ -87,6 +87,8 @@
 	<!-- Critical CSS (load immediately) -->
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<link rel="stylesheet" href="/assets/css/custom-styles.css">
+	<link rel="stylesheet" href="security-policy.css">
+
 
 	<!-- Performance-optimized CSS loading -->
 	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
@@ -293,12 +295,11 @@
 			<!-- Policy Navigation -->
 			<nav class="policy-nav mb-5" aria-label="Policy Sections">
 				<div class="nav nav-tabs" role="tablist">
-					<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#data-protection" type="button" role="tab">
+					<!-- HMIS Tab -->
+					<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#hmis-notice" type="button" role="tab">
 						HMIS Privacy Notice
 					</button>
-					<button class="nav-link" data-bs-toggle="tab" data-bs-target="#facility-security" type="button" role="tab">
-						Facility Policy
-					</button>
+					<!-- Code of Conduct Tab -->
 					<button class="nav-link" data-bs-toggle="tab" data-bs-target="#code-conduct" type="button" role="tab">
 						Code of Conduct
 					</button>
@@ -307,224 +308,292 @@
 
 			<!-- Policy Tab Content -->
 			<div class="tab-content">
-				<!-- Data Protection Section -->
-				<div class="tab-pane fade show active" id="data-protection" role="tabpanel">
-					<section class="policy-section" aria-labelledby="data-protection-heading">
-						<h2 id="data-protection-heading" class="visually-hidden">
-							HMIS Privacy Notice
-						</h2>
-						<div class="policy-card">
-							<h3 class="policy-card-title">
-								<i class="bi bi-shield-lock me-2"></i>
-								Maine's Notice of Privacy Practices
-							</h3>
-							<ul class="policy-list">
-								<li class="policy-list-item">
-									<strong>Effective Date:</strong> January 1, 2024
-								</li>
-								<li class="policy-list-item">
-									<strong>Organization:</strong> Maine Bread of Life
-								</li>
-								<li class="policy-list-item">
-									<strong>Questions:</strong> <i class="bi bi-envelope-at""> </i> receptionist@mainebreadoflife.org
-								</li>
-							</ul>
-						</div>
-
-						<section class="inner-page">
-							<div class="container">
-								<div class="row justify-content-center align-items-center">
-									<div class="col-md-8 text-center mb-5">
-										<h3>Maine’s Notice of Privacy Practices</h3>
-										<h4>
-											Effective Date: January 1, 2024
-										</h4>
-										<p>
-											This Agency (Maine Bread of Life) and other service providers, homeless agencies and social service agencies, including street outreach, shelters and housing programs, collect personal information about the people we serve in a computer system called
-											Maine’s Homeless Management Information System (HMIS). If Agency is a HIPAA covered entity, this HMIS Notice of Privacy Practices is a supplement to Agency’s HIPAA Notice of Privacy Practices, and you should also review Agency’s
-											HIPAA Notice for additional information about how Agency protects the privacy and security of your protected health information. This HMIS Notice of Privacy Practices may be amended at any time and an amendment may affect information
-											given to the Agency prior to the amendment.
-										</p>
-										<p>
-											<h3>
-												Why do we collect this information?
-											</h3>
-										</p>
-										<p>
-											So we know how many people we serve and the types of people we serve at our Agency and in the state.
-											<br />
-											So we all understand what people need and can plan services to meet those needs.
-											<br />
-											To satisfy U.S. Department of Housing and Urban Development requirements.
-
-										</p>
-										<p>
-											<h3>
-												Who can see information that is in Maine’s HMIS?
-											</h3>
-										<p>
-											People who work for this Agency will use it to help provide services to you or your family.
-											<br />
-											Other agencies like this Agency that provide services and have received permission from you to see your information. The agencies that participate in Maine’s HMIS may change from time to time. A copy of the current list
-											of participating agencies is available upon request or on our website: www.mainehmis.org.
-											<br />
-											Auditors or funders who have legal rights to review the work of this Agency, such as the U.S. Department of Housing and Urban Development and other state or local government entities.
-											<br />
-											Organizations that run, administer, and work, on the HMIS system. When these organizations work on the system, they may see information about you. They are required to protect your confidential information.
-											<br />
-											The law says we have to report physical or sexual abuse of children and vulnerable adults. If we have cause to suspect that there is abuse or neglect in your household, we must report it to Child or Adult Protection.
-											<br />
-											We may disclose your information to protect the health or safety of you or others as required by law.
-											<br />
-											Others as required by law, including officials with a valid subpoena, warrant, or court order.
-											<br />
-											We may disclose your information to prevent or lessen a serious and imminent threat to the health or safety of an individual or the public.
-										</p>
-										<p>
-											<em>
-												<b>
-													We will not disclose your information for any other use unless you permit us in
-													writing.
-											</em></b>
-										</p>
-										<p>
-											<h3>
-												How is your privacy protected?
-											</h3>
-										</p>
-										<p>
-											All users of HMIS data must sign an agreement to protect your privacy and comply with state and federal laws and policies before seeing any information.
-											<br />
-											The HMIS computer program used for this purpose has industry standard security safeguards and protocols and is updated regularly to meet these security requirements.
-										</p>
-
-										<p>
-											<h3>
-												What are your rights?
-											</h3>
-										</p>
-										If you do not want your name, social security number, or date of birth entered in HMIS, tell the intake worker. This Agency will not refuse to help you if you refuse to authorize Agency to share your information with other
-										providers/ agencies through HMIS. However, federal and state regulations may require limited data collection for funding purposes.
-										<br />
-										You have the right to request a copy of Maine’s HMIS information about you.
-										<br />
-										You have the right to correct mistakes in HMIS information about you.
-										<br />
-										If you think this Agency or Maine’s HMIS violated your privacy rights, you have the right to complain or appeal. Ask a staff person for a complaint and appeal form. If Agency is a HIPAA covered entity, see Agency’s HIPAA
-										Notice of Privacy Practices for information about how to file a HIPAA privacy complaint.
-										</p>
-									</div>
-								</div>
-							</div>
-
-						</section>
-				</div>
-
-				<!-- Facility Security Section -->
-				<div class="tab-pane fade" id="facility-security" role="tabpanel">
-					<section class="policy-section" aria-labelledby="facility-security-heading">
-						<h2 id="facility-security-heading" class="visually-hidden">
-							Facility Security
-						</h2>
-						<div class="policy-card">
-							<h3 class="policy-card-title">
-								<i class="bi bi-building-lock me-2"></i>
-								Shelter Access Protocols
-							</h3>
-							<div class="row g-4">
-								<div class="col-md-6">
-									<h4 class="policy-subsection-title">Staff Areas</h4>
-									<ul class="policy-list">
-										<li>Biometric entry systems</li>
-										<li>Security cameras with 90-day retention</li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<h4 class="policy-subsection-title">Public Areas</h4>
-									<ul class="policy-list">
-										<li>Visitor badge requirements</li>
-										<li>Controlled item check-in</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
 
 				<!-- Code of Conduct Section -->
 				<div class="tab-pane fade" id="code-conduct" role="tabpanel">
 					<section class="policy-section" aria-labelledby="code-conduct-heading">
 						<h2 id="code-conduct-heading" class="visually-hidden">
 							Code of Conduct
-						</h2>
-						<div class="policy-card">
-							<h3 class="policy-card-title">
-								<i class="bi bi-people me-2"></i>
-								Behavioral Expectations
-							</h3>
-							<div class="alert alert-info" role="alert">
-								<i class="bi bi-info-circle me-2"></i> All policies apply to staff, volunteers, and visitors
-							</div>
-							<ul class="policy-list">
-								<li>Mandatory confidentiality agreements</li>
-								<li>Non-discrimination enforcement procedures</li>
-								<li>Incident reporting timelines (within 24 hours)</li>
+							</h2>
+						<div class="hmis-section">
+							<h3><i class="bi bi-people-fill me-2 text-success"></i> 
+								Code of Conduct & Shelter Expectations
+								</h3>
+
+							<h4><i class="bi bi-shield-check me-2 text-primary"></i> 
+								Non-Discrimination Policy
+								</h4>
+							<p>
+								Bread of Life does not discriminate on the basis of race, gender, age, ethnicity, religious affiliation, income, physical and/or mental disability, marital status, or sexual orientation in accordance with local, state, and federal laws.
+							</p>
+
+							<h4><i class="bi bi-house-lock-fill me-2 text-primary"></i> 
+								Safety & Eligibility
+								</h4>
+							<ul>
+								<li>
+									Due to the presence of children, Bread of Life cannot house individuals on the sex offender registry.
+									</li>
+								<li>
+									Individuals with outstanding warrants cannot be housed.
+									</li>
+								<li>
+									Bread of Life reserves the right to conduct background checks on shelter applicants.
+									</li>
+							</ul>
+
+							<h4><i class="bi bi-clock-history me-2 text-primary"></i> 
+								Shelter Access & Curfew
+								</h4>
+							<ul>
+								<li>
+									The Veteran and Family Shelters are open to clients 24/7.
+									</li>
+								<li>
+									Clients must return by the designated curfew unless excused for work or appointments.
+									</li>
+							</ul>
+
+							<h4><i class="bi bi-broom me-2 text-primary"></i> Daily Responsibilities</h4>
+							<ul>
+								<li>
+									Clients are assigned daily chores to maintain cleanliness.
+									</li>
+								<li>
+									Chores must be initialed on the chart and confirmed with staff.
+									</li>
+							</ul>
+
+							<h4><i class="bi bi-capsule-pill me-2 text-primary"></i> Medication Policy</h4>
+							<ul>
+								<li>
+									Clients are responsible for managing their own medications.
+									</li>
+								<li>
+									Bread of Life does not provide medication dispensing or management services.
+									</li>
+							</ul>
+
+							<h4><i class="bi bi-ban me-2 text-danger"></i> 
+								Prohibited Items & Substances
+								</h4>
+							<ul>
+								<li>
+									No alcohol, marijuana, or illegal drugs are allowed on the property.
+									</li>
+								<li>
+									No knives, guns, or weapons of any kind are permitted.
+									</li>
+							</ul>
+
+							<h4><i class="bi bi-flag-fill me-2 text-primary"></i> Program Participation</h4>
+							<ul>
+								<li>
+									Clients are expected to follow their individual Plan of Care and work toward personal goals.
+									</li>
+								<li>
+									Progress through the Shelter Program is based on participation and accountability.
+									</li>
+							</ul>
+
+							<h4><i class="bi bi-exclamation-triangle-fill me-2 text-warning"></i> 
+								Mandated Reporting
+								</h4>
+							<p>
+								Bread of Life staff are mandated reporters. They are required to report any suspected abuse, neglect, or intent to harm to appropriate authorities, including but not limited to Augusta Police Department, Crisis Services, Child Protective Services, Adult Protective Services, or EMTs.
+							</p>
+						</div>
+					</section>
+				</div>
+
+				<!-- HMIS Privacy Notice Section -->
+				<div class="tab-pane fade show active" id="hmis-notice" role="tabpanel">
+					<section class="policy-section" aria-labelledby="hmis-notice-heading">
+						<h2 id="hmis-notice-heading" class="visually-hidden">
+							HMIS Privacy Notice
+							</h2>
+						<div class="hmis-section">
+							<h3><i class="bi bi-shield-lock-fill me-2 text-info"></i> 
+								Maine’s Notice of Privacy Practices
+								</h3>
+							<p><strong>
+								Effective Date:
+								</strong> 
+								January 1, 2024
+							</p>
+							<p>
+								This Agency (Maine Bread of Life) and other service providers, homeless agencies and social service agencies, including street outreach, shelters and housing programs, collect personal information about the people we serve in a computer system called <strong>Maine’s Homeless Management Information System (HMIS)</strong>.
+							</p>
+							<p>
+								If Agency is a HIPAA covered entity, this HMIS Notice of Privacy Practices is a supplement to Agency’s HIPAA Notice of Privacy Practices, and you should also review Agency’s HIPAA Notice for additional information about how Agency protects the privacy and security of your protected health information.
+							</p>
+							<p>
+								This HMIS Notice of Privacy Practices may be amended at any time and an amendment may affect information given to the Agency prior to the amendment.
+							</p>
+
+							<h4><i class="bi bi-question-circle-fill me-2 text-primary"></i>
+								Why do we collect this information?
+								</h4>
+							<ul>
+								<li>
+									So we know how many people we serve and the types of people we serve at our Agency and in the state.
+								</li>
+								<li>
+									So we all understand what people need and can plan services to meet those needs
+								</li>
+								<li>
+									To satisfy U.S. Department of Housing and Urban Development requirements.
+								</li>
+							</ul>
+
+							<h4><i class="bi bi-eye-fill me-2 text-primary"></i> 
+								Who can see your information?
+								</h4>
+							<ul>
+								<li>
+									People who work for this Agency will use it to help provide services to you or your family.
+									</li>
+								<li>
+									Other agencies like this Agency that provide services and have received permission from you to see your information.
+									</li>
+								<li>
+									The agencies that participate in Maine’s HMIS may change from time to time. A copy of the current list of participating agencies is available upon request or on our website: www.mainehmis.org.
+								</li>
+								<li>
+									Auditors or funders who have legal rights to review the work of this Agency, such as the U.S. Department of Housing and Urban Development and other state or local government entities.
+								</li>
+								<li>
+									Organizations that run, administer, and work, on the HMIS system. When these organizations work on the system, they may see information about you. They are required to protect your confidential information.
+								</li>
+								<li>
+									The law says we have to report physical or sexual abuse of children and vulnerable adults. If we have cause to suspect that there is abuse or neglect in your household, we must report it to Child or Adult Protection.
+								</li>
+								<li>
+									We may disclose your information to protect the health or safety of you or others as required by law.
+									Others as required by law, including officials with a valid subpoena, warrant, or court order.
+								</li>
+								<li>
+									We may disclose your information to prevent or lessen a serious and imminent threat to the health or safety of an individual or the public.
+								</li>
+							</ul>
+
+							<p class="mt-3"><em><strong>
+								We will not disclose your information for any other use unless you permit us in writing.
+								</strong></em></p>
+
+							<h4><i class="bi bi-lock-fill me-2 text-primary"></i> How is your privacy protected?</h4>
+							<ul>
+								<li>
+									All users of HMIS data must sign an agreement to protect your privacy and comply with state and federal laws and policies before seeing any information.
+									</li>
+								<li>
+									The HMIS computer program used for this purpose has industry standard security safeguards and protocols and is updated regularly to meet these security requirements.
+									</li>
+							</ul>
+
+							<h4><i class="bi bi-person-check-fill me-2 text-primary"></i> 
+									What are your rights?
+								</h4>
+							<ul>
+								<li>
+									If you do not want your name, social security number, or date of birth entered in HMIS, tell the intake worker. This Agency will not refuse to help you if you refuse to authorize Agency to share your information with other providers/ agencies through HMIS. However, federal and state regulations may require limited data collection for funding purposes.
+								</li>
+								<li>
+									You have the right to request a copy of Maine’s HMIS information about you.
+								</li>
+								<li>
+									You have the right to correct mistakes in HMIS information about you.
+								</li>
+								<li>
+									If you think this Agency or Maine’s HMIS violated your privacy rights, you have the right to complain or appeal. Ask a staff person for a complaint and appeal form. If Agency is a HIPAA covered entity, see Agency’s HIPAA Notice of Privacy Practices for information about how to file a HIPAA privacy complaint.
+								</li>
 							</ul>
 						</div>
 					</section>
 				</div>
-			</div>
 
-			<!-- Reporting Section -->
-			<section class="reporting-section mt-5">
-				<div class="reporting-card bg-light p-4 rounded-3">
-					<h2 class="reporting-title mb-4">
-						<i class="bi bi-megaphone me-2"></i>
-						Report Security Concerns
-					</h2>
-					<div class="row g-4">
-						<div class="col-md-6">
-							<div class="contact-method">
-								<h3 class="contact-title">
-									<i class="bi bi-envelope me-2"></i>
-									Email
-								</h3>
-								<p class="contact-info">
-									<a href="mailto:security@mainebreadoflife.org" class="text-decoration-none">
-										security@mainebreadoflife.org
-									</a>
-								</p>
+
+
+
+
+				<!-- Facility Security Section
+	<div class="tab-pane fade show" id="facility-security" role="tabpanel">
+		<section class="policy-section" aria-labelledby="facility-security-heading">
+			<h2 id="facility-security-heading" class="visually-hidden">Facility Guidelines</h2>
+			<div class="policy-card shadow-sm p-4 mb-4 bg-white rounded border-start border-4 border-primary">
+				<h3 class="policy-card-title">
+					<i class="bi bi-house-heart me-2"></i> Creating a Safe and Respectful Environment
+				</h3>
+				<p>Our shelter is a shared space for families, children, and individuals seeking support. We ask all guests to help maintain a peaceful and respectful atmosphere by following these general guidelines:</p>
+				<ul class="policy-list">
+					<li><i class="bi bi-check-circle text-success me-2"></i> Be courteous and considerate of others' space and privacy.</li>
+					<li><i class="bi bi-check-circle text-success me-2"></i> Keep noise to a minimum, especially during quiet hours.</li>
+					<li><i class="bi bi-check-circle text-success me-2"></i> Clean up after yourself in shared areas like kitchens and bathrooms.</li>
+					<li><i class="bi bi-check-circle text-success me-2"></i> Children must be supervised by a parent or guardian at all times.</li>
+					<li><i class="bi bi-check-circle text-success me-2"></i> Visitors are welcome during designated hours and must check in with staff.</li>
+					<li><i class="bi bi-check-circle text-success me-2"></i> All questions regarding what is or is not allowed may be directed to staff as all policy is subject to change.</li>
+				</ul>
+			</div>
+		</section>
+	</div> -->
+				<!-- Reporting Section -->
+				<section class="reporting-section mt-5">
+					<div class="reporting-card bg-light p-4 rounded-3">
+						<h2 class="reporting-title mb-4">
+							<i class="bi bi-megaphone me-2"></i> Report Security Concerns
+						</h2>
+						<p class="mb-4">
+							We encourage open communication and a respectful approach to resolving concerns. While not required, we recommend addressing issues through the following individuals in order of availability:
+						</p>
+						<ul class="policy-list mb-4">
+							<li><i class="bi bi-person-badge-fill text-primary me-2"></i> <strong>Executive Director:</strong> Victoria Abbott – <a href="mailto:victoria@mainebreadoflife.org">victoria@mainebreadoflife.org</a></li>
+							<li><i class="bi bi-person-badge-fill text-primary me-2"></i> <strong>Director of Operations:</strong> Laura Briggs – <a href="mailto:laura@mainebreadoflife.org">laura@mainebreadoflife.org</a></li>
+							<li><i class="bi bi-person-lines-fill text-primary me-2"></i> Shelter Managers (on-site)</li>
+							<li><i class="bi bi-person-lines-fill text-primary me-2"></i> Staff and Caseworkers</li>
+						</ul>
+						<div class="row g-4">
+							<div class="col-md-6">
+								<div class="contact-method">
+									<h3 class="contact-title">
+										<i class="bi bi-envelope me-2"></i> General Email
+									</h3>
+									<p class="contact-info">
+										<a href="mailto:security@mainebreadoflife.org" class="text-decoration-none">
+											security@mainebreadoflife.org
+										</a>
+									</p>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="contact-method">
-								<h3 class="contact-title">
-									<i class="bi bi-telephone me-2"></i>
-									Hotline
-								</h3>
-								<p class="contact-info">
-									<a href="tel:+1-207-555-0199" class="text-decoration-none">
-										(207) 555-0199
-									</a>
-								</p>
+							<div class="col-md-6">
+								<div class="contact-method">
+									<h3 class="contact-title">
+										<i class="bi bi-telephone me-2"></i> Hotline
+									</h3>
+									<p class="contact-info">
+										<a href="tel:+1-207-555-0199" class="text-decoration-none">
+											(207) 555-0199
+										</a>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
+
 				<div class="mt-5">
 					<center>
 						<a href="index.html" class="btn-get-started scrollto">Return to Homepage</a>
 						|
 						<a href="contact-us.html" class="btn-services scrollto">Contact Us</a>
 						|
-						<a href="security-policy.html"
+						<a href="privacy-conduct.html"
 						   title="Security Policy"
 						   target="_blank"
-						   rel="noopener noreferrer">Security Policy</a>
+						   rel="noopener noreferrer">Privacy & Conduct Policies</a>
 					</center>
 				</div>
-			</section>
-		</main>
+				</section>
+</main>
 
 		<footer role="contentinfo" id="footer" class="footer dark-background">
 			<div class="container footer-top">
@@ -706,14 +775,9 @@
 						MIT's Brave Behind Bars Program
 					</a>
 					<br />
-					<a href="index.html" class="btn-get-started scrollto">Return to Homepage</a>
+					<a href="contact-us.html" class="btn-services scrollto">Contact Us</a>
 					|
-					<a href="hmis.html"
-					   target="_blank"
-					   rel="noopener noreferrer"
-					   title="HMIS Privacy Notice">HMIS Privacy Notice</a>
-					|
-					<a href="security-policy.html" target="_blank" rel="noopener noreferrer" title="Security Policy"> Security Policy</a>
+					<a href="privacy-conduct.html" target="_blank" rel="noopener noreferrer" title="Security Policy"> Privacy & Conduct Policies</a>
 				</div>
 			</div>
 		</footer>

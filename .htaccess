@@ -43,10 +43,10 @@ RedirectMatch 404 /node_modules(/|$)
 RedirectMatch 404 /\.env(/|$)
 
 # Security Policy Redirect
-Redirect 301 /security.txt /security-policy.html
+Redirect 301 /security.txt /privacy-conduct.html
 
 # New security policy redirect
-Redirect 301 /security.txt /security-policy.html
+Redirect 301 /security.txt /privacy-conduct.html
 
 # RSS Feed Configuration
 Redirect 301 /feed.rss /feed.php

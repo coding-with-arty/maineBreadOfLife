@@ -1,0 +1,166 @@
+﻿/* Sticky navigation for policy tabs */
+.policy-nav {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: #fff;
+}
+
+/* Smooth tab transitions */
+.tab-pane {
+	transition: opacity 0.3s ease-in-out;
+}
+
+/* Consistent heading spacing */
+h3, h4 {
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+/* Lazy loading for images */
+img {
+	loading: lazy;
+}
+
+/* Accessibility enhancements */
+.nav-item.active {
+	aria-current: page;
+}
+
+.bi-icon-name {
+	aria-hidden: true;
+}
+
+.policy-card {
+	background-color: #fff;
+	border-radius: 0.5rem;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	border-left: 4px solid #0d6efd;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.policy-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+	.policy-list li {
+		margin-bottom: 0.75rem;
+		font-size: 1rem;
+	}
+
+.policy-card-title {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.nav-tabs {
+	border-bottom: 2px solid #dee2e6;
+	background-color: #f8f9fa;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+	.nav-tabs .nav-link {
+		border: none;
+		background: transparent;
+		color: #0d6efd;
+		font-weight: 500;
+		padding: 0.75rem 1.25rem;
+		transition: background-color 0.3s ease;
+	}
+
+		.nav-tabs .nav-link:hover {
+			background-color: #e9ecef;
+			border-radius: 0.5rem;
+		}
+
+		.nav-tabs .nav-link.active {
+			background-color: #0d6efd;
+			color: #fff;
+			border-radius: 0.5rem;
+		}
+
+.reporting-card {
+	border-left: 4px solid #0d6efd;
+	background-color: #fefefe;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.reporting-title {
+	font-size: 1.75rem;
+	font-weight: 600;
+}
+
+.contact-method h3 {
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+
+.policy-list li {
+	margin-bottom: 0.75rem;
+}
+
+.policy-card-title {
+	font-size: 1.75rem;
+	font-weight: 600;
+	color: #0d6efd;
+}
+
+.policy-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+	.policy-list li {
+		margin-bottom: 0.75rem;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+		.policy-list li::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: #0d6efd;
+			font-weight: bold;
+		}
+
+/* HMIS Privacy Notice Section */
+.hmis-section {
+	background-color: #ffffff;
+	border-left: 4px solid #0dcaf0;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+	margin-bottom: 2rem;
+}
+
+	.hmis-section h3,
+	.hmis-section h4 {
+		color: #0d6efd;
+		font-weight: 600;
+		margin-top: 1.5rem;
+	}
+
+	.hmis-section ul {
+		list-style: none;
+		padding-left: 0;
+	}
+
+		.hmis-section ul li {
+			position: relative;
+			padding-left: 1.5rem;
+			margin-bottom: 0.75rem;
+		}
+
+			.hmis-section ul li::before {
+				content: "•";
+				position: absolute;
+				left: 0;
+				color: #0d6efd;
+				font-size: 1.25rem;
+				line-height: 1;
+			}

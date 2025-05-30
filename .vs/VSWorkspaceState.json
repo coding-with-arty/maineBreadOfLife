@@ -3,9 +3,10 @@
     "",
     "\\assets",
     "\\assets\\css",
+    "\\assets\\css\\tests",
     "\\assets\\js",
     "\\forms"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\assets\\css\\tests\\main-julius.css",
   "PreviewInSolutionExplorer": false
 }

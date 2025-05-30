@@ -1,237 +1,171 @@
 /**
  * Form Handler for Bread of Life Website
- * Handles CSRF token loading and form submission feedback
+ * Handles CSRF token loading, form validation, and feedback
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Load CSRF tokens for all forms
-  loadCsrfTokens();
-  
-  // Set up form submission handlers
-  setupFormHandlers();
+document.addEventListener('DOMContentLoaded', function () {
+	loadCsrfTokens();
+	setupFormHandlers();
 });
 
-// Volunteer Form Handling
-document.addEventListener('DOMContentLoaded', function() {
-    const volunteerForm = document.getElementById('volunteerForm');
-    if (volunteerForm) {
-        volunteerForm.addEventListener('submit', function(e) {
-            if (!this.checkValidity()) {
-                e.preventDefault();
-                e.stopPropagation();
-                this.classList.add('was-validated');
-                return false;
-            }
-
-            const recaptchaResponse = grecaptcha && grecaptcha.getResponse();
-            if (!recaptchaResponse || recaptchaResponse.length === 0) {
-                alert('Please complete the reCAPTCHA verification.');
-                e.preventDefault();
-                return false;
-            }
-
-            const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = 
-                '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
-        });
-    }
-});
-
-/**
- * Load CSRF tokens for contact and newsletter forms
- */
 /**
  * Load CSRF tokens for all forms with retry logic
- * @param {number} retryCount - Number of retry attempts remaining
  */
 function loadCsrfTokens(retryCount = 3) {
-  // Only show loading indicator if this is the first attempt
-  if (retryCount === 3) {
-    const loadingIndicator = document.getElementById('csrf-loading');
-    if (loadingIndicator) {
-      loadingIndicator.style.display = 'inline-block';
-    }
-  }
-  
-  // Get the base URL from the current page
-  const baseUrl = window.location.origin;
-  
-  fetch(`${baseUrl}/forms/get_csrf_token.php`, {
-    method: 'GET',
-    cache: 'no-store',
-    credentials: 'same-origin',
-    headers: {
-      'Accept': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest',
-      'X-Requested-By': 'BreadOfLifeForm',
-      'X-CSRF-Request': 'true'
-    }
-  })
-  .then(async response => {
-    const data = await response.json();
-    
-    if (!response.ok || !data.success) {
-      const error = new Error(data.message || 'Failed to load security token');
-      error.response = response;
-      error.data = data;
-      throw error;
-    }
-    
-    if (!data.token) {
-      throw new Error('Invalid token received from server');
-    }
-    
-    return data;
-  })
-  .then(data => {
-    // Set token for contact form
-    const contactCsrfInput = document.getElementById('csrf_token');
-    if (contactCsrfInput) {
-      contactCsrfInput.value = data.token;
-    }
-    
-    // Set tokens for all newsletter forms
-    const newsletterCsrfInputs = document.querySelectorAll('.newsletter-csrf-token');
-    newsletterCsrfInputs.forEach(input => {
-      input.value = data.token;
-    });
-    
-    // Hide loading indicator
-    const loadingIndicator = document.getElementById('csrf-loading');
-    if (loadingIndicator) {
-      loadingIndicator.style.display = 'none';
-    }
-  })
-  .catch(error => {
-    console.error('CSRF Token Error:', error);
-    
-    // Hide loading indicator
-    const loadingIndicator = document.getElementById('csrf-loading');
-    if (loadingIndicator) {
-      loadingIndicator.style.display = 'none';
-    }
-    
-    // Only show error to user on last attempt
-    if (retryCount <= 0) {
-      const messageDiv = document.getElementById('form-messages') || 
-                        document.querySelector('.newsletter-message');
-      if (messageDiv) {
-        messageDiv.innerHTML = `
-          <div class="alert alert-danger">
-            <strong>Security Error:</strong> Unable to load security token. 
-            <button onclick="window.location.reload()" class="btn btn-link p-0">
-              Please refresh the page and try again.
-            </button>
-          </div>`;
-      }
-    } else {
-      // Retry with exponential backoff
-      const delay = Math.min(1000 * Math.pow(2, 3 - retryCount), 5000);
-      console.log(`Retrying CSRF token load in ${delay}ms...`);
-      setTimeout(() => loadCsrfTokens(retryCount - 1), delay);
-    }
-  });
+	if (retryCount === 3) {
+		const loadingIndicator = document.getElementById('csrf-loading');
+		if (loadingIndicator) loadingIndicator.style.display = 'inline-block';
+	}
+
+	const baseUrl = window.location.origin;
+
+	fetch(`${baseUrl}/forms/get_csrf_token.php`, {
+		method: 'GET',
+		cache: 'no-store',
+		credentials: 'same-origin',
+		headers: {
+			'Accept': 'application/json',
+			'X-Requested-With': 'XMLHttpRequest',
+			'X-Requested-By': 'BreadOfLifeForm',
+			'X-CSRF-Request': 'true'
+		}
+	})
+		.then(response => response.json())
+		.then(data => {
+			if (!data.success || !data.token) throw new Error('Invalid CSRF token');
+
+			const contactToken = document.getElementById('csrf_token');
+			if (contactToken) contactToken.value = data.token;
+
+			document.querySelectorAll('.newsletter-csrf-token').forEach(input => {
+				input.value = data.token;
+			});
+
+			const loadingIndicator = document.getElementById('csrf-loading');
+			if (loadingIndicator) loadingIndicator.style.display = 'none';
+		})
+		.catch(error => {
+			console.error('CSRF Token Error:', error);
+			const loadingIndicator = document.getElementById('csrf-loading');
+			if (loadingIndicator) loadingIndicator.style.display = 'none';
+
+			if (retryCount <= 0) {
+				const messageDiv = document.getElementById('form-messages') || document.querySelector('.newsletter-message');
+				if (messageDiv) {
+					messageDiv.innerHTML = `
+            <div class="alert alert-danger">
+              <strong>Security Error:</strong> Unable to load security token.
+              <button onclick="window.location.reload()" class="btn btn-link p-0">Refresh and try again</button>
+            </div>`;
+				}
+			} else {
+				const delay = Math.min(1000 * Math.pow(2, 3 - retryCount), 5000);
+				setTimeout(() => loadCsrfTokens(retryCount - 1), delay);
+			}
+		});
 }
 
 /**
- * Set up form submission handlers for all forms
+ * Validate contact form fields and show inline errors
+ */
+function validateContactForm(form) {
+	let isValid = true;
+
+	const fields = [
+		{ id: 'name', message: 'Please enter your name.' },
+		{ id: 'email', message: 'Please enter a valid email address.' },
+		{ id: 'topic', message: 'Please enter a topic.' },
+		{ id: 'message', message: 'Please enter your message.' }
+	];
+
+	fields.forEach(field => {
+		const input = form.querySelector(`[name="${field.id}"]`);
+		const errorDiv = form.querySelector(`#${field.id}-error`);
+
+		if (!input.value.trim()) {
+			errorDiv.textContent = field.message;
+			errorDiv.classList.remove('visually-hidden');
+			input.classList.add('is-invalid');
+			isValid = false;
+		} else {
+			errorDiv.textContent = '';
+			errorDiv.classList.add('visually-hidden');
+			input.classList.remove('is-invalid');
+		}
+	});
+
+	return isValid;
+}
+
+/**
+ * Set up form submission handlers
  */
 function setupFormHandlers() {
-  // Contact form handler
-  const contactForm = document.querySelector('form.php-email-form[action$="contact.php"]');
-  if (contactForm) {
-    console.log('Contact form found, setting up submit handler');
-    contactForm.addEventListener('submit', function(e) {
-      console.log('Contact form submitted');
-      const messageDiv = document.getElementById('form-messages');
-      
-      // Log form data for debugging
-      const formData = new FormData(this);
-      for (let [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-      }
-      
-      // Show loading indicator
-      if (messageDiv) {
-        console.log('Showing loading message');
-        messageDiv.innerHTML = '<div class="alert alert-info">Sending message, please wait...</div>';
-      }
-      
-      // Let the form submit normally - PHP will handle it
-      // We're not preventing default because we want the traditional form submission
-      // This is more reliable on GoDaddy hosting than AJAX
-    });
-  }
-  
-  // Volunteer Form Validation
-  function validateVolunteerForm() {
-    const form = document.getElementById('volunteerForm');
-    if (!form.checkValidity()) {
-      event.preventDefault();
-      event.stopPropagation();
-      form.classList.add('was-validated');
-      return false;
-    }
+	const contactForm = document.querySelector('form.php-email-form[action$="contact.php"]');
+	if (contactForm) {
+		contactForm.addEventListener('submit', function (e) {
+			if (!validateContactForm(this)) {
+				e.preventDefault();
+				return false;
+			}
 
-    const recaptchaResponse = grecaptcha && grecaptcha.getResponse();
-    if (!recaptchaResponse || recaptchaResponse.length === 0) {
-      alert('Please complete the reCAPTCHA verification.');
-      return false;
-    }
+			const messageDiv = document.getElementById('form-messages');
+			if (messageDiv) {
+				messageDiv.innerHTML = '<div class="alert alert-info">Sending message, please wait...</div>';
+			}
+		});
+	}
 
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
-    return true;
-  }
-  
-  const volunteerForm = document.getElementById('volunteerForm');
-  if (volunteerForm) {
-    volunteerForm.addEventListener('submit', validateVolunteerForm);
-  }
-  
-  // Newsletter form handlers
-  const newsletterForms = document.querySelectorAll('form.php-email-form[action="forms/newsletter.php"]');
-  newsletterForms.forEach(form => {
-    form.addEventListener('submit', function(e) {
-      const messageDiv = form.querySelector('.newsletter-message');
-      
-      // Show loading indicator
-      if (messageDiv) {
-        messageDiv.innerHTML = '<div class="alert alert-info">Processing subscription, please wait...</div>';
-      }
-      
-      // Let the form submit normally - PHP will handle it
-    });
-  });
-  
-  // Check for success/error parameters in URL
-  window.addEventListener('load', function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const status = urlParams.get('status');
-    const message = urlParams.get('message');
-    
-    if (status && message) {
-      // Display message based on status
-      const decodedMessage = decodeURIComponent(message);
-      const alertClass = status === 'success' ? 'alert-success' : 'alert-danger';
-      
-      // Find the appropriate message container based on the referring form
-      let messageContainer;
-      if (document.referrer.includes('contact-us.html')) {
-        messageContainer = document.getElementById('form-messages');
-      } else {
-        messageContainer = document.querySelector('.newsletter-message');
-      }
-      
-      if (messageContainer) {
-        messageContainer.innerHTML = `<div class="alert ${alertClass}">${decodedMessage}</div>`;
-        
-        // Scroll to the message
-        messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  });
+	const volunteerForm = document.getElementById('volunteerForm');
+	if (volunteerForm) {
+		volunteerForm.addEventListener('submit', function (e) {
+			if (!this.checkValidity()) {
+				e.preventDefault();
+				e.stopPropagation();
+				this.classList.add('was-validated');
+				return false;
+			}
+
+			const recaptchaResponse = grecaptcha && grecaptcha.getResponse();
+			if (!recaptchaResponse || recaptchaResponse.length === 0) {
+				alert('Please complete the reCAPTCHA verification.');
+				e.preventDefault();
+				return false;
+			}
+
+			const submitBtn = this.querySelector('button[type="submit"]');
+			submitBtn.disabled = true;
+			submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
+		});
+	}
+
+	const newsletterForms = document.querySelectorAll('form.php-email-form[action="forms/newsletter.php"]');
+	newsletterForms.forEach(form => {
+		form.addEventListener('submit', function () {
+			const messageDiv = form.querySelector('.newsletter-message');
+			if (messageDiv) {
+				messageDiv.innerHTML = '<div class="alert alert-info">Processing subscription, please wait...</div>';
+			}
+		});
+	});
+
+	window.addEventListener('load', function () {
+		const urlParams = new URLSearchParams(window.location.search);
+		const status = urlParams.get('status');
+		const message = urlParams.get('message');
+
+		if (status && message) {
+			const decodedMessage = decodeURIComponent(message);
+			const alertClass = status === 'success' ? 'alert-success' : 'alert-danger';
+
+			let messageContainer = document.referrer.includes('contact-us.html')
+				? document.getElementById('form-messages')
+				: document.querySelector('.newsletter-message');
+
+			if (messageContainer) {
+				messageContainer.innerHTML = `<div class="alert ${alertClass}">${decodedMessage}</div>`;
+				messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			}
+		}
+	});
 }
