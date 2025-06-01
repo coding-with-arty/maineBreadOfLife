@@ -4,10 +4,8 @@
     "\\assets",
     "\\assets\\css",
     "\\assets\\css\\tests",
-    "\\assets\\js",
-    "\\forms",
-    "\\tests"
+    "\\assets\\js"
   ],
-  "SelectedNode": "\\contact-us.html",
+  "SelectedNode": "\\assets\\css",
   "PreviewInSolutionExplorer": false
 }
