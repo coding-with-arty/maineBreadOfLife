@@ -110,48 +110,67 @@
 		<link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
 	</noscript>
 
-	<!-- Page-specific Schema (Add this) -->
+	<!-- Error.html  specific Schema -->
 	<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
-		  "@type": "Organization",
-		  "name": "Maine Bread of Life",
-		  "url": "https://mainebreadoflife.org",
-		  "logo": "https://mainebreadoflife.org/assets/img/logo.webp",
-		  "sameAs": [
-			"https://www.facebook.com/MaineBreadofLife"
-		  ],
-		  "contactPoint": {
-			"@type": "ContactPoint",
-			"telephone": "+1-207-626-3434",
-			"contactType": "Customer Service",
-			"areaServed": "US",
-			"availableLanguage": "English"
-		  },
-		  "founder": {
-			"@type": "Person",
-			"name": "Carolyn Neighoff"
-		  },
-		  "employee": [
+		  "@graph": [
 			{
-			  "@type": "Person",
-			  "name": "Victoria Abbott",
-			  "jobTitle": "Executive Director"
-			},
-			{
-			  "@type": "Person",
-			  "name": "Laura Briggs",
-			  "jobTitle": "Director of Operations"
-			},
-			{
-			  "@type": "Person",
-			  "name": "Arthur Daniel Belanger Jr.",
-			  "jobTitle": "Lead Website Developer",
-			  "worksFor": {
-				"@type": "Organization",
-				"name": "Maine Bread of Life",
-				"url": "https://www.mainebreadoflife.org"
+			  "@type": "Organization",
+			  "name": "Maine Bread of Life",
+			  "url": "https://mainebreadoflife.org",
+			  "logo": "https://mainebreadoflife.org/assets/img/logo.webp",
+			  "sameAs": ["https://www.facebook.com/MaineBreadofLife"],
+			  "contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+1-207-626-3434",
+				"contactType": "Customer Service",
+				"areaServed": "US",
+				"availableLanguage": "English"
 			  },
+			  "founder": {
+				"@type": "Person",
+				"name": "Carolyn Neighoff"
+			  },
+			  "employee": [
+				{
+				  "@type": "Person",
+				  "name": "Victoria Abbott",
+				  "jobTitle": "Executive Director"
+				},
+				{
+				  "@type": "Person",
+				  "name": "Laura Briggs",
+				  "jobTitle": "Director of Operations"
+				},
+				{
+				  "@type": "Person",
+				  "name": "Arthur Daniel Belanger Jr.",
+				  "jobTitle": "Lead Website Developer",
+				  "worksFor": {
+					"@type": "Organization",
+					"name": "Maine Bread of Life",
+					"url": "https://www.mainebreadoflife.org"
+				  },
+				  "address": {
+					"@type": "PostalAddress",
+					"streetAddress": "157 Water Street",
+					"addressLocality": "Augusta",
+					"addressRegion": "ME",
+					"postalCode": "04330",
+					"addressCountry": "US"
+				  },
+				  "url": "https://www.mainebreadoflife.org"
+				}
+			  ],
+			  "description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
+			},
+			{
+			  "@type": "HousingProject",
+			  "name": "Error 404 - Bread of Life - Augusta, ME",
+			  "description": "Transitional and supportive housing for veterans in Augusta, Maine.",
+			  "url": "https://mainebreadoflife.org/error.html",
+			  "image": "https://mainebreadoflife.org/assets/img/error.webp",
 			  "address": {
 				"@type": "PostalAddress",
 				"streetAddress": "157 Water Street",
@@ -160,61 +179,38 @@
 				"postalCode": "04330",
 				"addressCountry": "US"
 			  },
-			  "url": "https://www.mainebreadoflife.org"
+			  "audience": {
+				"@type": "Audience",
+				"audienceType": "Veterans"
+			  },
+			  "telephone": "+1-207-626-3434",
+			  "provider": {
+				"@type": "Organization",
+				"name": "Maine Bread of Life",
+				"url": "https://mainebreadoflife.org"
+			  }
+			},
+			{
+			  "@type": "BreadcrumbList",
+			  "itemListElement": [
+				{
+				  "@type": "ListItem",
+				  "position": 1,
+				  "name": "Home",
+				  "item": "https://mainebreadoflife.org/"
+				},
+				{
+				  "@type": "ListItem",
+				  "position": 2,
+				  "name": "Error 404",
+				  "item": "https://mainebreadoflife.org/contact-us.html"
+				}
+			  ]
 			}
-		  ],
-		  "description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
+		  ]
 		}
 	</script>
 
-	<!-- Page-specific Schema (Add this) -->
-	<script type="application/ld+json">
-		{
-		  "@context": "https://schema.org",
-		  "@type": "HousingProject",
-		  "name": "Error 404 - Bread of Life - Augusta, ME",
-		  "description": "Transitional and supportive housing for veterans in Augusta, Maine.",
-		  "url": "https://mainebreadoflife.org/error.html",
-		  "image": "https://mainebreadoflife.org/assets/img/error.webp",
-		  "address": {
-			"@type": "PostalAddress",
-			"streetAddress": "157 Water Street",
-			"addressLocality": "Augusta",
-			"addressRegion": "ME",
-			"postalCode": "04330",
-			"addressCountry": "US"
-		  },
-		  "audience": {
-			"@type": "Audience",
-			"audienceType": "Veterans"
-		  },
-		  "telephone": "+1-207-626-3434",
-		  "provider": {
-			"@type": "Organization",
-			"name": "Maine Bread of Life",
-			"url": "https://mainebreadoflife.org"
-		  }
-		}
-	</script>
-
-	<!-- Breadcrumb Schema -->
-	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "BreadcrumbList",
-			"itemListElement": [{
-				"@type": "ListItem",
-				"position": 1,
-				"name": "Home",
-				"item": "https://mainebreadoflife.org/"
-			}, {
-				"@type": "ListItem",
-				"position": 2,
-				"name": "Error 404",
-				"item": "https://mainebreadoflife.org/contact-us.html"
-			}]
-		}
-	</script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM4L36RV0"></script>
 	<script>
@@ -238,7 +234,7 @@
 			<a href="https://mainebreadoflife.org"
 			   class="logo d-flex align-items-center"
 			   aria-label="Bread of Life Home">
-				<img src="assets/img/breadoflife-white.webp"
+				<img src="assets/img/bolw.webp"
 					 alt="Bread of Life Logo"
 					 title="Back To Home Page" />
 			</a>

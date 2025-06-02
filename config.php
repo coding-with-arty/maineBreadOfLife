@@ -1,6 +1,9 @@
 <?php
-/**
- * Configuration file for Bread of Life forms - Production Environment
+/*--
+ *  ======================================================================
+ *   CONFIG.PHP | MAINE BREAD OF LIFE
+ *   AUTHOR: ARTHUR DANIEL BELANGER JR.
+ *  ======================================================================
  */
 
 // Load environment variables from .env file

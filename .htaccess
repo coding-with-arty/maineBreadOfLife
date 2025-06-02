@@ -1,3 +1,10 @@
+ #
+ #  ======================================================================
+ #   .HTACCESS | MAINE BREAD OF LIFE
+ #   AUTHOR: ARTHUR DANIEL BELANGER JR.
+ #  ======================================================================
+ #
+
 RewriteEngine On
 
 # HTTP/2 Server Push for critical resources
@@ -9,7 +16,7 @@ RewriteEngine On
     Header add Link "</assets/css/service-styles.css>;rel=preload;as=style"
     Header add Link "</assets/vendor/bootstrap/css/bootstrap.min.css>;rel=preload;as=style"
     Header add Link "</assets/vendor/bootstrap-icons/bootstrap-icons.min.css>;rel=preload;as=style"
-    
+
     # Push JS
     Header add Link "</assets/js/main.js>;rel=preload;as=script"
     Header add Link "</assets/js/form-handler.js>;rel=preload;as=script"
@@ -29,7 +36,6 @@ Deny from all
   Order allow,deny
   Deny from all
 </Files>
-
 
 # Protect all PHP files in the forms directory
 <FilesMatch "^form_errors\.log$">
@@ -71,13 +77,13 @@ RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
 # Enable GZIP compression
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml application/rss+xml application/atom+xml image/svg+xml application/x-font-ttf application/x-font-otf font/ttf font/otf image/x-icon
-  
+
   # Remove browser bugs
   BrowserMatch ^Mozilla/4 gzip-only-text/html
   BrowserMatch ^Mozilla/4\.0[678] no-gzip
   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
   Header append Vary User-Agent
-  
+
   # Compression level (0-9, 9 being highest)
   DeflateCompressionLevel 9
 </IfModule>
@@ -85,7 +91,7 @@ RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
 # Browser caching
 <IfModule mod_expires.c>
   ExpiresActive On
-  
+
   # Images
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
@@ -93,18 +99,18 @@ RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
-  
+
   # CSS, JavaScript
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType text/javascript "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
-  
+
   # Fonts
   ExpiresByType font/ttf "access plus 1 year"
   ExpiresByType font/otf "access plus 1 year"
   ExpiresByType font/woff "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
-  
+
   # RSS feed
   ExpiresByType application/rss+xml "access plus 1 day"
 </IfModule>
@@ -123,25 +129,25 @@ RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
 <IfModule mod_headers.c>
   # Prevent MIME-type sniffing
   Header always set X-Content-Type-Options "nosniff"
-  
+
   # Protection against XSS attacks
   Header always set X-XSS-Protection "1; mode=block"
-  
+
   # Prevent site from being embedded in iframes on other domains
   Header always set X-Frame-Options "SAMEORIGIN"
-  
+
   # Control how much referrer information is included with requests
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  
+
   # Content Security Policy (CSP) - cautious implementation to not break functionality
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://*.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-src 'self' https://www.google.com;"
-  
+
   # Feature Policy / Permissions Policy
   Header always set Permissions-Policy "geolocation=(), midi=(), camera=(), microphone=()"
-  
+
   # Set Strict Transport Security (HSTS) for HTTPS
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-  
+
   # Additional security headers
   Header always set Cross-Origin-Embedder-Policy "require-corp"
   Header always set Cross-Origin-Opener-Policy "same-origin"
@@ -153,7 +159,7 @@ RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
   <IfModule mod_headers.c>
     # Set appropriate content type
     Header set Content-Type "text/html; charset=UTF-8"
-    
+
     # Add CORS headers for AJAX calls
     Header set Access-Control-Allow-Origin "https://mainebreadoflife.org"
     Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
@@ -171,7 +177,7 @@ RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
   RewriteEngine On
   RewriteCond %{REQUEST_METHOD} POST
   RewriteCond %{REQUEST_URI} ^/forms/(contact|newsletter)\.php$
-  
+
   # Allow max 10 form submissions in 5 minutes (adjust as needed)
   # Note: This requires RewriteMap and rate limiting setup in httpd.conf
   # For GoDaddy, you can use alternative approaches like session-based limits

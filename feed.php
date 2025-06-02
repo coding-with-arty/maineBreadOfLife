@@ -1,4 +1,12 @@
 <?php
+
+/*
+ *  ======================================================================
+ *   FEED.PHP | MAINE BREAD OF LIFE
+ *   AUTHOR: ARTHUR DANIEL BELANGER JR.
+ *  ======================================================================
+ */
+
 header('Content-Type: application/rss+xml; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 header("Content-Security-Policy: default-src 'none';");

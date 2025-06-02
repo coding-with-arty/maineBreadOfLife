@@ -7,24 +7,15 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<!-- 1. Essential Setup -->
 	<meta charset="utf-8">
 	<base href="/" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ART's House | Bread of Life | Augusta, ME</title>
-
-	<!-- 2. SEO Basics -->
 	<meta name="description" content="ART's House by Bread of Life offers transitional housing and recovery services for veterans in Augusta, ME. Supporting recovery, stability, and community reintegration.">
-
 	<meta name="author" content="Arthur Belanger | Bread of Life Web Development Team - Lead Developer">
-
-	<!-- Use same robots meta tag for crawling and indexing of the page  -->
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="English">
-
-	<!-- 3. Social Sharing - Open Graph (Facebook, LinkedIn) -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Veterans Support & Community Services | Augusta, ME | Bread of Life">
 	<meta property="og:description" content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
@@ -37,8 +28,6 @@
 	<meta property="og:image:type" content="image/webp">
 	<meta property="og:updated_time" content="2025-04-02T19:58:41-04:00">
 	<meta property="article:publisher" content="https://www.facebook.com/MaineBreadofLife">
-
-	<!-- 4. Social Sharing - Twitter -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Veterans Support & Community Services | Augusta, ME">
 	<meta name="twitter:description" content="Bread of Life: Serving veterans and the Augusta, ME community for over 40 years. Providing comprehensive support through our soup kitchen, emergency shelters, and veteran recovery programs.">
@@ -50,13 +39,10 @@
 	<meta name="twitter:creator" content="@MaineBreadofLife">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-	<!-- 5. Other Helpful Meta -->
 	<meta name="theme-color" content="#0d6efd">
 	<meta name="scroll-restoration" content="manual">
 	<meta http-equiv="Cache-Control" content="public, max-age=31536000">
 	<meta name="google-site-verification" content="gO5P_EY6XkK9EaqQJTYtkdUL9ZESyJYKQqc1_rC3JzQ">
-
 	<meta http-equiv="X-Content-Type-Options" content="nosniff">
 	<meta http-equiv="X-XSS-Protection" content="1; mode=block">
 	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -72,14 +58,10 @@
 			frame-ancestors 'none';
 			report-uri /csp-report-endpoint/;">
 	<meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(self), camera=(self), interest-cohort=()">
-
-	<!-- Link and Favicons -->
 	<link rel="canonical" href="https://mainebreadoflife.org/arts-house.html">
 	<link href="assets/img/favicon.webp" rel="icon" type="image/webp">
 	<link href="assets/img/apple-favicon.webp" rel="apple-touch-icon" type="image/webp">
 	<link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg">
-
-	<!-- Resource hints for faster loading -->
 	<link rel="manifest" href="/manifest.json">
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -87,21 +69,13 @@
 	<link href="https://fonts.googleapis.com" rel="preconnect">
 	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 	<link href="https://www.google.com" rel="preconnect" crossorigin>
-
-	<!-- Font loading with performance optimization -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-
-	<!-- Critical CSS (load immediately) -->
 	<link rel="stylesheet" href="/assets/css/main.css">
-
-	<!-- Performance-optimized CSS loading -->
 	<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
 	<link rel="preload" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
 	<link rel="preload" href="/assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="/assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="/assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-	<!-- Fallback for users with JavaScript disabled -->
 	<noscript>
 		<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" crossorigin="anonymous">
@@ -109,49 +83,67 @@
 		<link rel="stylesheet" href="/assets/vendor/glightbox/css/glightbox.min.css">
 		<link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
 	</noscript>
-
-	<!-- Page-specific Schema (Add this) -->
+	<!-- ART's House specific Schema -->
 	<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
-		  "@type": "Organization",
-		  "name": "Maine Bread of Life",
-		  "url": "https://mainebreadoflife.org",
-		  "logo": "https://mainebreadoflife.org/assets/img/logo.webp",
-		  "sameAs": [
-			"https://www.facebook.com/MaineBreadofLife"
-		  ],
-		  "contactPoint": {
-			"@type": "ContactPoint",
-			"telephone": "+1-207-626-3434",
-			"contactType": "Customer Service",
-			"areaServed": "US",
-			"availableLanguage": "English"
-		  },
-		  "founder": {
-			"@type": "Person",
-			"name": "Carolyn Neighoff"
-		  },
-		  "employee": [
+		  "@graph": [
 			{
-			  "@type": "Person",
-			  "name": "Victoria Abbott",
-			  "jobTitle": "Executive Director"
-			},
-			{
-			  "@type": "Person",
-			  "name": "Laura Briggs",
-			  "jobTitle": "Director of Operations"
-			},
-			{
-			  "@type": "Person",
-			  "name": "Arthur Daniel Belanger Jr.",
-			  "jobTitle": "Lead Website Developer",
-			  "worksFor": {
-				"@type": "Organization",
-				"name": "Maine Bread of Life",
-				"url": "https://www.mainebreadoflife.org"
+			  "@type": "Organization",
+			  "name": "Maine Bread of Life",
+			  "url": "https://mainebreadoflife.org",
+			  "logo": "https://mainebreadoflife.org/assets/img/logo.webp",
+			  "sameAs": ["https://www.facebook.com/MaineBreadofLife"],
+			  "contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+1-207-626-3434",
+				"contactType": "Customer Service",
+				"areaServed": "US",
+				"availableLanguage": "English"
 			  },
+			  "founder": {
+				"@type": "Person",
+				"name": "Carolyn Neighoff"
+			  },
+			  "employee": [
+				{
+				  "@type": "Person",
+				  "name": "Victoria Abbott",
+				  "jobTitle": "Executive Director"
+				},
+				{
+				  "@type": "Person",
+				  "name": "Laura Briggs",
+				  "jobTitle": "Director of Operations"
+				},
+				{
+				  "@type": "Person",
+				  "name": "Arthur Daniel Belanger Jr.",
+				  "jobTitle": "Lead Website Developer",
+				  "worksFor": {
+					"@type": "Organization",
+					"name": "Maine Bread of Life",
+					"url": "https://www.mainebreadoflife.org"
+				  },
+				  "address": {
+					"@type": "PostalAddress",
+					"streetAddress": "157 Water Street",
+					"addressLocality": "Augusta",
+					"addressRegion": "ME",
+					"postalCode": "04330",
+					"addressCountry": "US"
+				  },
+				  "url": "https://www.mainebreadoflife.org"
+				}
+			  ],
+			  "description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
+			},
+			{
+			  "@type": "HousingProject",
+			  "name": "ART's House - Bread of Life Veterans Housing",
+			  "description": "Transitional and supportive housing for veterans in Augusta, Maine.",
+			  "url": "https://mainebreadoflife.org/arts-house.html",
+			  "image": "https://mainebreadoflife.org/assets/img/logo.webp",
 			  "address": {
 				"@type": "PostalAddress",
 				"streetAddress": "157 Water Street",
@@ -160,70 +152,44 @@
 				"postalCode": "04330",
 				"addressCountry": "US"
 			  },
-			  "url": "https://www.mainebreadoflife.org"
+			  "audience": {
+				"@type": "Audience",
+				"audienceType": "Veterans"
+			  },
+			  "telephone": "+1-207-626-3434",
+			  "provider": {
+				"@type": "Organization",
+				"name": "Maine Bread of Life",
+				"url": "https://mainebreadoflife.org"
+			  }
+			},
+			{
+			  "@type": "BreadcrumbList",
+			  "itemListElement": [
+				{
+				  "@type": "ListItem",
+				  "position": 1,
+				  "name": "Home",
+				  "item": "https://mainebreadoflife.org/"
+				},
+				{
+				  "@type": "ListItem",
+				  "position": 2,
+				  "name": "Services",
+				  "item": "https://mainebreadoflife.org/services.html"
+				},
+				{
+				  "@type": "ListItem",
+				  "position": 3,
+				  "name": "ART's House",
+				  "item": "https://mainebreadoflife.org/arts-house.html"
+				}
+			  ]
 			}
-		  ],
-		  "description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
+		  ]
 		}
 	</script>
-
-	<!-- Page-specific Schema (Add this) -->
-	<script type="application/ld+json">
-		{
-		  "@context": "https://schema.org",
-		  "@type": "HousingProject",
-		  "name": "ART's House - Bread of Life Veterans Housing",
-		  "description": "Transitional and supportive housing for veterans in Augusta, Maine.",
-		  "url": "https://mainebreadoflife.org/arts-house.html",
-		  "image": "https://mainebreadoflife.org/assets/img/arts-house.webp",
-		  "address": {
-			"@type": "PostalAddress",
-			"streetAddress": "157 Water Street",
-			"addressLocality": "Augusta",
-			"addressRegion": "ME",
-			"postalCode": "04330",
-			"addressCountry": "US"
-		  },
-		  "audience": {
-			"@type": "Audience",
-			"audienceType": "Veterans"
-		  },
-		  "telephone": "+1-207-626-3434",
-		  "provider": {
-			"@type": "Organization",
-			"name": "Maine Bread of Life",
-			"url": "https://mainebreadoflife.org"
-		  }
-		}
-	</script>
-
-	<!-- Breadcrumb Schema -->
-	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "BreadcrumbList",
-			"itemListElement": [{
-				"@type": "ListItem",
-				"position": 1,
-				"name": "Home",
-				"item": "https://mainebreadoflife.org/"
-			}, {
-				"@type": "ListItem",
-				"position": 2,
-				"name": "Services",
-				"item": "https://mainebreadoflife.org/services.html"
-			}, {
-				"@type": "ListItem",
-				"position": 3,
-				"name": "ART's House",
-				"item": "https://mainebreadoflife.org/arts-house.html"
-			}]
-		}
-	</script>
-
 </head>
-
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HM4L36RV0"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
@@ -235,12 +201,11 @@
 
 	gtag('config', 'G-6HM4L36RV0');
 </script>
-
 <body class="service-details-page">
 	<header role="banner" id="header" class="header d-flex align-items-center fixed-top" aria-label="Main header">
 		<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 			<a href="https://mainebreadoflife.org" class="logo d-flex align-items-center" aria-label="Bread of Life Home">
-				<img src="assets/img/breadoflife-white.webp" alt="Bread of Life Logo" title="Back To Home Page">
+				<img src="assets/img/bolw.webp" alt="Bread of Life Logo" title="Back To Home Page">
 			</a>
 			<nav role="navigation" id="navmenu" class="navmenu" aria-label="Primary navigation">
 				<ul>
@@ -261,7 +226,6 @@
 			</nav>
 		</div>
 	</header>
-
 	<main role="main" class="main" aria-label="Main content">
 		<div class="page-title dark-background">
 			<div class="container position-relative">
@@ -550,7 +514,7 @@
 							</div>
 							<a href="https://www.youtube.com/watch?v=UurLrHsNFc4" class="stretched-link" target="_blank" rel="noopener noreferrer">
 								<h3>
-									Youtube
+									YouTube
 								</h3>
 							</a>
 							<p>

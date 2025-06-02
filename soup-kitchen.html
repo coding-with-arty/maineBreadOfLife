@@ -152,46 +152,67 @@
 			  href="/assets/vendor/swiper/swiper-bundle.min.css" />
 	</noscript>
 
-	<!-- Page-specific Schema (Add this) -->
+	<!-- Soup-Kitchen.html specific Schema -->
 	<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
-		  "@type": "Organization",
-		  "name": "Maine Bread of Life",
-		  "url": "https://mainebreadoflife.org",
-		  "logo": "https://mainebreadoflife.org/assets/img/logo.webp",
-		  "sameAs": ["https://www.facebook.com/MaineBreadofLife"],
-		  "contactPoint": {
-			"@type": "ContactPoint",
-			"telephone": "+1-207-626-3434",
-			"contactType": "Customer Service",
-			"areaServed": "US",
-			"availableLanguage": "English"
-		  },
-		  "founder": {
-			"@type": "Person",
-			"name": "Carolyn Neighoff"
-		  },
-		  "employee": [
+		  "@graph": [
 			{
-			  "@type": "Person",
-			  "name": "Victoria Abbott",
-			  "jobTitle": "Executive Director"
-			},
-			{
-			  "@type": "Person",
-			  "name": "Laura Briggs",
-			  "jobTitle": "Director of Operations"
-			},
-			{
-			  "@type": "Person",
-			  "name": "Arthur Daniel Belanger Jr.",
-			  "jobTitle": "Lead Website Developer",
-			  "worksFor": {
-				"@type": "Organization",
-				"name": "Maine Bread of Life",
-				"url": "https://www.mainebreadoflife.org"
+			  "@type": "Organization",
+			  "name": "Maine Bread of Life",
+			  "url": "https://mainebreadoflife.org",
+			  "logo": "https://mainebreadoflife.org/assets/img/logo.webp",
+			  "sameAs": ["https://www.facebook.com/MaineBreadofLife"],
+			  "contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+1-207-626-3434",
+				"contactType": "Customer Service",
+				"areaServed": "US",
+				"availableLanguage": "English"
 			  },
+			  "founder": {
+				"@type": "Person",
+				"name": "Carolyn Neighoff"
+			  },
+			  "employee": [
+				{
+				  "@type": "Person",
+				  "name": "Victoria Abbott",
+				  "jobTitle": "Executive Director"
+				},
+				{
+				  "@type": "Person",
+				  "name": "Laura Briggs",
+				  "jobTitle": "Director of Operations"
+				},
+				{
+				  "@type": "Person",
+				  "name": "Arthur Daniel Belanger Jr.",
+				  "jobTitle": "Lead Website Developer",
+				  "worksFor": {
+					"@type": "Organization",
+					"name": "Maine Bread of Life",
+					"url": "https://www.mainebreadoflife.org"
+				  },
+				  "address": {
+					"@type": "PostalAddress",
+					"streetAddress": "157 Water Street",
+					"addressLocality": "Augusta",
+					"addressRegion": "ME",
+					"postalCode": "04330",
+					"addressCountry": "US"
+				  },
+				  "url": "https://www.mainebreadoflife.org"
+				}
+			  ],
+			  "description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
+			},
+			{
+			  "@type": "HousingProject",
+			  "name": "Soup Kitchen - Bread of Life Veterans Housing",
+			  "description": "Feeding the hungry in Augusta, Maine.",
+			  "url": "https://mainebreadoflife.org/soup-kitchen.html",
+			  "image": "https://mainebreadoflife.org/assets/img/logo.webp",
 			  "address": {
 				"@type": "PostalAddress",
 				"streetAddress": "157 Water Street",
@@ -200,66 +221,39 @@
 				"postalCode": "04330",
 				"addressCountry": "US"
 			  },
-			  "url": "https://www.mainebreadoflife.org"
-			}
-		  ],
-		  "description": "Bread of Life serves the Augusta, Maine community and veterans through shelters, soup kitchens, and recovery programs."
-		}
-	</script>
-
-	<!-- Page-specific Schema (Add this) -->
-	<script type="application/ld+json">
-		{
-		  "@context": "https://schema.org",
-		  "@type": "HousingProject",
-		  "name": "Soup Kitchen - Bread of Life Veterans Housing",
-		  "description": "Feeding the hungry in Augusta, Maine.",
-		  "url": "https://mainebreadoflife.org/arts-house.html",
-		  "image": "https://mainebreadoflife.org/assets/img/arts-house.webp",
-		  "address": {
-			"@type": "PostalAddress",
-			"streetAddress": "157 Water Street",
-			"addressLocality": "Augusta",
-			"addressRegion": "ME",
-			"postalCode": "04330",
-			"addressCountry": "US"
-		  },
-		  "audience": {
-			"@type": "Audience",
-			"audienceType": "Veterans"
-		  },
-		  "telephone": "+1-207-626-3434",
-		  "provider": {
-			"@type": "Organization",
-			"name": "Maine Bread of Life",
-			"url": "https://mainebreadoflife.org"
-		  }
-		}
-	</script>
-
-	<!-- Breadcrumb Schema -->
-	<script type="application/ld+json">
-		{
-		  "@context": "https://schema.org",
-		  "@type": "BreadcrumbList",
-		  "itemListElement": [
-			{
-			  "@type": "ListItem",
-			  "position": 1,
-			  "name": "Home",
-			  "item": "https://mainebreadoflife.org/"
+			  "audience": {
+				"@type": "Audience",
+				"audienceType": "Veterans"
+			  },
+			  "telephone": "+1-207-626-3434",
+			  "provider": {
+				"@type": "Organization",
+				"name": "Maine Bread of Life",
+				"url": "https://mainebreadoflife.org"
+			  }
 			},
 			{
-			  "@type": "ListItem",
-			  "position": 2,
-			  "name": "Services",
-			  "item": "https://mainebreadoflife.org/services.html"
-			},
-			{
-			  "@type": "ListItem",
-			  "position": 3,
-			  "name": "Soup Kitchen",
-			  "item": "https://mainebreadoflife.org/soup-kitchen.html"
+			  "@type": "BreadcrumbList",
+			  "itemListElement": [
+				{
+				  "@type": "ListItem",
+				  "position": 1,
+				  "name": "Home",
+				  "item": "https://mainebreadoflife.org/"
+				},
+				{
+				  "@type": "ListItem",
+				  "position": 2,
+				  "name": "Services",
+				  "item": "https://mainebreadoflife.org/services.html"
+				},
+				{
+				  "@type": "ListItem",
+				  "position": 3,
+				  "name": "Soup Kitchen",
+				  "item": "https://mainebreadoflife.org/soup-kitchen.html"
+				}
+			  ]
 			}
 		  ]
 		}
@@ -289,7 +283,7 @@
 			<a href="https://mainebreadoflife.org"
 			   class="logo d-flex align-items-center"
 			   aria-label="Bread of Life Home">
-				<img src="assets/img/breadoflife-white.webp"
+				<img src="assets/img/bolw.webp"
 					 alt="Bread of Life Logo"
 					 loading="eager"
 					 title="Back To Home Page" />
@@ -748,7 +742,7 @@
 							   class="stretched-link"
 							   target="_blank"
 							   rel="noopener noreferrer">
-								<h3>Youtube</h3>
+								<h3>YouTube</h3>
 							</a>
 							<p>Learn a little more about what we do.</p>
 						</div>

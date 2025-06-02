@@ -1,3 +1,10 @@
+ #
+ #  ======================================================================
+ #   ROBOTS.TXT | MAINE BREAD OF LIFE
+ #   AUTHOR: ARTHUR DANIEL BELANGER JR.
+ #  ======================================================================
+ #
+
 # Maine Bread of Life Website Robots Configuration
 # Updated: May 15, 2025
 
