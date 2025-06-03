@@ -3,7 +3,7 @@
 require_once(__DIR__ . '/../config.php');
 
 // CORS headers
-header('Access-Control-Allow-Origin: https://mainebreadoflife.org'); // Replace with your actual domain
+header('Access-Control-Allow-Origin: https://mainebreadoflife.org');
 header('Access-Control-Allow-Methods: GET');
 header('Access-Control-Allow-Headers: Content-Type');
 

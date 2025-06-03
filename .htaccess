@@ -1,15 +1,22 @@
- #
- #  ======================================================================
- #   .HTACCESS | MAINE BREAD OF LIFE
- #   AUTHOR: ARTHUR DANIEL BELANGER JR.
- #  ======================================================================
- #
+#
+# ======================================================================
+# .HTACCESS | MAINE BREAD OF LIFE - Production Ready for GoDaddy
+# AUTHOR: Arthur Daniel Belanger Jr.
+# ======================================================================
+#
 
 RewriteEngine On
 
-# HTTP/2 Server Push for critical resources
+# ----------------------------
+# Force HTTPS - Critical for security/Uncomment before deploy
+# ----------------------------
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ----------------------------
+# HTTP/2 Server Push for critical assets (works if enabled on server)
+# ----------------------------
 <IfModule mod_headers.c>
-  # Push CSS
   <FilesMatch "index\.html$">
     Header add Link "</assets/css/main.css>;rel=preload;as=style"
     Header add Link "</assets/css/custom-styles.css>;rel=preload;as=style"
@@ -17,7 +24,6 @@ RewriteEngine On
     Header add Link "</assets/vendor/bootstrap/css/bootstrap.min.css>;rel=preload;as=style"
     Header add Link "</assets/vendor/bootstrap-icons/bootstrap-icons.min.css>;rel=preload;as=style"
 
-    # Push JS
     Header add Link "</assets/js/main.js>;rel=preload;as=script"
     Header add Link "</assets/js/form-handler.js>;rel=preload;as=script"
     Header add Link "</assets/js/custom-scripts.js>;rel=preload;as=script"
@@ -25,74 +31,77 @@ RewriteEngine On
   </FilesMatch>
 </IfModule>
 
+# ----------------------------
 # Protect sensitive files
+# ----------------------------
 <Files "config.php">
-Order Allow,Deny
-Deny from all
-</Files>
-
-# Protect .env file
-<Files .env>
-  Order allow,deny
+  Order Allow,Deny
   Deny from all
 </Files>
 
-# Protect all PHP files in the forms directory
+<Files .env>
+  Order Allow,Deny
+  Deny from all
+</Files>
+
 <FilesMatch "^form_errors\.log$">
-Order Allow,Deny
-Deny from all
+  Order Allow,Deny
+  Deny from all
 </FilesMatch>
 
-# Block sensitive paths
 RedirectMatch 404 /\.git(/|$)
 RedirectMatch 404 /node_modules(/|$)
 RedirectMatch 404 /\.env(/|$)
 
-# Security Policy Redirect
+# ----------------------------
+# Security policy redirect
+# ----------------------------
 Redirect 301 /security.txt /privacy-conduct.html
 
-# New security policy redirect
-Redirect 301 /security.txt /privacy-conduct.html
-
-# RSS Feed Configuration
+# ----------------------------
+# RSS Feed configuration
+# ----------------------------
 Redirect 301 /feed.rss /feed.php
 <Files "feed.php">
-    Require all granted
-    AddType application/rss+xml .php
+  Require all granted
+  AddType application/rss+xml .php
 </Files>
 
+# ----------------------------
 # Remove .html from URLs and allow access without file extension
+# ----------------------------
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)/?$ $1.html [L]
 
-# Redirect old .html URLs to clean URLs with a trailing slash (SEO-friendly)
+# Redirect old .html URLs to clean URLs with trailing slash (SEO)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
 RewriteRule (.*)\.html$ /$1/ [R=301,L]
 
-# Force trailing slash on URLs (except for actual files and directories)
+# Force trailing slash on URLs (except existing files/directories)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
 
+# ----------------------------
 # Enable GZIP compression
+# ----------------------------
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml application/rss+xml application/atom+xml image/svg+xml application/x-font-ttf application/x-font-otf font/ttf font/otf image/x-icon
 
-  # Remove browser bugs
   BrowserMatch ^Mozilla/4 gzip-only-text/html
   BrowserMatch ^Mozilla/4\.0[678] no-gzip
   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
   Header append Vary User-Agent
 
-  # Compression level (0-9, 9 being highest)
   DeflateCompressionLevel 9
 </IfModule>
 
-# Browser caching
+# ----------------------------
+# Browser caching - long expiration for static assets
+# ----------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # Images
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
@@ -100,126 +109,91 @@ RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
 
-  # CSS, JavaScript
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType text/javascript "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
 
-  # Fonts
   ExpiresByType font/ttf "access plus 1 year"
   ExpiresByType font/otf "access plus 1 year"
   ExpiresByType font/woff "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
 
-  # RSS feed
   ExpiresByType application/rss+xml "access plus 1 day"
 </IfModule>
 
-# Define MIME types
+# ----------------------------
+# MIME types & XSL headers
+# ----------------------------
 <IfModule mod_mime.c>
   AddType application/rss+xml .rss
 </IfModule>
 
-# Add XSL MIME type
 <Files "sitemap.xsl">
-    Header set Content-Type "text/xsl"
+  Header set Content-Type "text/xsl"
 </Files>
 
-# HTTP Security Headers
+# ----------------------------
+# HTTP Security Headers - solid baseline/Uncomment for deploy
+# ----------------------------
 <IfModule mod_headers.c>
-  # Prevent MIME-type sniffing
   Header always set X-Content-Type-Options "nosniff"
-
-  # Protection against XSS attacks
   Header always set X-XSS-Protection "1; mode=block"
-
-  # Prevent site from being embedded in iframes on other domains
   Header always set X-Frame-Options "SAMEORIGIN"
-
-  # Control how much referrer information is included with requests
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
-  # Content Security Policy (CSP) - cautious implementation to not break functionality
+  # Content Security Policy (CSP) - moderate for compatibility
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://*.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-src 'self' https://www.google.com;"
 
-  # Feature Policy / Permissions Policy
   Header always set Permissions-Policy "geolocation=(), midi=(), camera=(), microphone=()"
-
-  # Set Strict Transport Security (HSTS) for HTTPS
-  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-
-  # Additional security headers
-  Header always set Cross-Origin-Embedder-Policy "require-corp"
-  Header always set Cross-Origin-Opener-Policy "same-origin"
+#  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+#  Header always set Cross-Origin-Embedder-Policy "require-corp"
+#  Header always set Cross-Origin-Opener-Policy "same-origin"
 </IfModule>
 
-# Form Submission Security
-# Protect and optimize form handling for GoDaddy hosting
-<FilesMatch "^(contact|newsletter)\.php$">
-  <IfModule mod_headers.c>
-    # Set appropriate content type
-    Header set Content-Type "text/html; charset=UTF-8"
+# ----------------------------
+# Form Submission Security Headers for AJAX (contact, newsletter) Uncomment for deploy
+# ----------------------------
+# <FilesMatch "^(contact|newsletter|get-csrf-token)\.php$">
+#   <IfModule mod_headers.c>
+#     Header set Content-Type "application/json; charset=UTF-8"
+#     Header set Access-Control-Allow-Origin "https://mainebreadoflife.org"
+#     Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+#     Header set Access-Control-Allow-Headers "Content-Type"
+#   </IfModule>
+# </FilesMatch>
 
-    # Add CORS headers for AJAX calls
-    Header set Access-Control-Allow-Origin "https://mainebreadoflife.org"
-    Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
-    Header set Access-Control-Allow-Headers "Content-Type"
-  </IfModule>
-</FilesMatch>
-
-# Protect the upload directory (prevent direct access to uploaded files)
+# ----------------------------
+# Protect uploads directory (no direct access)
+# ----------------------------
 <IfModule mod_rewrite.c>
   RewriteRule ^forms/uploads/(.*)$ - [F,L]
 </IfModule>
 
-# Rate limiting for form submissions (based on IP)
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{REQUEST_METHOD} POST
-  RewriteCond %{REQUEST_URI} ^/forms/(contact|newsletter)\.php$
+# ----------------------------
+# Disable directory listings globally
+# ----------------------------
+Options -Indexes
 
-  # Allow max 10 form submissions in 5 minutes (adjust as needed)
-  # Note: This requires RewriteMap and rate limiting setup in httpd.conf
-  # For GoDaddy, you can use alternative approaches like session-based limits
-</IfModule>
-
+# ----------------------------
 # Custom Error Pages
+# ----------------------------
 ErrorDocument 404 /error.html
 ErrorDocument 500 /error.html
 ErrorDocument 403 /error.html
 ErrorDocument 401 /error.html
 ErrorDocument 400 /error.html
 
-# Force HTTPS (uncomment when ready to enforce SSL)
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTPS} off
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
-
-# Prevent image hotlinking/Comment this out for development/ Uncomment for deployment
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#   RewriteCond %{HTTP_REFERER} !^$
-#   RewriteCond %{HTTP_REFERER} !^https://(www\.)?mainebreadoflife\.org/.*$ [NC]
-#   RewriteCond %{HTTP_REFERER} !^https://www\.google\.com/.*$ [NC]
-#   RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
-# </IfModule>
-
-# Add caching headers for static assets
+# ----------------------------
+# Cache Control for static assets
+# ----------------------------
 <FilesMatch "\.(css|js|webp|woff2)$">
   Header set Cache-Control "public, max-age=31536000, immutable"
 </FilesMatch>
 
-# Add ETags for better cache validation
+# ----------------------------
+# Disable ETags to prevent caching issues and rely on FileETag
+# ----------------------------
 <IfModule mod_headers.c>
   Header unset ETag
 </IfModule>
 FileETag MTime Size
-
-# Add cache control headers
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
-</IfModule>
