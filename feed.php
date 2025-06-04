@@ -4,6 +4,7 @@
  *  ======================================================================
  *   FEED.PHP | MAINE BREAD OF LIFE
  *   AUTHOR: ARTHUR DANIEL BELANGER JR.
+ *   https://github.com/MusicalViking/maineBreadOfLife
  *  ======================================================================
  */
 

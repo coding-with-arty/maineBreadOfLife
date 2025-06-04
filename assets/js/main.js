@@ -1,7 +1,8 @@
 /*
  *  ======================================================================
- *   MAIN.JS | MAINE BREAD OF LIFE
- *   AUTHOR: ARTHUR DANIEL BELANGER JR.
+ *  MAIN.JS | MAINE BREAD OF LIFE
+ *  AUTHOR: ARTHUR DANIEL BELANGER JR.
+ *  https://github.com/MusicalViking/maineBreadOfLife
  *  ======================================================================
 */
 (function () {

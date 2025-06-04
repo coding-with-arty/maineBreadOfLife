@@ -2,6 +2,10 @@
 /**
  * Newsletter Subscription Handler
  * Optimized for GoDaddy hosting
+ * Author: Arthur Belanger
+ * Email: arthur@example.com
+ * Date: 2025-06-04
+ * Description: This script handles user login functionality.
  */
 
 // Start output buffering to prevent header issues on GoDaddy

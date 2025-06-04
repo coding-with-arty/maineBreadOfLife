@@ -25,8 +25,8 @@ Bread of Life is a community outreach program based in Augusta, Maine, dedicated
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript
-- **Build Tools**: Webpack, PostCSS
-- **Linting**: ESLint, Stylelint
+- **Build Tools**: Webpack, PostCSS, Node.js
+- **Linting**: ESLint, Stylelint, ESBuild
 - **Performance**: Image optimization, code minification
 - **Analytics**: Google Analytics integration
 
@@ -107,4 +107,4 @@ For more information about Bread of Life, please visit [mainebreadoflife.org](ht
 
 ---
 
-Made with ❤️ by [Arthur Belanger](https://github.com/ArthurBelanger207) for the Bread of Life community.
+Made with ❤️ by [Arthur Belanger](https://github.com/MusicalViking) for the Bread of Life community.
