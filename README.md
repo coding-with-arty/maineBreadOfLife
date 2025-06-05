@@ -1,7 +1,7 @@
 # Maine Bread of Life
 
 - 🌐 [mainebreadoflife.org](https://mainebreadoflife.org)
-- 📸 Screenshot Credit: ![Bread of Life Homepage](images/maineBreadOfLife.png)
+- 📸 ![Bread of Life Homepage](images/maineBreadOfLife.png)
 - [Tour of ART's House - Maine Bread of Life](https://www.youtube.com/watch?v=DNcIMS_XcEY&t=2s)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

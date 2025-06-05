@@ -1,11 +1,10 @@
- #
  #  ======================================================================
- #  ROBOTS.TXT | MAINE BREAD OF LIFE
- #  AUTHOR: ARTHUR DANIEL BELANGER JR.
- #  https://github.com/MusicalViking/maineBreadOfLife
+ #  ARTS-HOUSE.HTML | MAINE BREAD OF LIFE
+ #   AUTHOR: ARTHUR DANIEL BELANGER JR.
+ #	 Email: arthur.belanger@maine.edu
+ #   https://github.com/MusicalViking/maineBreadOfLife
  #  ======================================================================
- #
-
+ 
 # Maine Bread of Life Website Robots Configuration
 # Updated: May 15, 2025
 
