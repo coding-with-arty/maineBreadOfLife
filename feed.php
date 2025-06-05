@@ -1,11 +1,11 @@
 <?php
 
-/*
- *  ======================================================================
- *   FEED.PHP | MAINE BREAD OF LIFE
- *   AUTHOR: ARTHUR DANIEL BELANGER JR.
- *   https://github.com/MusicalViking/maineBreadOfLife
- *  ======================================================================
+/**
+ * Optimized for GoDaddy hosting
+ * Author: Arthur Belanger
+ * Email: arthur.belanger@maine.edu
+ * https://github.com/MusicalViking/maineBreadOfLife
+ * Date: 2025-06-04
  */
 
 header('Content-Type: application/rss+xml; charset=utf-8');

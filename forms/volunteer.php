@@ -1,5 +1,11 @@
 <?php
-// volunteer.php
+/**
+ * Optimized for GoDaddy hosting
+ * Author: Arthur Belanger
+ * Email: arthur.belanger@maine.edu
+ * https://github.com/MusicalViking/maineBreadOfLife
+ * Date: 2025-06-04
+ */
 
 // Start output buffering
 ob_start();

@@ -1,4 +1,12 @@
 <?php
+/**
+ * Optimized for GoDaddy hosting
+ * Author: Arthur Belanger
+ * Email: arthur.belanger@maine.edu
+ * https://github.com/MusicalViking/maineBreadOfLife
+ * Date: 2025-06-04
+ */
+
 // Load configuration first
 require_once(__DIR__ . '/../config.php');
 
