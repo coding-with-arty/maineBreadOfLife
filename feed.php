@@ -15,12 +15,41 @@ header("Content-Security-Policy: default-src 'none';");
 $base_url = 'https://mainebreadoflife.org';
 $items = [
     [
-        'title' => 'Family, Veteran and Emergency Shelters',
+        'title' => 'Emergency Shelter Services',
         'link' => '/shelters/',
-        'description' => 'Bread of Life offers shelter options including family shelters and veteran housing.',
-        'pubDate' => time()
+        'description' => 'Bread of Life provides emergency shelter services for individuals and families experiencing homelessness in the Augusta area. Our shelters offer a safe, supportive environment with access to meals, case management, and resources to help guests regain stability.',
+        'pubDate' => strtotime('2025-06-01')
     ],
-    // Add more items here
+    [
+        'title' => 'Soup Kitchen & Community Meals',
+        'link' => '/soup-kitchen/',
+        'description' => 'Our soup kitchen serves nutritious meals to anyone in need, no questions asked. Open 365 days a year, we provide breakfast, lunch, and dinner to combat food insecurity in our community.',
+        'pubDate' => strtotime('2025-06-02')
+    ],
+    [
+        'title' => 'The Arts House',
+        'link' => '/arts-house/',
+        'description' => 'A unique program that combines art therapy and life skills training to help individuals experiencing homelessness or housing insecurity. The Arts House provides a creative outlet and valuable skills development.',
+        'pubDate' => strtotime('2025-06-03')
+    ],
+    [
+        'title' => 'Veteran Support Services',
+        'link' => '/services/',
+        'description' => 'Specialized support for veterans experiencing homelessness, including housing assistance, case management, and connection to VA benefits and resources.',
+        'pubDate' => strtotime('2025-06-04')
+    ],
+    [
+        'title' => 'Volunteer Opportunities',
+        'link' => '/volunteer/',
+        'description' => 'Join our team of dedicated volunteers! Opportunities include meal service, shelter support, fundraising events, and skills-based volunteering. Make a difference in your community today.',
+        'pubDate' => strtotime('2025-06-05')
+    ],
+    [
+        'title' => 'Community Resources & Referrals',
+        'link' => '/services/',
+        'description' => 'Access to essential services including housing assistance, healthcare referrals, job training programs, and more. Our case managers work one-on-one with guests to connect them with the resources they need.',
+        'pubDate' => strtotime('2025-06-06')
+    ]
 ];
 
 echo '<?xml version="1.0" encoding="utf-8"?>';

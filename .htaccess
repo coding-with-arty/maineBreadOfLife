@@ -10,8 +10,8 @@ RewriteEngine On
 # ----------------------------
 # Force HTTPS - Uncomment for deployment
 # ----------------------------
-# RewriteCond %{HTTPS} off
-# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ----------------------------
 # HTTP/2 Server Push (if supported)
