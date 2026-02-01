@@ -2,7 +2,7 @@
  *  ======================================================================
  *  MAIN.JS | MAINE BREAD OF LIFE - FORM SUBMIT VERSION
  *  AUTHOR: ARTHUR DANIEL BELANGER JR.
- *  https://github.com/MusicalViking/maineBreadOfLife
+ *  https://github.com/coding-with-arty/maineBreadOfLife
  *  ======================================================================
  */
 (function () {
@@ -152,21 +152,22 @@
   }
 
   // Handle form submissions
-  document.querySelectorAll('form[action*="formsubmit.co"]').forEach(form => {
-    form.addEventListener('submit', function(event) {
+  document.querySelectorAll('form[action*="formsubmit.co"]').forEach((form) => {
+    form.addEventListener("submit", function (event) {
       // Show loading state
       const submitBtn = this.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn?.innerHTML;
-      
+
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+        submitBtn.innerHTML =
+          '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
       }
-      
+
       // Let the form submit naturally to FormSubmit
       // The form will be handled by the browser's default behavior
       // since we're not calling event.preventDefault()
-      
+
       // Reset the button after a delay in case submission fails
       setTimeout(() => {
         if (submitBtn) {

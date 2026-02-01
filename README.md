@@ -115,4 +115,4 @@ For more information about Bread of Life, please visit [mainebreadoflife.org](ht
 
 ---
 
-Made with ❤️ by [Arthur](https://github.com/MusicalViking) for the Bread of Life community.
+Made with ❤️ by [Arthur](https://github.com/coding-with-arty) for the Bread of Life community.

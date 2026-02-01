@@ -4,7 +4,7 @@
  * Optimized for GoDaddy hosting
  * Author: Arthur Belanger
  * Email: arthur.belanger@maine.edu
- * https://github.com/MusicalViking/maineBreadOfLife
+ * https://github.com/coding-with-arty/maineBreadOfLife
  * Date: 2025-06-04
  */
 

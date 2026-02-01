@@ -1,7 +1,7 @@
 # ======================================================================
 # ROBOTS.TXT | MAINE BREAD OF LIFE
 # AUTHOR: Arthur Daniel Belanger Jr.
-# https://github.com/MusicalViking/maineBreadOfLife
+# https://github.com/coding-with-arty/maineBreadOfLife
 # Updated: June 7, 2025
 # ======================================================================
 
