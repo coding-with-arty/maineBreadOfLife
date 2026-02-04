@@ -23,13 +23,13 @@
     # 4. Clean URLs: serve .html files without extension and add trailing slash
 
     # If not a directory and .html file exists, serve it transparently
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}.html -f
-    RewriteRule ^(.+?)/?$ $1.html [L]
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_FILENAME}.html -f
+    # RewriteRule ^(.+?)/?$ $1.html [L]
 
-    # Redirect direct .html requests to clean URL with trailing slash
-    RewriteCond %{THE_REQUEST} \s([^\s]+)\.html[\s?] [NC]
-    RewriteRule ^ %1/ [R=301,L]
+    # # Redirect direct .html requests to clean URL with trailing slash
+    # RewriteCond %{THE_REQUEST} \s([^\s]+)\.html[\s?] [NC]
+    # RewriteRule ^ %1/ [R=301,L]
 
     # Add trailing slash if missing and not a file or directory
     RewriteCond %{REQUEST_FILENAME} !-f
