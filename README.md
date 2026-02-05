@@ -5,7 +5,7 @@
 - [Tour of ART's House - Maine Bread of Life](https://www.youtube.com/watch?v=DNcIMS_XcEY&t=2s)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/ArthurBelanger207/maineBreadOfLife?style=social)](https://github.com/ArthurBelanger207/maineBreadOfLife/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/coding-with-arty/maineBreadOfLife?style=social)](https://github.com/coding-with-arty/maineBreadOfLife/stargazers)
 
 ## 🌟 About
 
