@@ -2083,3 +2083,26 @@ textarea.is-invalid {
 .stat-number {
   animation: countUp 0.6s ease-out forwards;
 }
+
+#volunteer-form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+#volunteer-form-container h4 {
+    color: #2c3e50;
+    margin-top: 20px;
+}
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+/* Focus styling for accessibility */
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
