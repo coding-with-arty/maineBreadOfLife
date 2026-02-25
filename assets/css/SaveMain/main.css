@@ -7,7 +7,9 @@
  */
 
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Raleway", sans-serif;
@@ -342,7 +344,8 @@ input[type="file"] {
     padding: 0.625rem 0;
     margin: 0.625rem 1.25rem;
     background-color: var(--nav-dropdown-background-color);
-    border: 0.0625rem solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border: 0.0625rem solid
+      color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
     transition: all 0.5s ease-in-out;
   }
@@ -405,7 +408,8 @@ input[type="file"] {
   border-radius: 50%;
   border: 0.0625rem solid rgba(0, 0, 0, 0.5);
   /* fallback */
-  border: 0.0625rem solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 0.0625rem solid
+    color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 1.5rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-right: 0.625rem;
@@ -492,7 +496,8 @@ input[type="file"] {
 
 .footer .copyright {
   padding: 1.25rem 0;
-  border-top: 0.0625rem solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 0.0625rem solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p,
@@ -724,7 +729,12 @@ section,
   top: 0;
   width: 130%;
   height: 95%;
-  background: linear-gradient( to right, color-mix(in srgb, var(--background-color), transparent 90%), var(--background-color)), url("../img/sign.webp") center top no-repeat;
+  background: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--background-color), transparent 90%),
+      var(--background-color)
+    ),
+    url("../img/sign.webp") center top no-repeat;
   background-size: cover;
   z-index: 1;
   border-radius: 0 0 50% 50%;
@@ -853,8 +863,7 @@ section,
   }
 }
 
-@media (max-width: 48rem),
-(max-height: 43.75rem) {
+@media (max-width: 48rem), (max-height: 43.75rem) {
   .hero h2 {
     font-size: 2rem;
   }
@@ -1107,7 +1116,8 @@ section,
   font-size: 2rem;
   font-weight: 750;
   text-align: center;
-  border-bottom: 0.125rem solid color-mix(in srgb, var(--default-color), transparent 92%);
+  border-bottom: 0.125rem solid
+    color-mix(in srgb, var(--default-color), transparent 92%);
   padding-bottom: 0.9375rem;
   margin-bottom: 0.9375rem;
 }
@@ -1357,7 +1367,8 @@ h6,
 .comment-form form input {
   background-color: var(--surface-color);
   color: var(--default-color);
-  border: 0.125rem solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 0.125rem solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
   font-size: 1rem;
   border-radius: 0.25rem;
   padding: 0.625rem 0.625rem;
@@ -1378,7 +1389,8 @@ h6,
 .comment-form form textarea {
   background-color: var(--surface-color);
   color: var(--default-color);
-  border: 0.125rem solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 0.125rem solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 0.5rem;
   padding: 0.625rem 0.625rem;
   font-size: 1rem;
@@ -1449,7 +1461,8 @@ label[for="file-upload"]:hover {
   align-items: center;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
-  border: 0.125rem dotted color-mix(in srgb, var(--accent-color), transparent 40%);
+  border: 0.125rem dotted
+    color-mix(in srgb, var(--accent-color), transparent 40%);
 }
 
 .contact .info-item h3 {
@@ -1543,7 +1556,8 @@ label[for="file-upload"]:hover {
 
 .search-widget form {
   background: var(--background-color);
-  border: 0.0625rem solid color-mix(in srgb, var(--default-color), transparent 75%);
+  border: 0.0625rem solid
+    color-mix(in srgb, var(--default-color), transparent 75%);
   padding: 0.1875rem 0.625rem;
   position: relative;
   border-radius: 3.125rem;
@@ -2085,24 +2099,85 @@ textarea.is-invalid {
 }
 
 #volunteer-form-container {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 #volunteer-form-container h4 {
-    color: #2c3e50;
-    margin-top: 20px;
+  color: #2c3e50;
+  margin-top: 20px;
 }
 .form-label {
-    font-weight: 500;
-    color: #495057;
+  font-weight: 500;
+  color: #495057;
 }
 .bg-light {
-    background-color: #f8f9fa !important;
+  background-color: #f8f9fa !important;
 }
 /* Focus styling for accessibility */
-.form-control:focus, .form-select:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* === Google Form (embedded) — match the site's contact cards === */
+.google-form-card {
+  /* inner card matches your left column light-blue panels */
+  background: var(--nav-dropdown-background-color); /* #b1dffa */
+  color: var(--default-color);
+  border-radius: 1rem;
+  /* same weight of shadow used elsewhere, but slightly softened */
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  /* faint border to define the edge like other cards */
+  border: 0.0625rem solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 1rem;
+}
+
+/* Make the embedded form feel "native" inside the card */
+.google-form-card .ratio > iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0.75rem; /* rounded inner corners like the left card */
+  background: transparent;
+}
+
+/* Headings + helper text align with your palette */
+#contact-form h4 {
+  color: var(--heading-color);
+}
+#contact-form .small.text-muted,
+#contact-form em {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+/* Fine-tune the outer band so both columns match */
+.comment-form {
+  background-color: var(--heading-color); /* dark blue band behind the card */
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+}
+
+/* Responsive: give the form enough visible height so the footer/submit area isn't cramped */
+@media (max-width: 575.98px) {
+  /* phones */
+  .google-form-card .ratio {
+    --bs-aspect-ratio: 195%;
+  }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  /* tablets */
+  .google-form-card .ratio {
+    --bs-aspect-ratio: 180%;
+  }
+}
+@media (min-width: 992px) {
+  /* desktop */
+  .google-form-card .ratio {
+    --bs-aspect-ratio: 165%;
+  }
 }

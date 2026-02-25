@@ -1,12 +1,20 @@
-<!--
- *  ======================================================================
- *   CONTACT-US.HTML | MAINE BREAD OF LIFE
- *   AUTHOR: ARTHUR DANIEL BELANGER JR.
- *	 Email: arthur.belanger@maine.edu
- *   https://github.com/coding-with-arty/maineBreadOfLife
- *  ======================================================================
- -->
 
+<?php
+session_start();
+
+
+ #  ======================================================================
+ #   CONTACT-US.PHP(HTML Page) | MAINE BREAD OF LIFE
+ #   AUTHOR: ARTHUR DANIEL BELANGER JR.
+ #	 Email: arthur.belanger@maine.edu
+ #   https://github.com/coding-with-arty/maineBreadOfLife
+ #  ======================================================================
+ 
+// Generate a new CSRF token if one doesn't exist
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -245,7 +253,7 @@
                         <a href="volunteer.html" rel="preload">Volunteer</a>
                     </li>
                     <li role="menuitem">
-                        <a href="contact-us.html" class="active" aria-current="page">Contact Us</a>
+                        <a href="contact.php" class="active" aria-current="page">Contact Us</a>
                     </li>
                     <li role="menuitem">
                         <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PGTFGX7RU4QHQ">
@@ -429,7 +437,7 @@
                                             <!-- Cloudflare Turnstile (managed mode) -->
                                             <!-- Server must verify cf-turnstile-response in contact.php -->
                                             <div class="mb-3">
-                                                <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="auto">
+                                                <div class="cf-turnstile" data-sitekey="0x4AAAAAAChgsEnQnqcBX8Dv" data-theme="auto">
                                                 </div>
                                             </div>
 
@@ -903,7 +911,7 @@
                         </li>
                         <li>
                             <i class="bi bi-info-circle"> </i>
-                            <a href="contact-us.html"> Resource Office</a>
+                            <a href="contact.php"> Resource Office</a>
                         </li>
                         <li>
                             <a href="/assets/img/clients/h_app.pdf" download target="_blank" rel="noopener noreferrer" title="Open Housing Application Form">
@@ -1000,3 +1008,77 @@
 </body>
 
 </html>
+
+
+
+==========================================================
+
+SAVE <CODE>
+    <form id="contactForm" action="https://formsubmit.co/a823ddc1dcecd5973a4dd020a84797e0"
+									method="POST" enctype="multipart/form-data">
+									<!-- FormSubmit Configuration -->
+									<input type="hidden" name="_captcha" value="false" />
+									<input type="hidden" name="_next"
+										value="https://mainebreadoflife.org/thank-you.html" />
+									<input type="hidden" name="_subject" value="New Contact Form Submission" />
+									<input type="text" name="_honey" style="display: none" tabindex="-1" />
+
+									<h4 id="contact-heading"><u>Contact Us Today</u></h4>
+									<p>
+										<em>
+											We'd love to hear from you! Whether you're reaching out
+											for help, to volunteer, or to get involved, connecting
+											with Bread of Life means becoming part of a community that
+											cares.
+										</em>
+									</p>
+
+									<!-- Name -->
+									<div class="row mb-3">
+										<div class="col-md-6 mb-3">
+											<label for="name" class="form-label">Your Name</label>
+											<input type="text" class="form-control" id="name" name="name" required />
+										</div>
+
+										<!-- Email -->
+										<div class="col-md-6 mb-3">
+											<label for="email" class="form-label">Your Email</label>
+											<input type="email" class="form-control" id="email" name="email" required />
+										</div>
+									</div>
+
+									<!-- Topic -->
+									<div class="mb-3">
+										<label for="topic" class="form-label">Subject</label>
+										<input type="text" class="form-control" id="topic" name="topic" required />
+									</div>
+
+									<!-- Message -->
+									<div class="mb-3">
+										<label for="message" class="form-label">Your Message</label>
+										<textarea class="form-control" id="message" name="message" rows="4"
+											required></textarea>
+									</div>
+
+									<!-- File Upload -->
+									<div class="row">
+										<div class="text-center">
+											<label for="file-upload" class="btn btn-primary file-upload-btn">
+												Attach Files (Optional)
+											</label>
+											<input type="file" class="form-control" id="file-upload" name="attachment"
+												accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip" multiple />
+											<div class="form-text">
+												Max size: 5MB. Formats: PDF, DOC, ZIP, JPG, etc.
+											</div>
+										</div>
+									</div>
+
+									<!-- Submit Button -->
+									<div class="text-center mt-4">
+										<button type="submit" class="btn btn-primary btn-lg">
+											<i class="bi bi-send me-2"></i>Send Message
+										</button>
+									</div>
+								</form>
+</CODE>

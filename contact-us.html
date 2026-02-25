@@ -74,11 +74,12 @@
 			img-src 'self' data: https:;
 			font-src 'self' https://fonts.gstatic.com;
 			connect-src 'self' https://www.google-analytics.com;
-			frame-src https://www.google.com https://www.youtube.com;
+			frame-src https://www.google.com https://www.youtube.com https://docs.google.com;
 			object-src 'none';
 			form-action 'self' https://www.google.com https://www.paypal.com https://formsubmit.co;
 			frame-ancestors 'none';
-			report-uri /csp-report-endpoint/;" />
+			report-uri /csp-report-endpoint/;">
+		``
 		<meta http-equiv="Permissions-Policy"
 			content="geolocation=(self), microphone=(self), camera=(self), interest-cohort=()" />
 
@@ -102,7 +103,7 @@
 			rel="stylesheet" media="print" onload="this.media='all'" />
 
 		<!-- Critical CSS (load immediately) -->
-		<link rel="stylesheet" href="/assets/css/main.min.css" />
+		<link rel="stylesheet" href="/assets/css/SaveMain/main.css" />
 
 		<!-- Performance-optimized CSS loading -->
 		<link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style"
@@ -374,74 +375,26 @@
 						<!-- /Section -->
 						<!-- Contact Form -->
 						<div class="col-lg-6 mb-4 mb-lg-0">
-							<section id="contact-form" class="comment-form section">
-								<form id="contactForm" action="https://formsubmit.co/a823ddc1dcecd5973a4dd020a84797e0"
-									method="POST" enctype="multipart/form-data">
-									<!-- FormSubmit Configuration -->
-									<input type="hidden" name="_captcha" value="false" />
-									<input type="hidden" name="_next"
-										value="https://mainebreadoflife.org/thank-you.html" />
-									<input type="hidden" name="_subject" value="New Contact Form Submission" />
-									<input type="text" name="_honey" style="display: none" tabindex="-1" />
+							<section id="contact-form" class="comment-form section"
+								aria-labelledby="google-form-heading">
 
-									<h4 id="contact-heading"><u>Contact Us Today</u></h4>
-									<p>
-										<em>
-											We'd love to hear from you! Whether you're reaching out
-											for help, to volunteer, or to get involved, connecting
-											with Bread of Life means becoming part of a community that
-											cares.
-										</em>
-									</p>
-
-									<!-- Name -->
-									<div class="row mb-3">
-										<div class="col-md-6 mb-3">
-											<label for="name" class="form-label">Your Name</label>
-											<input type="text" class="form-control" id="name" name="name" required />
-										</div>
-
-										<!-- Email -->
-										<div class="col-md-6 mb-3">
-											<label for="email" class="form-label">Your Email</label>
-											<input type="email" class="form-control" id="email" name="email" required />
-										</div>
+								<!-- Inner card should visually match the left column -->
+								<div class="google-form-card">
+									<div class="ratio" style="--bs-aspect-ratio: 170%;">
+										<iframe
+											src="https://docs.google.com/forms/d/e/1FAIpQLSddoDb-cNeyauSnUYNTT4bqE0N1VBHpLRKJRQCneWAWrtfAfg/viewform?usp=header"
+											title="Maine Bread of Life Contact Form" loading="lazy"
+											referrerpolicy="no-referrer">
+										</iframe>
 									</div>
+								</div>
 
-									<!-- Topic -->
-									<div class="mb-3">
-										<label for="topic" class="form-label">Subject</label>
-										<input type="text" class="form-control" id="topic" name="topic" required />
-									</div>
+								<!-- <p class="mt-3 small text-muted">
+									If the form does not load,
+									<a href="https://docs.google.com/forms/d/e/1FAIpQLSddoDb-cNeyauSnUYNTT4bqE0N1VBHpLRKJRQCneWAWrtfAfg/viewform"
+										target="_blank" rel="noopener">open it in a new tab</a>.
+								</p> -->
 
-									<!-- Message -->
-									<div class="mb-3">
-										<label for="message" class="form-label">Your Message</label>
-										<textarea class="form-control" id="message" name="message" rows="4"
-											required></textarea>
-									</div>
-
-									<!-- File Upload -->
-									<div class="row">
-										<div class="text-center">
-											<label for="file-upload" class="btn btn-primary file-upload-btn">
-												Attach Files (Optional)
-											</label>
-											<input type="file" class="form-control" id="file-upload" name="attachment"
-												accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip" multiple />
-											<div class="form-text">
-												Max size: 5MB. Formats: PDF, DOC, ZIP, JPG, etc.
-											</div>
-										</div>
-									</div>
-
-									<!-- Submit Button -->
-									<div class="text-center mt-4">
-										<button type="submit" class="btn btn-primary btn-lg">
-											<i class="bi bi-send me-2"></i>Send Message
-										</button>
-									</div>
-								</form>
 							</section>
 						</div>
 					</div>
@@ -944,7 +897,7 @@
 							</li>
 							<li>
 								<i class="bi bi-info-circle"> </i>
-								<a href="contact-us.html"> Resource Office</a>
+								<a href="contact.php"> Resource Office</a>
 							</li>
 							<li>
 								<a href="/assets/img/clients/h_app.pdf" download target="_blank"

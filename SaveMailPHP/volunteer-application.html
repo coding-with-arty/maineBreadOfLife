@@ -1,19 +1,25 @@
 <!--
  *  ======================================================================
- *   VOLUNTEER-APPLICATION.HTML | MAINE BREAD OF LIFE
+ *   VOLUNTEER-APPLICATION.PHP(HTML) | MAINE BREAD OF LIFE
  *   AUTHOR: ARTHUR DANIEL BELANGER JR.
  *	 Email: arthur.belanger@maine.edu
  *   https://github.com/coding-with-arty/maineBreadOfLife
  *  ======================================================================
  -->
 
+<?php
+session_start();
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
         <!-- 1. Essential Setup -->
         <meta charset="utf-8" />
-        <base href="/" />
+        <!-- <base href="/" /> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
             Volunteer Application | Community Outreach Program | Augusta, ME | Bread of Life
@@ -102,7 +108,7 @@
             rel="stylesheet" media="print" onload="this.media='all'" />
 
         <!-- Critical CSS (load immediately) -->
-        <link rel="stylesheet" href="/assets/css/main.min.css" />
+        <link rel="stylesheet" href="/assets/css/SaveMain/main.css" />
 
         <!-- Performance-optimized CSS loading -->
         <link rel="preload" href="/assets/vendor/bootstrap/css/bootstrap.min.css" as="style"
@@ -254,11 +260,18 @@
                         <li role="menuitem">
                             <a href="services.html" rel="preload">Services</a>
                         </li>
-                        <li role="menuitem">
+                        <!-- <li role="menuitem">
                             <a href="volunteer.html" rel="preload">Volunteer</a>
+                        </li> -->
+                        <li class="dropdown"><a href="Volunteer.html">Volunteer <i
+                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="Volunteer.html">Volunteer Application</a></li>
+
+                            </ul>
                         </li>
                         <li role="menuitem">
-                            <a href="contact-us.html" class="active" aria-current="page">Contact Us</a>
+                            <a href="contact-us.html" aria-current="page">Contact Us</a>
                         </li>
                         <li role="menuitem">
                             <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PGTFGX7RU4QHQ">
@@ -292,7 +305,8 @@
                     <h1 role="heading" aria-level="1">Volunteer Application</h1>
                     <hr />
                     <h3 role="heading" aria-level="3">
-                        We are here if you need any help, please reach out today!
+                        Bread of Life relies on its community of volunteers to help those in need.<br /> Your time and
+                        talents can make a real difference in people's lives.
                     </h3>
                     <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
                         <ol role="list">
@@ -316,7 +330,10 @@
                         injury that may occur while volunteering*</p>
                 </div>
 
-                <form action="contact.php" method="POST" class="needs-validation" novalidate>
+                <form action="forms/volunteer-application.php" method="POST" class="php-email-form needs-validation"
+                    novalidate>
+                    <input type="hidden" name="csrf_token"
+                        value="<?= htmlspecialchars($_SESSION['csrf_token'], ENT_QUOTES, 'UTF-8'); ?>">
 
                     <h4 class="mb-3 border-bottom pb-2">Personal Information</h4>
                     <div class="row g-3 mb-4">
@@ -571,6 +588,16 @@
                             <label for="sigDate" class="form-label">Date *</label>
                             <input type="date" class="form-control" id="sigDate" name="sigDate" required>
                         </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAAChgsEnQnqcBX8Dv" data-theme="auto"></div>
+                    </div>
+
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your volunteer application has been sent. Thank you!</div>
                     </div>
 
                     <button class="btn btn-primary btn-lg w-100" type="submit">Submit Application</button>
@@ -1051,8 +1078,7 @@
         <script src="/assets/vendor/waypoints/noframework.waypoints.js" type="text/javascript" defer></script>
         <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" type="text/javascript" defer></script>
         <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js" type="text/javascript" defer></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer type="text/javascript"
-            referrerpolicy="no-referrer"></script>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
         <script src="/assets/js/main.js" type="text/javascript" defer></script>
 
         <script>

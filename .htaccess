@@ -20,15 +20,20 @@
     RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
     RewriteRule ^ - [F,L]
 
-    # 4. Clean URLs: serve .html files without extension and add trailing slash
+    # 4. Clean URLs: serve .html and .php files without extension and add trailing slash
 
     # If not a directory and .html file exists, serve it transparently
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME}.html -f
     RewriteRule ^(.+?)/?$ $1.html [L]
 
-    # # Redirect direct .html requests to clean URL with trailing slash
-    RewriteCond %{THE_REQUEST} \s([^\s]+)\.html[\s?] [NC]
+    # If not a directory and .php file exists, serve it transparently
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+?)/?$ $1.php [L]
+
+    # Redirect direct .html or .php requests to clean URL with trailing slash
+    RewriteCond %{THE_REQUEST} \s([^\s]+)\.(html|php)[\s?] [NC]
     RewriteRule ^ %1/ [R=301,L]
 
     # Add trailing slash if missing and not a file or directory
@@ -37,14 +42,15 @@
     RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
     RewriteRule ^(.*)$ $1/ [R=301,L]
 
-    # Fix URLs leaking full server path (if still needed)
-   RewriteCond %{REQUEST_URI} ^/home/[^/]+/public_html/(.*)$ [NC]
-   RewriteRule ^ /%1 [R=301,L]
-
 </IfModule>
 
 # Disable directory listing
 Options -Indexes
+
+# Protect hidden files (like .env) from public access
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
 
 # Basic security headers (add more if needed)
 <IfModule mod_headers.c>
