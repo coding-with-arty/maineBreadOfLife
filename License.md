@@ -1,8 +1,8 @@
 # 📜 The Belanger Non-Commercial Open License (BNOL v1.0)
 
-**Author:** Arthur Daniel Belanger Jr.  
-**GitHub:** [@coding-with-arty](https://github.com/coding-with-arty)  
-**First Published:** 2025  
+**Author:** Arthur Daniel Belanger Jr.
+**GitHub:** [@Coding-With-Arty](https://github.com/coding-with-arty)
+**First Published:** 2025
 **Inspired by:** MIT License, Creative Commons CC BY-NC 4.0, GNU GPL
 
 ---
@@ -28,14 +28,14 @@ You are **not allowed** to:
 
 If you wish to use this work for commercial purposes (including but not limited to resale, SaaS, ads, or paid products), you **must obtain a separate license** from the author.
 
-## **GitHub:** [@coding-with-arty](https://github.com/coding-with-arty)
+## **GitHub:** [@Coding-With-Arty](https://github.com/coding-with-arty)
 
 ## ✅ Attribution Requirements
 
 When using or adapting this work, include the following credit (or something equivalent):
 
-> This work is based on original code and content developed by Arthur Daniel Belanger Jr.  
-> Shared under the Belanger Non-Commercial Open License (BNOL v1.0)  
+> This work is based on original code and content developed by Arthur Daniel Belanger Jr.
+> Shared under the Belanger Non-Commercial Open License (BNOL v1.0)
 > [https://github.com/coding-with-arty/bread-of-life-license](https://github.com/coding-with-arty/bread-of-life-license)
 
 ---
