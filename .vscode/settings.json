@@ -22,12 +22,26 @@
     "wrap_line_length": 0,
     "wrap_attributes": "auto",
     "wrap_attributes_indent_size": 4,
-    "unformatted": ["a", "code", "pre", "textarea", "script", "style", "title"],
+    "unformatted": [
+      "a",
+      "code",
+      "pre",
+      "textarea",
+      "script",
+      "style",
+      "title"
+    ],
     "language": {
       "html": {
         "indent_handlebars": true,
         "indent_inner_html": true,
-        "extra_liners": ["head", "body", "/html", "li", "section"]
+        "extra_liners": [
+          "head",
+          "body",
+          "/html",
+          "li",
+          "section"
+        ]
       },
       "css": {
         "newline_between_rules": true,
@@ -63,5 +77,13 @@
     "mainebreadoflife",
     "msapplication",
     "webp"
-  ]
+  ],
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.enableMultiLinePasteWarning": "always",
+  "terminal.integrated.enableVisualBell": true,
+  "terminal.integrated.focusAfterRun": "accessible-buffer",
+  "terminal.integrated.hideOnStartup": "whenEmpty"
 }
