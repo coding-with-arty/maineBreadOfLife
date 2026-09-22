@@ -85,5 +85,6 @@
   "terminal.integrated.enableMultiLinePasteWarning": "always",
   "terminal.integrated.enableVisualBell": true,
   "terminal.integrated.focusAfterRun": "accessible-buffer",
-  "terminal.integrated.hideOnStartup": "whenEmpty"
+  "terminal.integrated.hideOnStartup": "whenEmpty",
+  "editor.hover.enabled": "onKeyboardModifier"
 }
