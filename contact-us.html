@@ -320,91 +320,93 @@
 
 			<section id="contact" class="contact section" aria-labelledby="contact-heading">
 				<div class="container">
-					<div class="row gy-4 d-flex align-items-stretch">
-						<div class="col-lg-6 mb-4 mb-lg-0">
-							<div class="contact-info-container d-flex flex-column" role="region"
-								aria-labelledby="contact-info-heading">
-								<div class="row gy-4 flex-grow-1">
-									<div class="col-lg-12">
-										<div class="info-item d-flex flex-column justify-content-center align-items-center h-100"
-											data-aos="fade-up" data-aos-delay="200" role="region"
-											aria-labelledby="address-heading">
-											<i class="bi bi-geo-alt" aria-hidden="true" aria-label="Address Icon"></i>
-											<h3 id="address-heading">Addresses</h3>
-											<p>
-												Bread of Life
-												<br />
-												159 Water Street Augusta,<br />Maine 04330
-											</p>
-											<br />
-											<p>
-												Soup Kitchen
-												<br />
-												157 Water Street
-											</p>
-											<br />
-											<p>
-												ART's House'
-												<br />
-												147 Riverside Drive
-											</p>
-											<br />
-											<p>
-												Family Shelter
-												<br />
-												155 Hospital Street
-											</p>
-											<br />
-											<p>
-												Veteran Shelter
-												<br />
-												157 Hospital Street
-											</p>
-										</div>
-									</div>
-									<!-- /Item -->
+					<div class="row gy-4">
 
-									<div class="col-md-6">
-										<div class="info-item d-flex flex-column justify-content-center align-items-center"
-											data-aos="fade-up" data-aos-delay="300" role="region"
-											aria-labelledby="phone-heading">
-											<i class="bi bi-telephone" aria-hidden="true"></i>
-											<h3 id="phone-heading">Call Today</h3>
-											<p>(207) 626-3434</p>
-										</div>
-									</div>
-									<!-- /Item -->
-
-									<div class="col-md-6">
-										<div class="info-item d-flex flex-column justify-content-center align-items-center"
-											data-aos="fade-up" data-aos-delay="400" role="region"
-											aria-labelledby="email-heading">
-											<i class="bi bi-envelope" aria-hidden="true"></i>
-											<h3 id="email-heading">Save our email</h3>
-											<p>receptionist@mainebreadoflife.org</p>
-										</div>
-									</div>
-									<!-- /Item -->
-								</div>
+						<!-- Addresses Card -->
+						<div class="col-lg-12">
+							<div class="info-item d-flex flex-column justify-content-center align-items-center"
+								data-aos="fade-up" data-aos-delay="200" role="region" aria-labelledby="address-heading">
+								<i class="bi bi-geo-alt" aria-hidden="true" aria-label="Address Icon"></i>
+								<h3 id="address-heading">Addresses</h3>
+								<p>
+									Bread of Life<br />
+									159 Water Street Augusta, Maine 04330
+								</p>
+								<br />
+								<p>
+									Soup Kitchen<br />
+									157 Water Street
+								</p>
+								<br />
+								<p>
+									ART's House<br />
+									147 Riverside Drive
+								</p>
+								<br />
+								<p>
+									Family Shelter<br />
+									155 Hospital Street
+								</p>
+								<br />
+								<p>
+									Veteran Shelter<br />
+									157 Hospital Street
+								</p>
 							</div>
 						</div>
-						<!-- /Section -->
-						<!-- Contact Form -->
-						<div class="col-lg-6 mb-4 mb-lg-0">
-							<section id="contact-form" class="comment-form section">
-								<!-- Responsive Google Form Container -->
-								<div class="google-form-container">
-									<iframe
-										src="https://docs.google.com/forms/d/e/1FAIpQLSd8n6BRRkSPrI8drYX10Y7wdf9_9wqJxzdZ1UfPSkzp-YV7XA/viewform?embedded=true"
-										frameborder="0" marginheight="0" marginwidth="0" title="Contact Us Google Form">
-										Loading…
-									</iframe>
-								</div>
-							</section>
+
+						<!-- Phone Card -->
+						<div class="col-md-6">
+							<div class="info-item d-flex flex-column justify-content-center align-items-center"
+								data-aos="fade-up" data-aos-delay="300" role="region" aria-labelledby="phone-heading">
+								<i class="bi bi-telephone" aria-hidden="true"></i>
+								<h3 id="phone-heading">Call Today</h3>
+								<p>(207) 626-3434</p>
+							</div>
 						</div>
+
+						<!-- Email Card -->
+						<div class="col-md-6">
+							<div class="info-item d-flex flex-column justify-content-center align-items-center"
+								data-aos="fade-up" data-aos-delay="400" role="region" aria-labelledby="email-heading">
+								<i class="bi bi-envelope" aria-hidden="true"></i>
+								<h3 id="email-heading">Save our email</h3>
+								<p>receptionist@mainebreadoflife.org</p>
+							</div>
+						</div>
+
+						<!-- Contact Form Modal Launch Button -->
+						<div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+							<button type="button" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm"
+								data-bs-toggle="modal" data-bs-target="#contactFormModal">
+								<i class="bi bi-send-fill me-2"></i> Send Us A Message
+							</button>
+						</div>
+
 					</div>
 				</div>
 			</section>
+
+			<!-- Contact Form Modal -->
+			<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content rounded-4 border-0 shadow">
+						<div class="modal-header border-0 pb-0">
+							<h5 class="modal-title fw-bold" id="contactFormModalLabel">Contact Bread of Life</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body p-0" style="height: 600px;">
+							<iframe
+								src="https://docs.google.com/forms/d/e/1FAIpQLSd8n6BRRkSPrI8drYX10Y7wdf9_9wqJxzdZ1UfPSkzp-YV7XA/viewform?embedded=true"
+								frameborder="0" marginheight="0" marginwidth="0" title="Contact Us Google Form"
+								class="w-100 h-100" style="border: 0;">
+								Loading…
+							</iframe>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- /Section -->
 			<!-- Services -->
 			<section id="service-details" class="service-details section">
