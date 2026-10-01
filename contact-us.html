@@ -74,7 +74,7 @@
 			img-src 'self' data: https:;
 			font-src 'self' https://fonts.gstatic.com;
 			connect-src 'self' https://www.google-analytics.com;
-			frame-src https://www.google.com https://www.youtube.com;
+			frame-src https://www.google.com https://docs.google.com https://www.youtube.com;
 			object-src 'none';
 			form-action 'self' https://www.google.com https://www.paypal.com https://formsubmit.co;
 			frame-ancestors 'none';
@@ -392,73 +392,14 @@
 						<!-- Contact Form -->
 						<div class="col-lg-6 mb-4 mb-lg-0">
 							<section id="contact-form" class="comment-form section">
-								<form id="contactForm" action="https://formsubmit.co/a823ddc1dcecd5973a4dd020a84797e0"
-									method="POST" enctype="multipart/form-data">
-									<!-- FormSubmit Configuration -->
-									<input type="hidden" name="_captcha" value="false" />
-									<input type="hidden" name="_next"
-										value="https://mainebreadoflife.org/thank-you.html" />
-									<input type="hidden" name="_subject" value="New Contact Form Submission" />
-									<input type="text" name="_honey" style="display: none" tabindex="-1" />
-
-									<h4 id="contact-heading"><u>Contact Us Today</u></h4>
-									<p>
-										<em>
-											We'd love to hear from you! Whether you're reaching out
-											for help, to volunteer, or to get involved, connecting
-											with Bread of Life means becoming part of a community that
-											cares.
-										</em>
-									</p>
-
-									<!-- Name -->
-									<div class="row mb-3">
-										<div class="col-md-6 mb-3">
-											<label for="name" class="form-label">Your Name</label>
-											<input type="text" class="form-control" id="name" name="name" required />
-										</div>
-
-										<!-- Email -->
-										<div class="col-md-6 mb-3">
-											<label for="email" class="form-label">Your Email</label>
-											<input type="email" class="form-control" id="email" name="email" required />
-										</div>
-									</div>
-
-									<!-- Topic -->
-									<div class="mb-3">
-										<label for="topic" class="form-label">Subject</label>
-										<input type="text" class="form-control" id="topic" name="topic" required />
-									</div>
-
-									<!-- Message -->
-									<div class="mb-3">
-										<label for="message" class="form-label">Your Message</label>
-										<textarea class="form-control" id="message" name="message" rows="4"
-											required></textarea>
-									</div>
-
-									<!-- File Upload -->
-									<div class="row">
-										<div class="text-center">
-											<label for="file-upload" class="btn btn-primary file-upload-btn">
-												Attach Files (Optional)
-											</label>
-											<input type="file" class="form-control" id="file-upload" name="attachment"
-												accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip" multiple />
-											<div class="form-text">
-												Max size: 5MB. Formats: PDF, DOC, ZIP, JPG, etc.
-											</div>
-										</div>
-									</div>
-
-									<!-- Submit Button -->
-									<div class="text-center mt-4">
-										<button type="submit" class="btn btn-primary btn-lg">
-											<i class="bi bi-send me-2"></i>Send Message
-										</button>
-									</div>
-								</form>
+								<!-- Responsive Google Form Container -->
+								<div class="google-form-container">
+									<iframe
+										src="https://docs.google.com/forms/d/e/1FAIpQLSd8n6BRRkSPrI8drYX10Y7wdf9_9wqJxzdZ1UfPSkzp-YV7XA/viewform?embedded=true"
+										frameborder="0" marginheight="0" marginwidth="0" title="Contact Us Google Form">
+										Loading…
+									</iframe>
+								</div>
 							</section>
 						</div>
 					</div>
@@ -511,26 +452,6 @@
 										</div>
 									</div>
 
-									<!-- Soup Kitchen -->
-									<div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="200">
-										<div class="service-card h-100 p-3">
-											<div class="d-flex align-items-center">
-												<div class="service-icon bg-warning bg-gradient text-white rounded-3 p-2 me-3"
-													style="width: 3rem; height: 3rem; flex-shrink: 0">
-													<i class="bi bi-cup-hot-fill" style="font-size: 1.5rem"></i>
-												</div>
-												<div>
-													<h5 class="mb-1">Soup Kitchen</h5>
-												</div>
-												<a href="soup-kitchen.html"
-													class="btn btn-sm btn-outline-warning ms-auto"
-													aria-label="Learn more about the Soup Kitchen">
-													Learn more <i class="bi bi-arrow-right ms-1"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-
 									<!-- Applications -->
 									<div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="250">
 										<div class="service-card h-100 p-3">
@@ -554,6 +475,26 @@
 														<i class="bi bi-download me-1"></i> Housing
 													</a>
 												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Newsletter Sign-up -->
+									<div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="300">
+										<div class="service-card h-100 p-3">
+											<div class="d-flex align-items-center">
+												<div class="service-icon bg-danger bg-gradient text-white rounded-3 p-2 me-3"
+													style="width: 3rem; height: 3rem; flex-shrink: 0">
+													<i class="bi bi-envelope-paper-heart" style="font-size: 1.5rem"></i>
+												</div>
+												<div>
+													<h5 class="mb-1">Newsletter</h5>
+												</div>
+												<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGdniqEpAqruDbYplVCDZ2eAL0GuE4mi26sGsjz7wOrxwZg/viewform"
+													target="_blank" rel="noopener noreferrer"
+													class="btn btn-sm btn-outline-danger ms-auto"
+													aria-label="Subscribe to our Newsletter">
+													Subscribe <i class="bi bi-send ms-1"></i>
+												</a>
 											</div>
 										</div>
 									</div>
@@ -1073,7 +1014,7 @@
 
 		<!-- JS with performance optimization -->
 		<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript" defer></script>
-		<script src="/assets/vendor/php-email-form/validate.js" type="text/javascript" defer></script>
+
 		<script src="/assets/vendor/aos/aos.js" type="text/javascript" defer></script>
 		<script src="/assets/vendor/glightbox/js/glightbox.min.js" type="text/javascript" defer></script>
 		<script src="/assets/vendor/purecounter/purecounter_vanilla.js" type="text/javascript" defer></script>
@@ -1081,8 +1022,7 @@
 		<script src="/assets/vendor/waypoints/noframework.waypoints.js" type="text/javascript" defer></script>
 		<script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" type="text/javascript" defer></script>
 		<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js" type="text/javascript" defer></script>
-		<script src="https://www.google.com/recaptcha/api.js" async defer type="text/javascript"
-			referrerpolicy="no-referrer"></script>
+
 		<script src="/assets/js/main.js" type="text/javascript" defer></script>
 	</body>
 

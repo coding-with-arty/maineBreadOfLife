@@ -23,6 +23,8 @@
 		<meta name="keywords"
 			content="Bread of Life Newsletter, Community Updates, Augusta ME Non-Profit News, Homeless Shelter Updates, Veteran Support News">
 		<meta name="author" content="Arthur Belanger | Bread of Life Web Development Team - Lead Developer">
+		<meta http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src https://www.google.com https://docs.google.com https://www.youtube.com; object-src 'none'; form-action 'self' https://www.google.com https://www.paypal.com https://formsubmit.co; frame-ancestors 'none'; report-uri /csp-report-endpoint/;" />
 
 		<meta name="robots" content="index, follow">
 		<meta name="language" content="English">
@@ -276,22 +278,22 @@
 						<!-- Sidebar Widgets -->
 						<div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
 							<div class="widgets-container mt-0">
-								<!-- Subscribe Box -->
-								<div class="widget-item">
-									<h3 class="widget-title">Get Newsletters in Email</h3>
-									<p class="small">Stay up to date with new publication releases, shelter updates, and
-										volunteer events directly in your inbox.</p>
-									<form action="/subscribe.php" method="post" class="php-email-form">
-										<div class="mb-3">
-											<input type="text" name="name" class="form-control" placeholder="Your Name"
-												required>
-										</div>
-										<div class="mb-3">
-											<input type="email" name="email" class="form-control"
-												placeholder="Your Email Address" required>
-										</div>
-										<button type="submit" class="btn btn-primary w-100">Subscribe Now</button>
-									</form>
+								<!-- Compact Newsletter Subscribe Widget -->
+								<div class="widget-item text-center p-4 rounded bg-light border">
+									<div class="mb-2">
+										<i class="bi bi-envelope-paper-heart text-primary display-6"></i>
+									</div>
+									<h3 class="widget-title mb-2">Bread of Life Family Newsletter</h3>
+									<p class="small text-muted mb-3">
+										Stay connected! Receive impact stories, shelter updates, and community news
+										delivered straight to your inbox.
+									</p>
+
+									<!-- Action Button to Open Google Form -->
+									<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGdniqEpAqruDbYplVCDZ2eAL0GuE4mi26sGsjz7wOrxwZg/viewform"
+										target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100 fw-bold">
+										<i class="bi bi-send-check me-2"></i>Subscribe to Newsletter
+									</a>
 								</div>
 
 								<!-- Quick Resources -->
